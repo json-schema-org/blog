@@ -18,11 +18,10 @@ import AppContext from '../context/AppContext'
 import '../css/styles.css'
 
 export default function MyApp({ Component, pageProps, router }) {
-
   return (
     <AppContext.Provider value={{ path: router.asPath }}>
       <MDXProvider components={getMDXComponents()}>
-        <Layout>
+        <Layout >
           <Component {...pageProps} />
         </Layout>
       </MDXProvider>

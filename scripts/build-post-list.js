@@ -11,10 +11,7 @@ let specWeight = 100
 const result = []
 const basePath = 'pages'
 const postDirectories = [
-  [`${basePath}/docs`, '/docs'],
-  [`${basePath}/blog`, '/blog'],
-  [`${basePath}/about`, '/about'],
-  [`${basePath}/jobs`, '/jobs'],
+  [`${basePath}/posts`, '/'],
 ]
 walkDirectories(postDirectories, result)
 if (process.env.NODE_ENV === 'production') {
@@ -31,16 +28,10 @@ function walkDirectories(directories, result, sectionWeight = 0, sectionTitle) {
     for (let file of files) {
       let details
       const fileName = join(directory, file)
-      const fileNameWithSection = join(fileName, '_section.md')
       const slug = fileName.replace(new RegExp(`^${basePath}`), '')
       if (isDirectory(fileName)) {
-        if (existsSync(fileNameWithSection)) {
-          details = frontMatter(readFileSync(fileNameWithSection, 'utf-8')).data
-          details.title = details.title || capitalize(basename(fileName))
-        } else {
-          details = {
-            title: capitalize(basename(fileName)),
-          }
+        details = {
+          title: capitalize(basename(fileName)),
         }
         details.isSection = true
         details.slug = slug
@@ -57,29 +48,7 @@ function walkDirectories(directories, result, sectionWeight = 0, sectionTitle) {
         details.sectionWeight = sectionWeight
         details.sectionTitle = sectionTitle
         details.isIndex = fileName.endsWith('/index.md')
-        details.slug = details.isIndex ? sectionSlug : slug.replace(/\.md$/, '')
-        if(details.slug.includes('/specifications/') && !details.title) {
-          const fileBaseName = basename(data.slug)  // ex. v2.0.0 | v2.1.0-2021-06-release
-          const fileName = fileBaseName.split('-')[0] // v2.0.0 | v2.1.0
-
-          if(fileBaseName.includes('release')) {
-            details.isPrerelease = true
-            details.releaseDate = getReleaseDate(fileBaseName)
-          }
-
-          details.weight = specWeight--
-
-          if(fileName.startsWith('v')) {
-            details.title = capitalize(fileName.slice(1))
-          } else {
-            details.title = capitalize(fileName)
-          }
-
-          if(details.isPrerelease) {
-            // this need to be separate because the `-` in "Pre-release" will get removed by `capitalize()` function
-            details.title += " (Pre-release)"
-          }
-        }
+        details.slug = details.isIndex ? sectionSlug : slug.replace(/\.md$/, '');
         result.push(details)
       }
     }
@@ -106,11 +75,4 @@ function isDirectory(dir) {
 
 function capitalize(text) {
   return text.split(/[\s\-]/g).map(word => `${word[0].toUpperCase()}${word.substr(1)}`).join(' ')
-}
-
-function getReleaseDate(text) {
- // ex. filename = v2.1.0-2021-06-release
- const splittedText = text.split('-') // ['v2.1.0', '2021', '06', 'release']
- const releaseDate = `${splittedText[1]}-${splittedText[2]}` // '2021-06'
- return releaseDate
 }
