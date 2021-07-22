@@ -5,10 +5,8 @@ import moment from 'moment'
 import Head from '../Head'
 import BlogContext from '../../context/BlogContext'
 import TOC from '../TOC'
-import NavBar from '../navigation/NavBar'
 import Container from './Container'
 import Footer from '../Footer'
-import AnnouncementHero from '../campaigns/AnnoucementHero'
 import AuthorAvatars from '../AuthorAvatars'
 
 export default function BlogLayout({ post, children }) {
@@ -25,7 +23,6 @@ export default function BlogLayout({ post, children }) {
       {/* <Container>
         <NavBar />
       </Container> */}
-      <AnnouncementHero className="text-center m-4" small={true} />
       <Container cssBreakingPoint="lg" flex flexReverse className="pt-8">
         <TOC toc={post.toc} cssBreakingPoint="lg" className="bg-blue-100 mt-4 p-4 sticky top-0 overflow-y-auto max-h-screen lg:bg-transparent lg:mt-0 lg:pt-0 lg:pb-8 lg:top-4 lg:max-h-(screen-16) lg:border-l lg:border-gray-200 lg:min-w-40 lg:max-w-64 lg:-mr-20 xl:min-w-72 xl:-mr-36" />
         <main className="mt-8 px-4 sm:px-6 lg:pr-8 lg:pl-0 lg:flex-1 lg:max-w-172 xl:max-w-172">

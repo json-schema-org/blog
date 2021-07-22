@@ -7,12 +7,10 @@ import ChapterSuggestions from '../components/buttons/ChapterSuggestions'
 import CodeBlock from '../components/editor/CodeBlock'
 import Remember from '../components/Remember'
 import Warning from '../components/Warning'
-import Sponsors from '../components/Sponsors'
 import Caption from '../components/Caption'
 import Row from '../components/layout/Row'
 import Column from '../components/layout/Column'
 import Figure from '../components/Figure'
-import GeneratorInstallation from '../components/GeneratorInstallation'
 import NewsletterSubscribe from '../components/NewsletterSubscribe'
 import AppContext from '../context/AppContext'
 import '../css/styles.css'
@@ -77,12 +75,10 @@ function getMDXComponents() {
     YouTube,
     Remember,
     Warning,
-    Sponsors,
     Caption,
     Row,
     Column,
     Figure,
-    GeneratorInstallation,
     NewsletterSubscribe,
     TwitterTimelineEmbed,
     TwitterShareButton,

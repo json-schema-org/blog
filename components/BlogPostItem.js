@@ -1,6 +1,6 @@
 import moment from 'moment'
 import TextTruncate from 'react-text-truncate'
-import AuthorAvatars from '../AuthorAvatars'
+import AuthorAvatars from './AuthorAvatars'
 
 export default function BlogPostItem({ post, className = '' }) {
   let typeColors = ['bg-indigo-100', 'text-indigo-800']
