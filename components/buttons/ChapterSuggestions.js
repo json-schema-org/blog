@@ -1,4 +1,4 @@
-import ChapterSuggestion from "./ChapterSuggestion";
+import ChapterSuggestion from './ChapterSuggestion';
 
 export default function ChapterSuggestions({ suggestions = [], className = '' }) {
   return (

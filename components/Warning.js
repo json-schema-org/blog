@@ -1,4 +1,4 @@
-import IconExclamation from "./icons/Exclamation";
+import IconExclamation from './icons/Exclamation';
 
 export default function Warning({ className = '', title, description }) {
   return (

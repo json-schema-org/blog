@@ -6,9 +6,9 @@ import TagManager from 'react-gtm-module'
 
 export default function HeadComponent({
   title,
-  description = 'Open source tools to easily build and maintain your event-driven architecture. All powered by the AsyncAPI specification, the industry standard for defining asynchronous APIs.',
+  description = 'The home of JSON Schema',
   image = '/img/social/card.png',
-  rssTitle = 'RSS Feed for AsyncAPI Initiative Blog',
+  rssTitle = 'RSS Feed for the JSON Schema Blog',
   rssLink = '/rss.xml'
 }) {
   const url = process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL
@@ -17,13 +17,13 @@ export default function HeadComponent({
   let type = 'website'
   if (path.startsWith('/docs') || path.startsWith('/blog')) type = 'article'
   if (!image.startsWith('http') && !image.startsWith('https')) image = `${url}${image}`
-  const permTitle = 'AsyncAPI Initiative for event-driven APIs'
+  const permTitle = 'The home of JSON Schema'
   title = title ? `${title} | ${permTitle}` : permTitle
 
   //enable google analytics
   if (typeof window !== 'undefined') {
-    TagManager.initialize({gtmId: 'GTM-T58BTVQ'})
-    ReactGA.initialize('UA-109278936-1')
+    TagManager.initialize({gtmId: 'XXXXX'})
+    ReactGA.initialize('XXXXX')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
@@ -37,21 +37,18 @@ export default function HeadComponent({
 
       {/* Icons */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png" />
 
       {/* Google / Search Engine Tags */}
       <meta itemProp="name" content={title} />
       <meta itemProp="description" content={description} />
       <meta itemProp="image" content={image} />
-      
+
       {/* Twitter Card data */}
       <meta name="twitter:card" value="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
+
       {/* Open Graph data */}
       <meta property="og:title" content={title} />
       <meta property="og:type" content={type} />

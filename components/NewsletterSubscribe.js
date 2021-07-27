@@ -1,10 +1,10 @@
-import Button from "./buttons/Button";
+import Button from './buttons/Button';
 
 export default function NewsletterSubscribe ({
   formName = 'free form',
   className = 'p-8',
   dark = false,
-  title = 'Subscribe to our newsletter to receive news about AsyncAPI.',
+  title = 'Subscribe to our newsletter to receive news about JSON Schema.',
   type,
 }) {
   if (!formName) throw new Error('Parameter formName is required for the NewsletterSubscribe component.')
