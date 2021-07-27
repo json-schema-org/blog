@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Button({
   text,
   href,
@@ -10,7 +12,7 @@ export default function Button({
   textClassName = 'text-white hover:text-white',
 }) {
   const classNames = `${bgClassName} ${textClassName} shadow-md hover:shadow-lg transition-all duration-500 ease-in-out rounded px-4 py-3 text-white ${className || ''}`
-  
+
   if (!href) {
     return (
       <button type={type} className={classNames}>
@@ -30,7 +32,8 @@ export default function Button({
   }
 
   return (
-    <a href={href} target={target} className={classNames}>
+    <Link href={href}>
+    <a target={target} className={classNames}>
       {
         icon && iconPosition === 'left' && (
           <span className="inline-block mr-2">{icon}</span>
@@ -42,7 +45,8 @@ export default function Button({
           <span className="inline-block ml-2">{icon}</span>
         )
       }
-    </a>
+      </a>
+    </Link>
   )
 }
 

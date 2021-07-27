@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import HtmlHead from 'next/head'
 import ErrorPage from 'next/error'
+import Link from 'next/link'
 import moment from 'moment'
 import Head from '../Head'
 import BlogContext from '../../context/BlogContext'
@@ -37,7 +38,7 @@ export default function BlogLayout({ post, children }) {
                 <div className="ml-3">
                   <p className="text-sm leading-5 font-medium text-gray-900">
                     <span className="hover:underline">
-                      {post.authors.map((author, index) => author.link ? <a key={index} alt={author.name} href={author.link}>{author.name}</a> : author.name).reduce((prev, curr) => [ prev, ' & ', curr ])}
+                      {post.authors.map((author, index) => author.link ? <Link key={index} alt={author.name} href={author.link}>{author.name}</Link> : author.name).reduce((prev, curr) => [ prev, ' & ', curr ])}
                     </span>
                   </p>
                   <div className="flex text-sm leading-5 text-gray-500">
@@ -79,7 +80,7 @@ export default function BlogLayout({ post, children }) {
                   }
                 `}</style>
               </HtmlHead>
-              <img src={post.cover} alt={post.coverCaption} title={post.coverCaption} className="mt-6 mb-6 w-full" />
+              <img src={`/blog${post.cover}`} alt={post.coverCaption} title={post.coverCaption} className="mt-6 mb-6 w-full" />
               {children}
             </article>
           </main>

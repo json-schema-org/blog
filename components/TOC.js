@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Scrollspy from 'react-scrollspy'
+import Link from 'next/link'
 import ArrowRight from './icons/ArrowRight'
 
 export default function TOC({
@@ -40,13 +41,16 @@ export default function TOC({
         >
           {
             tocItems.map((item, index) => (
-              <a
-                className={`pl-${(item.lvl - minLevel) * 2} block mb-1 transition duration-100 ease-in-out text-gray-500 font-normal text-sm font-sans antialiased hover:text-gray-700 hover:font-medium`}
-                href={`#${item.slug}`}
-                key={index}
+              <Link
+            href={`#${item.slug}`}
               >
-                {item.content}
-              </a>
+                <a
+                key={index}
+                className={`pl-${(item.lvl - minLevel) * 2} block mb-1 transition duration-100 ease-in-out text-gray-500 font-normal text-sm font-sans antialiased hover:text-gray-700 hover:font-medium`}
+                >
+                  {item.content}
+                </a>
+              </Link>
             ))
           }
         </Scrollspy>

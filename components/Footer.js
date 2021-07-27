@@ -16,27 +16,27 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
           <div className="px-5 py-2">
-            <a href="/" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+            <a href="https://json-schema.org" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Home
             </a>
           </div>
           <div className="px-5 py-2">
-            <a href="/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+            <a href="https://json-schema.org/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Blog
             </a>
           </div>
           <div className="px-5 py-2">
-            <a href="/learn" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+            <a href="https://json-schema.org/learn" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Learn
             </a>
           </div>
           <div className="px-5 py-2">
-            <a href="/implementations" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+            <a href="https://json-schema.org/implementations" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Implementations
             </a>
           </div>
           <div className="px-5 py-2">
-            <a href="/slack" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+            <a href="https://json-schema.org/slack" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Join our Slack
             </a>
           </div>

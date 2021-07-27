@@ -19,6 +19,10 @@ const withMDX = require('@next/mdx')({
     rehypePlugins: [],
   },
 })
-module.exports = withMDX({
-  pageExtensions: ['js', 'md'],
-})
+module.exports = {
+  ...withMDX({
+    pageExtensions: ['js', 'md'],
+  }),
+  basePath: '/blog',
+  // assetPrefix: 'https://json-schema.org/blog',
+}
