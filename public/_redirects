@@ -1,6 +1,6 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-https://asyncapi.com/* https://www.asyncapi.com/:splat 301!
+https://json-schema.org/* https://json-schema.org/:splat 301!
 
 # Blog
 /blog / 301!

@@ -1,27 +1,36 @@
-<h5 align="center">
-  <img src="./.github/assets/logo.png" alt="AsyncAPI logo" width="200">
-  <br>
-  Website
-</h5>
+# JSON Schema blog
+
+A fork from https://github.com/asyncapi/website at 34eba91120505a5065715337f73c66bfcf126736
+In effort to avoid having to build a whole new blog and get something up quickly!
+With complements of the AsyncAPI team!
+
+TODO: Update link / info / description for JSON Schema in files such as...
+[x] scripts/build-rss.js
+[x] change favicon in the /public folders
+[x] update main description/keywords etc for page in the components/Head
+[x] update desc for footer in the components/Footer
+[x] Search whole repo for mention of AsyncAPI.
+[ ] Modify actions and deploy to cloudflare pages
+[ ] Google analytics tracking?
 
 ---
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b2137407-b765-46c4-95b5-a72d9b1592ab/deploy-status)](https://app.netlify.com/sites/asyncapi-website/deploys)
-
 ## Overview
 
-This repository contains the sources of AsyncAPI website:
+This repository contains the sources of JSON Schema blog website:
 
-- It's powered by [Next.js](https://nextjs.org/), 
-- It uses [Tailwind](https://tailwindcss.com/) CSS framework,
-- It's build and deployed with [Netlify](https://www.netlify.com/).
+- It's powered by [Next.js](https://nextjs.org/)
+- It uses [Tailwind](https://tailwindcss.com/) CSS framework
+- It WILL be deployed using cloudflare pages
 
 ## Requirements
 
 Use the following tools to set up the project:
 
-- [Node.js](https://nodejs.org/) v12.16+
-- [npm](https://www.npmjs.com/) v6.13.7+
+- [Node.js](https://nodejs.org/) v14.17+
+- [yarn](https://yarnpkg.com/) v1.22+
+
+We recommend using [Volta](https://volta.sh/) to easily use the correct versions of node and yarn
 
 ## Usage
 
@@ -30,15 +39,17 @@ Use the following tools to set up the project:
 To install all dependencies, run this command:
 
 ```bash
-npm install
+yarn
 ```
+
+Yarn [automagically](https://classic.yarnpkg.com/en/docs/cli/install/) installs the correct dependencies you need, develop by default.
 
 ### Develop
 
-Launch the development server with the hot reloading functionality that allows any change in files to be immediately visible in the browser. Use this command:
+Launch the development server with the hot reloading functionality that allows any change in files to be immediately visible in the browser (code only, not content). Use this command:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 You can access the live development server at [localhost:8080](http://localhost:8080).
@@ -48,7 +59,7 @@ You can access the live development server at [localhost:8080](http://localhost:
 To build a production-ready website, run the following command:
 
 ```bash
-npm run build
+yarn build
 ```
 
 Generated files of the website go to the `.next` folder.
@@ -66,10 +77,8 @@ This repository has the following structure:
   ├── context                     # Various React's contexts used in website
   ├── css                         # Various CSS files
   ├── lib                         # Various JS code for preparing static data to render in pages
-  ├── pages                       # Website's pages source. It includes raw markdown files and React page templates.
-  │    ├── about                  # Raw content for /about page
+  ├── pages                       # Website's pages source. Only the blog!
   │    ├── blog                   # Blog posts
-  │    └── docs                   # Content for /docs/* pages
   ├── public                      # Data for site metadata and static content such as images
   ├── scripts                     # Scripts used in the build and dev processes
   ├── next.config.js              # Next.js configuration file

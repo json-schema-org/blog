@@ -2,7 +2,7 @@ self.addEventListener('install', function (event) {
     self.skipWaiting();
 });
 
-self.addEventListener("activate", function (e) {
+self.addEventListener('activate', function (e) {
 
     self.registration.unregister()
         .then(function () {
