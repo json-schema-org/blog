@@ -1,22 +1,26 @@
 ---
 title: "Awesome 2020 and What Can Get Better In 2021"
 date: 2020-12-23T06:00:00+01:00
-type: Communication
+type: Communications
 tags:
   - Postman
   - Announcement
 cover: /img/posts/2020-summary/cover.webp
 authors:
-  - name: Lukasz Gornicki
-    photo: /img/avatars/lpgornicki.webp
-    link: https://twitter.com/derberq
-    byline: AsyncAPI Maintainer and Dev Comm Keeper
-excerpt: 'Fuck you COVID-19, AsyncAPI Community is stronger than you think. See the growth of AsyncAPI in 2020 in hard numbers. How we compare to 2019?'
+  - name: Jonathan Schabowsky
+    photo: /img/avatars/jschabowsky.webp
+    link: https://twitter.com/jschabowsky
+    byline: Sr. Architect at Solace
+  - name: Fran Méndez
+    photo: /img/avatars/fmvilas.webp
+    link: https://twitter.com/fmvilas
+    byline: AsyncAPI founder
+excerpt: "you COVID-19, AsyncAPI Community is stronger than you think. See the growth of AsyncAPI in 2020 in hard numbers. How we compare to 2019?"
 ---
 
-:fu: COVID-19
+COVID-19
 
-AsyncAPI Community is stronger than you think. 
+AsyncAPI Community is stronger than you think.
 
 See the growth of AsyncAPI in 2020 in hard numbers. How do we compare to 2019?
 
@@ -31,9 +35,9 @@ This post is not 100% just in numbers and analytics. It is also a summary of all
 1. AsyncAPI was featured in InfoQ's [Software Architecture and Design InfoQ Trends Report—April 2020](https://www.infoq.com/articles/architecture-trends-2020/) that directly brought 1963 new users to the AsyncAPI website
 1. AsyncAPI showed up on [Technology Radar](https://www.thoughtworks.com/radar/tools/asyncapi) that took 1051 users directly to the AsyncAPI website
 1. Our two core tools reached their first major release
-    * [JavaScript Parser](https://github.com/asyncapi/parser-js/)
-    * [Generator](https://github.com/asyncapi/generator/)
-  
+   - [JavaScript Parser](https://github.com/asyncapi/parser-js/)
+   - [Generator](https://github.com/asyncapi/generator/)
+
 All those moments lead us to the most important one: the [partnership with Postman](/blog/asyncapi-partners-with-postman).
 
 ## Slack
@@ -52,7 +56,6 @@ I don't think the below tables require any introduction.
 <table>
   <tr>
     <td align="center">
-      
     </td>
     <td align="center">
       January 2019
@@ -63,6 +66,7 @@ I don't think the below tables require any introduction.
     <td align="center">
       December 2020
     </td>
+
   </tr>
   <tr>
     <td align="center">
@@ -113,7 +117,7 @@ More members means higher activity :sweat_smile:
   </tr>
   <tr>
     <td align="center">
-      Weekly members activity 
+      Weekly members activity
     </td>
     <td align="center">
       45 average<br/>
@@ -129,6 +133,7 @@ More members means higher activity :sweat_smile:
 ### Most present companies
 
 I was also super curious to check out where our members are coming from. The only way to do it was by checking the domain of their emails used during registration. Yes, this is not 100% accurate. Not all people use company emails in open source. It is visible in data; half of the users have the **gmail.com** domain. Nevertheless, the result of my investigation is pretty accurate with our knowledge. The ones that have more than three representants:
+
 - mulesoft.com
 - postman.com
 - redhat.com
@@ -145,6 +150,7 @@ Some of these companies sponsored our work in 2020. The ones that didn't... don'
 Slack hard numbers confirm what we see in Slack every day. Luckily, even though the activity doubled, the number of active users that help out in the workspace also grew :pray: With the recently announced Postman partnership, I do not worry about how we'll handle 2021.
 
 Next year we need to address two critical topics:
+
 - our community grows but the knowledge that we all share in Slack is lost. We use a free version of Slack, and therefore, only the last 10k messages are available. In 2021, we need to make a strong decision on what's next. Should we spend some budget on Slack commercial subscriptions, or maybe we should find a better tool?
 - we need to reorganize our channels, be a bit more granular, and target suitable community groups. We'll bother you to get your feedback once we start this reorganization.
 
@@ -218,7 +224,7 @@ I feel that probably some traffic coming from LinkedIn to our website is not ade
 
 ## Google Analytics
 
-We use Google Analytics on [AsyncAPI website](https://www.asyncapi.com/) because we want to understand what content is most valuable for you, and we want to learn how the interest is growing. 
+We use Google Analytics on [AsyncAPI website](https://www.asyncapi.com/) because we want to understand what content is most valuable for you, and we want to learn how the interest is growing.
 
 ### Traffic got much higher
 
@@ -287,7 +293,7 @@ If we look closer to the statistics to check out how people learn about AsyncAPI
   caption="Figure 5: Top channels in 2020"
 />
 
-In 2019, the most viral was the information about AsyncAPI 2.0 release, while in 2020, the blog post about how we [automated releases](/blog/automated-releases) on AsyncAPI packages to speed up work. 
+In 2019, the most viral was the information about AsyncAPI 2.0 release, while in 2020, the blog post about how we [automated releases](/blog/automated-releases) on AsyncAPI packages to speed up work.
 
 ### Top blog posts
 
@@ -440,7 +446,7 @@ We spent $924,14 on this activity and when we compare it to organic impressions 
 
 Nothing is black and white, even Twitter performance. One could say:
 
-> leave organic growth and invest in paid marketing 
+> leave organic growth and invest in paid marketing
 
 We do not treat Twitter as just a marketing channel. It is our window to the community. We use it to share updates, short information and engage directly with our community members. We should continue to work on organic growth. It converted only into 2 160 sessions to the AsyncAPI website, which is not much if we compare it with 2 283 sessions opened with the AsyncAPI Conference website using promoted content. We do not want to close the window, though.
 
@@ -462,7 +468,7 @@ We did some research on the most impressive and engaging tweets.
   <tr>
     <td align="center">
       <TwitterTweetEmbed
-        tweetId='1221873851031859200' 
+        tweetId='1221873851031859200'
         options={{
           cards: 'hidden',
           width: 200,
@@ -520,7 +526,7 @@ There is only one tweet that shows up in the top 3 for each category.
   <tr>
     <td align="center">
       <TwitterTweetEmbed
-        tweetId='1332276932998799361' 
+        tweetId='1332276932998799361'
         options={{
           cards: 'hidden',
           width: 200,
@@ -559,14 +565,14 @@ There is only one tweet that shows up in the top 3 for each category.
     </td>
     <td align="center">
       <div className="font-bold">
-        253 
+        253
       </div>
       (not all those memes were lame after all)
     </td>
   </tr>
 </table>
 
-It is pretty clear that what you liked the most this year is that we are hiring :muscle: 
+It is pretty clear that what you liked the most this year is that we are hiring :muscle:
 
 We are still hiring!
 
@@ -593,7 +599,7 @@ Our most popular repositories contain the AsyncAPI specification and the AsyncAP
   caption="Figure 6: GitHub stars growth in asyncapi repository"
 />
 
-[The generator repository](https://github.com/asyncapi/generator/) grew from 62 to 198. The path got steeper this year. This popularity is covered with our recent development activities in the project. 
+[The generator repository](https://github.com/asyncapi/generator/) grew from 62 to 198. The path got steeper this year. This popularity is covered with our recent development activities in the project.
 
 <Figure
   src="/img/posts/2020-summary/star-history-generator.webp"
@@ -730,7 +736,7 @@ There are still many downloads of the parser and generator using old names. It m
 
 ## YouTube
 
-The [AsyncAPI YouTube channel](https://www.youtube.com/asyncapi) had a massive increase in the traffic. 
+The [AsyncAPI YouTube channel](https://www.youtube.com/asyncapi) had a massive increase in the traffic.
 
 ### Watch time goes crazy
 
@@ -852,7 +858,7 @@ I think it is the right moment to work on the channels' landing page. We could u
 
 We earned and spent lots of money this year :money_mouth_face:
 
-Huge applause :clap: to all [our sponsors](https://opencollective.com/asyncapi#section-contributors)! 
+Huge applause :clap: to all [our sponsors](https://opencollective.com/asyncapi#section-contributors)!
 
 We enabled the [GitHub sponsoring](https://github.com/sponsors/asyncapi) this year, but still, 99% of funds go through the [Open Collective](https://opencollective.com/asyncapi).
 
@@ -895,7 +901,7 @@ We enabled the [GitHub sponsoring](https://github.com/sponsors/asyncapi) this ye
       $52 371 Maintanance<br/>
       $3 750 <a href="https://opencollective.com/json-schema">
         JSON Schema
-      </a> 
+      </a>
     </td>
     <td>
       $1 493,64
@@ -912,6 +918,7 @@ We don't know.
 It is the area where we have no specific metrics. We see the growth in tools' adoption, but not everybody uses open source tools. Many companies prefer to develop those in-house.
 
 From observations, we know that number of users that use specification grows:
+
 - More and more companies seek integration with the specification. From unofficial discussions, we know their customers ask them about AsyncAPI support
 - The metrics from this blog post clearly show adoption and interest growth
 

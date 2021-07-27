@@ -137,27 +137,6 @@ There's only one concern with the approach above: every single CloudEvents defin
 
 The default format for defining events (messages) in AsyncAPI 2.0 is JSON Schema. Thankfully, AsyncAPI provides a way to define events in your own custom format —like Avro and Protobuf — or a hypothetical CloudEvents one in this case. See example:
 
-<CodeBlock highlightedLines={[10]}>
-{`asyncapi: 2.0.0-rc1
-id: urn:com.asyncapi.examples.user
-info:
-  title: User service
-  version: 1.6.3
-channels:
-  user/signedup:
-    publish:
-      message:
-        schemaFormat: 'application/cloudevents+json; version=0.2; charset=utf-8'
-        payload:
-          type: object
-          properties:
-            fullName:
-              type: string
-            email:
-              type: string
-              format: email`}
-</CodeBlock>
-
 This results in a much shorter and nicer way of defining the usage of CloudEvents inside an AsyncAPI document.
 
 ## Ok, it's possible but, does it makes sense?
