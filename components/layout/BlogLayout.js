@@ -23,7 +23,7 @@ export default function BlogLayout({ post, children }) {
   return (
     <div className="relative pt-8 pb-20 px-4 sm:px-6 lg:pt-6 lg:pb-28 lg:px-8">
     <BlogContext.Provider value={{ post }}>
-        <Container>
+        <Container wide>
           <NavBar />
         </Container>
         <Container cssBreakingPoint="lg" flex flexReverse className="pt-8">
