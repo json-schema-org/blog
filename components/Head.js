@@ -22,8 +22,7 @@ export default function HeadComponent({
 
   //enable google analytics
   if (typeof window !== 'undefined') {
-    TagManager.initialize({gtmId: 'XXXXX'})
-    ReactGA.initialize('XXXXX')
+    ReactGA.initialize('UA-99695987-1')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
