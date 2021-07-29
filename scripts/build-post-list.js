@@ -1,4 +1,4 @@
-const { readdirSync, statSync, existsSync, readFileSync, writeFileSync } = require('fs')
+const { readdirSync, statSync, existsSync, readFileSync, writeFileSync, mkdirSync } = require('fs')
 const { join, resolve, basename } = require('path')
 const { inspect } = require('util')
 const frontMatter = require('gray-matter')
@@ -13,11 +13,18 @@ const basePath = 'pages'
 const postDirectories = [
   [`${basePath}/posts`, '/'],
 ]
+const dataDir = 'config';
+
 walkDirectories(postDirectories, result)
 if (process.env.NODE_ENV === 'production') {
   console.log(inspect(result, { depth: null, colors: true }))
 }
-writeFileSync(resolve(__dirname, '..', 'config', 'posts.json'), JSON.stringify(result, null, '  '))
+
+if (!existsSync(resolve(__dirname, '..', dataDir))) {
+  mkdirSync(resolve(__dirname, '..', dataDir));
+}
+
+writeFileSync(resolve(__dirname, '..', dataDir, 'posts.json'), JSON.stringify(result, null, '  '))
 
 function walkDirectories(directories, result, sectionWeight = 0, sectionTitle) {
   for (let dir of directories) {
