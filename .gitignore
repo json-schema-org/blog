@@ -7,4 +7,4 @@ config/posts.json
 public/rss.xml
 .env.local
 roadmap.json
-yarn.lock
+out
