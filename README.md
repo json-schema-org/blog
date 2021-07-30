@@ -4,14 +4,14 @@ A fork from https://github.com/asyncapi/website at 34eba91120505a5065715337f73c6
 In effort to avoid having to build a whole new blog and get something up quickly!
 With complements of the AsyncAPI team!
 
-TODO: Update link / info / description for JSON Schema in files such as...
-[x] scripts/build-rss.js
-[x] change favicon in the /public folders
-[x] update main description/keywords etc for page in the components/Head
-[x] update desc for footer in the components/Footer
-[x] Search whole repo for mention of AsyncAPI.
-[ ] Modify actions and deploy to cloudflare pages
-[ ] Google analytics tracking?
+TODO: Initial setup, Update link / info / description for JSON Schema in files such as...
+- [x] scripts/build-rss.js
+- [x] change favicon in the /public folders
+- [x] update main description/keywords etc for page in the components/Head
+- [x] update desc for footer in the components/Footer
+- [x] Search whole repo for mention of AsyncAPI.
+- [x] Google analytics tracking?
+- [ ] Include first article
 
 ---
 
