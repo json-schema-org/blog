@@ -24,5 +24,5 @@ module.exports = {
     pageExtensions: ['js', 'md'],
   }),
   basePath: process.env.NEXT_PUBLIC_BASE_PATH !== undefined ? process.env.NEXT_PUBLIC_BASE_PATH : '/blog',
-  // assetPrefix: 'https://json-schema.org/blog',
+  // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH !== undefined ? process.env.NEXT_PUBLIC_BASE_PATH : '/blog',
 }

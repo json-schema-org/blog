@@ -11,7 +11,7 @@ TODO: Initial setup, Update link / info / description for JSON Schema in files s
 - [x] update desc for footer in the components/Footer
 - [x] Search whole repo for mention of AsyncAPI.
 - [x] Google analytics tracking?
-- [ ] Include first article
+- [x] Include first article
 
 ---
 
@@ -21,7 +21,7 @@ This repository contains the sources of JSON Schema blog website:
 
 - It's powered by [Next.js](https://nextjs.org/)
 - It uses [Tailwind](https://tailwindcss.com/) CSS framework
-- It WILL be deployed using cloudflare pages
+- It is deployed using cloudflare pages
 
 ## Requirements
 

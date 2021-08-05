@@ -7,7 +7,7 @@ import TagManager from 'react-gtm-module'
 export default function HeadComponent({
   title,
   description = 'The home of JSON Schema',
-  image = '/img/social/card.png',
+  image = '/img/social/card.png',  // Need to fix this!
   rssTitle = 'RSS Feed for the JSON Schema Blog',
   rssLink = '/rss.xml'
 }) {
