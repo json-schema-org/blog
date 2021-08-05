@@ -6,20 +6,23 @@ import AuthorAvatars from './AuthorAvatars'
 export default function BlogPostItem({ post, className = '' }) {
   let typeColors = ['bg-indigo-100', 'text-indigo-800']
 
-  switch (post.type.toLowerCase()) {
-    case 'video':
-      typeColors = ['bg-pink-100', 'text-pink-800']
-      break
-    case 'marketing':
-      typeColors = ['bg-orange-100', 'text-orange-800']
-      break
-    case 'strategy':
-      typeColors = ['bg-green-100', 'text-green-800']
-      break
-    case 'communication':
-      typeColors = ['bg-teal-100', 'text-teal-800']
-      break
-  }
+  if(post.type){
+
+    switch (post.type.toLowerCase()) {
+      case 'video':
+        typeColors = ['bg-pink-100', 'text-pink-800']
+        break
+      case 'marketing':
+        typeColors = ['bg-orange-100', 'text-orange-800']
+        break
+      case 'strategy':
+        typeColors = ['bg-green-100', 'text-green-800']
+        break
+      case 'communication':
+        typeColors = ['bg-teal-100', 'text-teal-800']
+        break
+      }
+    }
 
   return (
     <div className={`flex flex-col rounded-lg shadow-lg overflow-hidden ${className}`}>
