@@ -42,10 +42,10 @@ export default function TOC({
           {
             tocItems.map((item, index) => (
               <Link
-            href={`#${item.slug}`}
+                href={`#${item.slug}`}
+                key={index}
               >
                 <a
-                key={index}
                 className={`pl-${(item.lvl - minLevel) * 2} block mb-1 transition duration-100 ease-in-out text-gray-500 font-normal text-sm font-sans antialiased hover:text-gray-700 hover:font-medium`}
                 >
                   {item.content}
