@@ -32,7 +32,7 @@ module.exports = {
         [100, 200, 300, 400, 500, 600, 700, 800, 900]
       ),
       "code-editor": {
-        dark: "#252f3f",
+        dark: "#002b36",
         "dark-highlight": "#3e4d64",
       },
       hub: "#252f3f",
