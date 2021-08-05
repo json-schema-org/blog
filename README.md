@@ -32,6 +32,8 @@ Use the following tools to set up the project:
 
 We recommend using [Volta](https://volta.sh/) to easily use the correct versions of node and yarn
 
+For image compression to webp you can use [`cwebp`](https://developers.google.com/speed/webp/docs/cwebp). Maybe this can be automated as a GitHub Action?
+
 ## Usage
 
 ### Install dependencies
