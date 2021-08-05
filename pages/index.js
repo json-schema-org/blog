@@ -25,7 +25,7 @@ export default function HomePage() {
     <div>
        <div className="relative pt-8 pb-20 px-4 sm:px-6 lg:pt-6 lg:pb-28 lg:px-8">
         <Container wide>
-            <Head title="The JSON Schema Blog index" />
+            <Head title="JSON Schema Blog index" />
             <NavBar className="z-50" />
           </Container>
         <div className="relative max-w-7xl mx-auto">

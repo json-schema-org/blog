@@ -6,7 +6,7 @@ import TagManager from 'react-gtm-module'
 
 export default function HeadComponent({
   title,
-  description = 'The home of JSON Schema',
+  description = 'JSON Schema Blog',
   image = '/img/social/card.png',  // Need to fix this!
   rssTitle = 'RSS Feed for the JSON Schema Blog',
   rssLink = '/rss.xml'
@@ -17,7 +17,7 @@ export default function HeadComponent({
   let type = 'website'
   if (path.startsWith('/docs') || path.startsWith('/blog')) type = 'article'
   if (!image.startsWith('http') && !image.startsWith('https')) image = `${url}${image}`
-  const permTitle = 'The home of JSON Schema'
+  const permTitle = 'JSON Schema Blog'
   title = title ? `${title} | ${permTitle}` : permTitle
 
   //enable google analytics
