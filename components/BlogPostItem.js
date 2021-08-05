@@ -58,7 +58,7 @@ export default function BlogPostItem({ post, className = '' }) {
             </p>
             <div className="flex text-sm leading-5 text-gray-500">
               <time dateTime={post.date}>
-                {moment(post.date).format('MMMM D, YYYY')}
+                {moment(post.date).format('YYYY-MM-DD')}
               </time>
               <span className="mx-1">
                 &middot;
