@@ -23,6 +23,6 @@ module.exports = {
   ...withMDX({
     pageExtensions: ['js', 'md'],
   }),
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : '/blog',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH !== undefined ? process.env.NEXT_PUBLIC_BASE_PATH : '/blog',
   // assetPrefix: 'https://json-schema.org/blog',
 }
