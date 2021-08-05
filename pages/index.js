@@ -41,7 +41,7 @@ export default function HomePage() {
               <Link className="ml-1 text-primary-500 hover:text-primary-400" href="https://github.com/asyncapi/website/issues/new?template=blog.md" target="_blank" rel="noreferrer">Submit yours!</Link>
             </p> */}
             <p className="max-w-2xl mx-auto text-md leading-7 text-gray-400">
-              We have an <img className="ml-1 text-primary-500 hover:text-primary-400" style={{ display: 'inline' }} src={`${process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : '/blog'}/img/logos/rss.svg`} height="18px" width="18px" /> <Link className="ml-1 text-primary-500 hover:text-primary-400" href="/rss.xml">RSS Feed</Link> too!
+              We have an <img className="ml-1 text-primary-500 hover:text-primary-400" style={{ display: 'inline' }} src={`${process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''}/img/logos/rss.svg`} height="18px" width="18px" /> <Link className="ml-1 text-primary-500 hover:text-primary-400" href="/rss.xml">RSS Feed</Link> too!
             </p>
           </div>
           <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">

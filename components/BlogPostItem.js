@@ -28,7 +28,7 @@ export default function BlogPostItem({ post, className = '' }) {
     <div className={`flex flex-col rounded-lg shadow-lg overflow-hidden ${className}`}>
       <Link href={post.slug} >
         <a className="flex-shrink-0">
-          <img className="h-48 w-full object-cover" src={`/blog${post.cover}`} alt="" />
+          <img className="h-48 w-full object-cover" src={`${process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''}${post.cover}`} alt="" />
         </a>
       </Link>
       <div className="flex-1 bg-white p-6 flex flex-col justify-between">

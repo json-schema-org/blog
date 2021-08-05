@@ -80,7 +80,7 @@ export default function BlogLayout({ post, children }) {
                   }
                 `}</style>
               </HtmlHead>
-              <img src={`/blog${post.cover}`} alt={post.coverCaption} title={post.coverCaption} className="mt-6 mb-6 w-full" />
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''}${post.cover}`} alt={post.coverCaption} title={post.coverCaption} className="mt-6 mb-6 w-full" />
               {children}
             </article>
           </main>
