@@ -269,3 +269,5 @@ You can reach out to us [@jsonschema](https://twitter.com/jsonschema) or our [Sl
 *I hope you’ll agree, Ben has clarified the process for us all here, and we can use this example to fully meet JSON Schema’s bundling expectations when writing tools which bundle multiple resources into compound OpenAPI documents. Thanks, Ben!* - Mike
 
 <a href="https://www.freepik.com/vanitjan1">Business photo created by vanitjan - www.freepik.com</a>
+
+This article was first published on the JSON Schema Blog and is canonically located at https://json-schema.org/blog/posts/bundling-json-schema-compound-documents
