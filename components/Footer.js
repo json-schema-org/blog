@@ -21,8 +21,8 @@ export default function Footer() {
             </a>
           </div>
           <div className="px-5 py-2">
-            <a href="https://json-schema.org/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-              Blog
+            <a href="https://json-schema.org/specification" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              Specification
             </a>
           </div>
           <div className="px-5 py-2">
@@ -33,6 +33,11 @@ export default function Footer() {
           <div className="px-5 py-2">
             <a href="https://json-schema.org/implementations" className="text-base leading-6 text-gray-500 hover:text-gray-900">
               Implementations
+            </a>
+          </div>
+          <div className="px-5 py-2">
+            <a href="https://json-schema.org/blog" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              Blog
             </a>
           </div>
           <div className="px-5 py-2">
