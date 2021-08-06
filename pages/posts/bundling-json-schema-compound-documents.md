@@ -154,7 +154,7 @@ Remember, any schema which provides a value for `$id` is considered a Schema Res
 
 Let's resolve (dereference) one of the references in our primary schema. `"$ref": "/schemas/mixins/integer"` resolves to a fully qualified URI of `https://jsonschema.dev/schemas/mixins/integer` by following the rules for first determining the base URI and then resolving the relative URI against that base URI. The implementation should then check its internal index of schema identifiers and schema resources, finding a match, and using the appropriate previously loaded schema resource.
 
-The bundling process is done. The previously externally referenced schemas are coped into `$defs` in our primary schema, as is. The keys for the `$defs` object are the identifying URIs, but they can be anything, as those values won't be referenced (They could be UUIDs if you like). Looking at our final bundled schema… I mean "Compound Schema Document", we now have multiple Schema Resources embedded in a single Schema document.
+The bundling process is done. The previously externally referenced schemas are copied into `$defs` in our primary schema, as is. The keys for the `$defs` object are the identifying URIs, but they can be anything, as those values won't be referenced (They could be UUIDs if you like). Looking at our final bundled schema… I mean "Compound Schema Document", we now have multiple Schema Resources embedded in a single Schema document.
 
 ```json
 {
