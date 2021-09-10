@@ -88,6 +88,11 @@ A "Compound Schema Document" is a JSON document which has multiple embedded JSON
   "$ref": "#/$defs/nonNegativeInteger"
 }
 ```
+> Note that schema bundling and the use of multiple definitions are not necessary to represent non-negative integers.
+> This example is purely for illustrative purposes and the schema below is perfectly suitable for representing non-negative integers without the use of bundling.
+> ```json
+> {"type": "integer", "minimum": 0}
+> ```
 
 Last, let's look at the carefully crafted definition of "bundling" according to the JSON Schema specification:
 
