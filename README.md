@@ -54,7 +54,7 @@ Launch the development server with the hot reloading functionality that allows a
 yarn dev
 ```
 
-You can access the live development server at [localhost:8080](http://localhost:8080).
+You can access the live development server at [localhost:8080/blog](http://localhost:8080/blog).
 
 ### Build
 
