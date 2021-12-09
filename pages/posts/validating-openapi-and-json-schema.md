@@ -1,4 +1,19 @@
-# Validating OpenAPI and JSON Schema
+---
+title: "Validating OpenAPI and JSON Schema"
+date: 2021-12-08
+tags:
+  - OpenAPI
+  - validation
+  - vocabulary
+  - dynamic reference
+# cover:
+authors:
+  - name: Jason Desrosiers
+    photo: /img/avatars/jasondesrosiers.jpeg
+    link: https://twitter.com/jasondesrosiers
+    byline: JSON Schema Specification Contributor
+excerpt: "Dynamic references make it possible to validate the schemas in an OpenAPI document even though OpenAPI does not constrain which JSON Schema dialects can be used."
+---
 
 Starting with the release of OpenAPI 3.1, the dialect of JSON Schema used in
 OpenAPI documents is configurable. By default, you get the OpenAPI 3.1 Schema
