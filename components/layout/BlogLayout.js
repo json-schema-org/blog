@@ -10,6 +10,21 @@ import TOC from '../TOC'
 import Container from './Container'
 import Footer from '../Footer'
 import AuthorAvatars from '../AuthorAvatars'
+import React from 'react'
+
+function translations(post) {
+  if (post?.hasOwnProperty('translations')) {
+    const knownTranslations = Object.keys(post.translations);
+    const translationLinks = knownTranslations.reduce((acc,t) =>
+      acc === null
+        ? <a className="uppercase rounded-md px-2 py-1 underline" href={post.translations[t]}>{t}</a>
+        : <>{acc}|{<a className="uppercase rounded-md px-2 py-1 underline" href={post.translations[t]}>{t}</a>}</>, null
+    );
+    return <>Translations : {translationLinks} </>;
+  } else {
+    return "";
+  }
+}
 
 export default function BlogLayout({ post, children }) {
   if (!post) return <ErrorPage statusCode={404} />
@@ -19,6 +34,8 @@ export default function BlogLayout({ post, children }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
+  const translationsElements = translations(post);
 
   return (
     <div className="relative pt-8 pb-20 px-4 sm:px-6 lg:pt-6 lg:pb-28 lg:px-8">
@@ -81,6 +98,7 @@ export default function BlogLayout({ post, children }) {
                 `}</style>
               </HtmlHead>
               <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''}${post.cover}`} alt={post.coverCaption} title={post.coverCaption} className="mt-6 mb-6 w-full" />
+              {translationsElements}
               {children}
             </article>
           </main>
