@@ -6,7 +6,7 @@ tags:
   - validation
   - vocabulary
   - dynamic reference
-# cover:
+cover: /img/posts/2021/validating-openapi-and-json-schema/cover.webp
 authors:
   - name: Jason Desrosiers
     photo: /img/avatars/jasondesrosiers.jpeg
@@ -77,7 +77,9 @@ const OasSchema = require("@hyperjump/oas-schema-validator");
 const example = require("./example.openapi.json");
 
 (async function () {
-  const schema = await OasSchema.get("https://spec.openapis.org/oas/3.1/schema");
+  const schema = await OasSchema.get(
+    "https://spec.openapis.org/oas/3.1/schema"
+  );
   const validate = await OasSchema.validate(schema);
 
   const result = validate(example);
@@ -91,7 +93,9 @@ const OasSchema = require("@hyperjump/oas-schema-validator");
 const example = require("./example.openapi.json");
 
 (async function () {
-  const schema = await OasSchema.get("https://spec.openapis.org/oas/3.1/schema-base");
+  const schema = await OasSchema.get(
+    "https://spec.openapis.org/oas/3.1/schema-base"
+  );
   const validate = await OasSchema.validate(schema);
 
   const result = validate(example);
@@ -312,3 +316,5 @@ The second `if`/`then` will validate the schema as a JSON Schema draft-07 schema
 if there is an `$id` and a `$schema` indicating draft-07.
 
 You can extend this pattern for any number of dialects you want to support.
+
+Photo by <a href="https://unsplash.com/@gonchifacello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gonzalo Facello</a> on <a href="https://unsplash.com/collections/8799947/json-schema-posts/c9d98f0b917af1758a609d674392502f?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
