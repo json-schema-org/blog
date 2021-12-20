@@ -45,14 +45,14 @@ Using JSON Schema has reduced the burden of changing requirements. "Even if new 
 
 Cookpad is a global recipe sharing platform, boasting an average of 100 million people every month across the world, spanning 76 countries, supporting 34 languages, and boasting more than 5.5 million shared recipes. It is the largest recipe sharing service in Japan.
 
-<div class="container flex flex-row space-x-4">
-  <figure class="group">
-    <img class="flex-1" src="/blog/img/posts/2021/cookpad-case-study/fridge.webp" />
+<div class="container flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 place-content-between">
+  <figure class="group m-auto">
+    <img class="flex-1 " src="/blog/img/posts/2021/cookpad-case-study/fridge.webp" />
     <figcaption class="absolute text-2xl -mt-9 px-4 bg-gray-600 bg-opacity-50">
         <p class="text-white">Cookpad Mart Fridges</p>
     </figcaption>
   </figure>
-  <figure class="group">
+  <figure class="group m-auto">
     <img class="flex-1" src="/blog/img/posts/2021/cookpad-case-study/office.webp" />
     <figcaption class="absolute text-2xl -mt-9 px-4 bg-gray-600 bg-opacity-50">
         <p class="text-white">Cookpad Offices</p>
