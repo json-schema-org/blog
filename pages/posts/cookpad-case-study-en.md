@@ -2,7 +2,7 @@
 title: "JSON Schema enabled Cookpad to deduplicate complex logic and validation"
 date: 2021-12-09T06:00:00+00:00
 type: Case Study
-cover: /img/posts/2021/cookpad-case-study/cover3.webp
+cover: /img/posts/2021/cookpad-case-study/cover.webp
 authors:
   - name: Ben Hutton
     photo: /img/avatars/benhutton.webp
