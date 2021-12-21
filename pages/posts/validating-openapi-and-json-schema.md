@@ -245,7 +245,7 @@ JSON Schema draft-07. There are a couple of things working together to make this
 possible. The `$schema` keyword sets the dialect for the schema, but `$schema`
 is only allowed at the root of the document it appears in. That's why we also
 need to include the `$id` keyword. The `$id` keyword effectively makes that
-schema a separate document with it's own identifier and that location as the
+schema a separate document with its own identifier and that location as the
 root. It's an independent document embedded inside the OpenAPI 3.1 document. You
 can think of it like an iframe in HTML.
 
