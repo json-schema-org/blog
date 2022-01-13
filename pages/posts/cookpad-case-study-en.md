@@ -9,9 +9,9 @@ authors:
     link: https://twitter.com/relequestual
 excerpt: "Using JSON Schema at Cookpad improved the accuracy and experience when registering products, and has greatly reduced the operational burden of product screening."
 language: en
-translations:
-  en: cookpad-case-study-en
-  jp: cookpad-case-study-jp
+# translations:
+#   en: cookpad-case-study-en
+#   jp: cookpad-case-study-jp
 ---
 
 ## Challenge
