@@ -48,7 +48,7 @@ Using JSON Schema has reduced the burden of changing requirements. "Even if new 
 
 ## Cookpad
 
-Cookpad is a global recipe sharing platform, boasting an average of 100 million people every month across the world, spanning 76 countries, supporting 34 languages, and boasting more than 5.5 million shared recipes. It is the largest recipe sharing service in Japan.
+<p className="text-2xl my-10">Cookpad is a global recipe sharing platform, boasting an average of 100 million people every month across the world, spanning 76 countries, supporting 34 languages, and boasting more than 5.5 million shared recipes. It is the largest recipe sharing service in Japan.</p>
 
 <div className="container flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 place-content-between">
   <figure className="group m-auto">
@@ -75,7 +75,7 @@ High quality ingredients that come from small producers tend to be difficult to 
 
 "We thought that we should use the same logic for backend and frontend applications. At first we thought about creating our own custom JSON Structure, but we had to write many `if` statements, and I do not want to imagine!"
 
-"JSON Schema helps us to implement backend validation and frontend form generation easily. It was quite an excellent experience!" explains Kenshi, estimating that time spent building validation has been cut in half as a result of using JSON Schema.
+<p className="text-2xl my-10">"JSON Schema helps us to implement backend validation and frontend form generation easily. It was quite an excellent experience!" explains Kenshi, estimating that time spent building validation has been cut in half as a result of using JSON Schema.</p>
 
 One mantra developers often hear is DRY: 'don't repeat yourself'. "We could focus ONLY on JSON Schema definitions and everything has been automatically generated and applied," says Kenshi, "That was an excellent moment." Reducing duplication of logic reduces the likelihood of a mismatch in expectations between the client and server side.
 
