@@ -14,6 +14,11 @@ language: en
 #   jp: cookpad-case-study-jp
 ---
 
+<div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg border-2 border-blue-300 border-solid" role="alert">
+  <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>日本語訳も近日公開予定です。(A Japanese translation will be released soon.)
+  </span>
+</div>
+
 ## Challenge
 
 Cookpad Mart is one of the new businesses that Cookpad Inc. is focusing on. It is an e-commerce platform that mainly deals with fresh food, and retailers in the city and local producers participate in Cookpad Mart as sellers. Dedicated refrigerators are installed as pick-up locations for users in various places such as convenience stores, drug stores, train stations, and condominiums. Users can place orders from the app and receive fresh food from the refrigerator.
