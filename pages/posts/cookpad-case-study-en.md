@@ -1,5 +1,5 @@
 ---
-title: "JSON Schema enabled Cookpad to deduplicate complex logic and validation"
+title: "JSON Schema deduplicated complex logic and validation at Cookpad"
 date: 2021-12-09T06:00:00+00:00
 type: Case Study
 cover: /img/posts/2021/cookpad-case-study/cover.webp
