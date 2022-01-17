@@ -20,7 +20,7 @@ function translations(post) {
         ? <a className="uppercase rounded-md px-2 py-1 underline" href={post.translations[t]}>{t}</a>
         : <>{acc}|{<a className="uppercase rounded-md px-2 py-1 underline" href={post.translations[t]}>{t}</a>}</>, null
     );
-    return <>Translations : {translationLinks} </>;
+    return <>{post?.hasOwnProperty('translation') ? post.translation : "Translations"} : {translationLinks} </>;
   } else {
     return "";
   }
@@ -66,7 +66,7 @@ export default function BlogLayout({ post, children }) {
                       &middot;
                     </span>
                     <span>
-                      {post.readingTime} min read
+                      { post.showReadTime ? post.readingTime + 'min read' : '' }
                     </span>
                   </div>
                 </div>
