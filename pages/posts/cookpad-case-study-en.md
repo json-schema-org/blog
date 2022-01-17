@@ -9,15 +9,10 @@ authors:
     link: https://twitter.com/relequestual
 excerpt: "Using JSON Schema at Cookpad improved the accuracy and experience when registering products, and has greatly reduced the operational burden of product screening."
 language: en
-# translations:
-#   en: cookpad-case-study-en
-#   jp: cookpad-case-study-jp
+translations:
+  en: cookpad-case-study-en
+  jp: cookpad-case-study-jp
 ---
-
-<div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg border-2 border-blue-300 border-solid" role="alert">
-  <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>日本語訳も近日公開予定です。(A Japanese translation will be released soon.)
-  </span>
-</div>
 
 ## Challenge
 
@@ -46,7 +41,7 @@ Using JSON Schema has reduced the burden of changing requirements. "Even if new 
 
 "Previously, about 10% of newly registered products had incomplete input of quality assurance items, but with the introduction of JSON Schema, there are no deficiencies in the quality assurance items," says Kenshi.
 
-## Cookpad
+## About Cookpad Inc.
 
 <p className="text-2xl my-10">Cookpad is a global recipe sharing platform, boasting an average of 100 million people every month across the world, spanning 76 countries, supporting 34 languages, and boasting more than 5.5 million shared recipes. It is the largest recipe sharing service in Japan.</p>
 
