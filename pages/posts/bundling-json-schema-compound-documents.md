@@ -1,7 +1,7 @@
 ---
 title: "JSON Schema bundling finally formalised"
 date: 2021-08-04T06:00:00+00:00
-# type: Engineering ?
+type: Engineering
 tags:
   - OpenAPI
   - Bundling

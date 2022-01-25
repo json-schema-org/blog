@@ -1,9 +1,9 @@
 ---
 title: "Why JSON Schema needs a Code of Conduct"
 date: 2021-11-24T06:00:00+00:00
-# type: Engineering ?
 tags:
   - Community
+type: Community
 cover: /img/posts/2021/code-of-conduct-for-json-schema/cover.webp
 authors:
   - name: Ben Hutton

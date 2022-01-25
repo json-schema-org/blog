@@ -3,6 +3,7 @@ title: "JSON Schema in 5 minutes"
 date: 2022-01-21
 tags:
   - Fundamentals
+type: Engineering
 cover: /img/posts/2022/json-schema-in-5-minutes/cover.webp
 authors:
   - name: Ben Hutton

@@ -1,6 +1,7 @@
 ---
 title: "Validating OpenAPI and JSON Schema"
 date: 2021-12-08
+type: Engineering
 tags:
   - OpenAPI
   - validation
