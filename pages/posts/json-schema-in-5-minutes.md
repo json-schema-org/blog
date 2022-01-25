@@ -23,7 +23,7 @@ By the end of this article, you will:
 - Know some of the basics of how JSON Schema works
 - Outshine even those with years of JSON Schema experience (hopefully)
 
-We won't cover writing any code today, but we will link you to a list of implementations in almost any programming language.
+Although this is a technical introduction, we won't cover writing any code today. But we will link you to a list of implementations in almost any programming language.
 
 ## JSON What?
 Primarily, JSON Schema is used to validate data.
@@ -34,10 +34,10 @@ JSON is both human and machine-readable, making it a popular format choice for d
 
 JSON Schema is both the name given to the project and the artefact (A JSON Schema) that defines the required validation. The validation rules are expressed by defining constraints against the JSON data.
 
-The JSON data we are validating is called a "JSON instance".
+The JSON data you are validating is called a "JSON instance".
 
 ## JSON Schema
-JSON Schema the project is located on GitHub under the organization name "json-schema-org". It is comprised of several git repositories used to track changes and enable collaboration on the specification and supporting resources.
+JSON Schema the project is located [on GitHub](https://github.com/json-schema-org) under the organization name "json-schema-org". It is comprised of several git repositories used to track changes and enable collaboration on the specification and supporting resources.
 
 The JSON Schema specification is made up of technical specification documents currently published canonically through the Internet Engineering Task Force (IETF) as a series of "personal drafts". A "personal draft" is the category given to documents published on the IETF which are from an IETF working group.
 
@@ -206,6 +206,7 @@ Here are some places you may find helpful moving forward:
 - [Up to date getting started guide](/learn/getting-started-step-by-step)
 - [Weekly Office Hours (Tuesday, 15:00 UTC)](https://github.com/json-schema-org/community/discussions/34)
 - [Open Community Slack Server](/slack)
+- [Community GitHub Discussions](https://github.com/json-schema-org/community/discussions)
 - [List of implementations](/implementations)
 - [Human-friendly documentation for understanding JSON Schema](/understanding-json-schema)
 - [JSON Schema live playground (ajv) for draft-07 with shareable links](https://jsonschema.dev)
