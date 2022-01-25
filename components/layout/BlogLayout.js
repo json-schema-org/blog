@@ -66,7 +66,7 @@ export default function BlogLayout({ post, children }) {
                       &middot;
                     </span>
                     <span>
-                      { post.showReadTime ? post.readingTime + 'min read' : '' }
+                      { post.showReadTime != false ? post.readingTime + ' min read' : '' }
                     </span>
                   </div>
                 </div>
