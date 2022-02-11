@@ -1,11 +1,11 @@
 ---
-title: "Project update and year progress 2022"
+title: "JSON Schema joins the OpenJS Foundation and 2022 updates"
 date: 2022-02-11
 tags:
   - Update
   - News
 type: Update
-cover: /img/posts/2022/update-and-year-progress-2022/cover.webp
+cover: /img/posts/2022/json-schema-joins-the-openjsf/cover.webp
 authors:
   - name: Ben Hutton
     photo: /img/avatars/benhutton.webp
@@ -14,7 +14,7 @@ authors:
 excerpt: "Find out what we've been doing in 2021 and read about our biggest development yet... joining the OpenJS Foundation. Oh, and WE'RE HIRING!"
 ---
 
-Joining Postman to work full time on JSON Schema has been a great move not only for me, but also for JSON Schema. Working full time on JSON Schema has been something I never expected, but I'm grateful and honoured to be able to do.
+Joining Postman to work full time on JSON Schema has been a great move for me personally, and I feel for the JSON Schema project. Working full time on JSON Schema has been something I never expected, but I'm grateful and honoured to be able to do.
 
 It's been almost a year, and one of the first meetings I organized was to chat with the OpenJS Foundation to learn more and discuss the potential for JSON Schema to join the foundation. That's why it gives me great pleasure to announce that JSON Schema has joined the OpenJS Foundation!
 
