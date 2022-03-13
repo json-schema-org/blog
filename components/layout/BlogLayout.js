@@ -77,6 +77,7 @@ export default function BlogLayout({ post, children }) {
                 title={post.title}
                 description={post.excerpt}
                 image={post.cover}
+                canonicalLink={post.canonicalLink}
               />
               <HtmlHead>
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ffbbba2767da29" async />

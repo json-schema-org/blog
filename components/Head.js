@@ -9,7 +9,8 @@ export default function HeadComponent({
   description = 'JSON Schema Blog',
   image = '/img/social/card.png',  // Need to fix this!
   rssTitle = 'RSS Feed for the JSON Schema Blog',
-  rssLink = '/rss.xml'
+  rssLink = '/rss.xml',
+  canonicalLink = false
 }) {
   const url = process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL
   const { path = '' } = useContext(AppContext)
@@ -33,6 +34,10 @@ export default function HeadComponent({
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="description" content={description} />
       <link rel="alternate" type="application/rss+xml" title={rssTitle} href={rssLink} />
+
+      {canonicalLink && (
+        <link rel="canonical" href={canonicalLink} />
+      )}
 
       {/* Icons */}
       <link rel="icon" href="/favicon.ico" />
