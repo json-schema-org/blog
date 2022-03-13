@@ -13,6 +13,7 @@ authors:
     link: https://twitter.com/simonplend
     byline: Independent Node.js consultant and educator
 excerpt: "Learn how to use JSON Schema for validation in your Node.js applications."
+canonicalLink: https://simonplend.com/get-started-with-validation-in-node-js/
 ---
 
 > Originally published at [simonplend.com](https://simonplend.com/get-started-with-validation-in-node-js/).
