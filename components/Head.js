@@ -10,7 +10,7 @@ export default function HeadComponent({
   image = '/img/social/card.png',  // Need to fix this!
   rssTitle = 'RSS Feed for the JSON Schema Blog',
   rssLink = '/rss.xml',
-  canonicalLink = false
+  canonicalLink = true
 }) {
   const url = process.env.DEPLOY_PRIME_URL || process.env.DEPLOY_URL
   const { path = '' } = useContext(AppContext)
