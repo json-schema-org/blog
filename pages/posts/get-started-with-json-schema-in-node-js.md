@@ -116,6 +116,8 @@ As one final step, we'll look at how we can potentially improve the way we creat
 
 JSON schemas are an expressive way of defining validation rules, but writing schemas "by hand" can sometimes get a bit much. There's a handy library called [fluent-json-schema](https://npm.im/fluent-json-schema) which can help us generate our JSON schemas. Let's give it a try.
 
+Note that while using a tool to define validaiton rules to be converted into a JSON Schema gives you control, other methods of generating JSON Schema, for example from your instance data, often leaves you with a partially complete or sometimes incorrect JSON Schema. Other approaches might be better called "scaffolding" rather than "generating", as you'll have the basics, but still have work to do before it's complete and useable.
+
 First we need to install the library by running the command `npm install fluent-json-schema`. Then we can import it and use it to generate our schema:
 
 ```javascript
