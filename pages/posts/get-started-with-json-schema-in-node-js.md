@@ -178,4 +178,4 @@ If you'd like to learn more about JSON Schema, you might find these links helpfu
 - **[Understanding JSON Schema](https://json-schema.org/understanding-json-schema/)**. A free online book which will teach you the fundamentals of JSON Schema. Also available in PDF format for offline reading.
 - **[JSON Schema Cheat Sheet](https://simonplend.com/wp-content/uploads/2020/12/JSON-Schema-Cheat-Sheet-v1.1.pdf)**. I created this cheat sheet PDF as a handy reference for JSON Schema validation keywords. Use it to give you a helping hand any time you're writing schemas.
 
-> Photo by [Enzo Tommasi](https://unsplash.com/@11x11) on [Unsplash](https://unsplash.com/photos/M4pMX0wMeVk).
+> Photo by [Manik Rathee](https://unsplash.com/@manikrathee) on [Unsplash](https://unsplash.com/photos/a8YV2C3yBMk).
