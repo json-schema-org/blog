@@ -1,6 +1,6 @@
 ---
 title: "Get started with JSON Schema in Node.js"
-date: 2022-03-14T06:00:00+00:00
+date: 2022-05-16T06:00:00+00:00
 tags:
   - Node.js
   - Ajv
