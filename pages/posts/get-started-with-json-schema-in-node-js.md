@@ -110,6 +110,8 @@ Pretty slick, huh?
 
 Alright, we've created a schema which describes the structure and types we expect, validated data against it, and handled any validation errors. So far so good!
 
+> A note from the editor: In the latest major release of AJV, a "strict mode" was introduced, enabled by default, which sometimes throws an exception when a valid JSON Schema is used. If you run into problems with strict mode related errors, check out [the documentation](https://ajv.js.org/strict-mode.html) for details on how to disable it, or even specific rules. We feel this may be better as linter functionality, however it does help prevent accidental errors in schema authorship. - Ben Hutton
+
 As one final step, we'll look at how we can potentially improve the way we create our JSON schema.
 
 ## Schema generation
