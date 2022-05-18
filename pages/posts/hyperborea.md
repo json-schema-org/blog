@@ -5,12 +5,15 @@ tags: []
 type: Engineering
 cover: /img/posts/2022/hyperborea/cover.jpg
 authors:
-  - name: Yanick Champoux 
+  - name: Yanick Champoux
     photo: /img/avatars/yanick.jpg
     link: https://twitter.com/yenzie
     byline: Necrohacker
 excerpt: Using JSON Schema for validating role-playing character sheets.
+canonicalLink: https://techblog.babyl.ca/entry/hyperborea-character
 ---
+
+> Originally published at [techblog.babyl.ca](https://techblog.babyl.ca/entry/hyperborea-character).
 
 For the last two years I am part of a band of intrepid
 adventurers joining forces every Thursday night via the teleporting magic of Discords, semi-arguably doing our best
@@ -501,7 +504,7 @@ health:
 Basically (and once we add a `--data` flag to `ajv` to tell it to enable
 that feature), any mention of `{ $data: '/path/to/another/value/in/the/schema' }` will be replaced by the value for which that JSON pointer resolves to
 in the document being validated. That's something that is not part of JSON
-Schema proper, but it's a mightily useful way to interconnect the schema 
+Schema proper, but it's a mightily useful way to interconnect the schema
 and the document being validated.
 
 Word of caution, though: I say 'any mention of $data', but that's
@@ -679,8 +682,8 @@ module.exports = (ajv) =>
                 );
             }
 
-            if( schema.class !== 'magician' 
-                && schema.class?.generic !== 'magician' 
+            if( schema.class !== 'magician'
+                && schema.class?.generic !== 'magician'
                 && data.length ) {
                 validate.errors = [
                     {
@@ -718,7 +721,7 @@ $defs:
             qty:
               type: number
               description: |
-                quantity of the item in the 
+                quantity of the item in the
                 character's possession
           required: [ desc ]
           additionalProperties: false
