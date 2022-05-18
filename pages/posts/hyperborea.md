@@ -1,6 +1,6 @@
 ---
 title: Astonishing Serializations & Schemas of Hyperborea
-date: 2022-04-27
+date: 2022-05-18
 tags: []
 type: Engineering
 cover: /img/posts/2022/hyperborea/cover.jpg
