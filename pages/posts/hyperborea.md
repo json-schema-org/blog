@@ -510,7 +510,7 @@ and the document being validated.
 Word of caution, though: I say 'any mention of $data', but that's
 overselling it. There are a few cases where `$data` fields won't be resolved.
 If you are to use that feature, make sure to reserve a few minutes to read
-the Ajv docs about it. Trust me, it'll save you a few "what the everlasting heck?" moments.
+the AJV docs about it. Trust me, it'll save you a few "what the everlasting heck?" moments.
 
 ## Custom keywords
 
@@ -532,7 +532,7 @@ health:
             items: { type: number }
 ```
 
-That's where custom keywords enter the picture. `ajv` allows us to
+That's where custom keywords enter the picture. AJV allows us to
 augment the JSON Schema vocabulary with new keywords.
 
 There is a few ways to define that custom keyword. The one I opted for
