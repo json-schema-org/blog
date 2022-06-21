@@ -8,7 +8,7 @@ type: Community
 cover: /img/posts/2022/and-then-there-were-three/cover.jpg
 authors:
   - name: Greg Dennis
-    photo: /img/avatars/gregsdennis.png
+    photo: /img/avatars/gregsdennis.jpg
     link: https://twitter.com/gregsdennis
     byline: JSON Tooling Implementer, Specification & Tooling Architect @Postman
 excerpt: "More full-time contributors is better, right?"
