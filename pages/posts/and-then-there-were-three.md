@@ -60,7 +60,7 @@ Ben's response was incredible and perfect:  he championed JSON Schema joining th
 
 Then business carried on as usual.  We were all working hard toward the release of an editorial, non-functional patch release for 2020-12 (now released!), and Ben found that he needed some more dedicated help.  So in Slack DMs, he asked me if I would be interested in joining up.  Even though I was just getting settled in at a new company, I couldn't let this opportunity pass me by.  Getting paid to work on a passion project is the dream!
 
-And now, I'm extremely excited to announce that I'm joining Postman's Open Source Initiative as a Specification & Tooling Architect.  I will have three focuses: work on the JSON Schema specification, support for its implementors, and development support of adjacent uses.
+And now, I'm extremely excited to announce that I'm joining Postman Open Technologies as a Specification & Tooling Architect.  I will have three focuses: work on the JSON Schema specification, support for its implementors, and development support of adjacent uses.
 
 To start with the specification, the output format will continue to be a primary focus for me.  Earlier this year, I opened a [discussion](https://github.com/orgs/json-schema-org/discussions/63) on potential improvements.  I think that we're in a good place, and I need to start creating PRs that move the current language in the specification to the new design.
 
