@@ -5,7 +5,7 @@ tags:
   - Update
   - News
 type: Community
-cover: /img/posts/2022/and-then-there-were-three/cover.webp
+cover: /img/posts/2022/and-then-there-were-three/cover.jpg
 authors:
   - name: Greg Dennis
     photo: /img/avatars/gregsdennis.png
