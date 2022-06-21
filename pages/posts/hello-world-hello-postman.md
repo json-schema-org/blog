@@ -34,7 +34,8 @@ My first public commit of the Python `jsonschema` project was in [December of th
 
 At the time, I decided to write a Python implementation not because one didn't already exist – on the contrary, at the time in 2011, there already were one or two out there. My implementation was instead almost born out of coincidence. I was growing as a developer at the time, and starting to form opinions about what I thought good code looked like (occasionally overly strong ones). When I found some specification inconsistencies in the pre-existing implementations, it gave me an itch to write something I could "own" and learn from as a maintainer.
 
-It was surprisingly quickly before my implementation was used by other projects, and those other projects were reaching out with issues, requests, thanks or feedback, which definitely caused me to continue to invest time and energy into improving it.
+It wasn't long before my implementation was used by other projects, and those other projects were reaching out with issues, requests, thanks or feedback.
+Hearing others appreciated my work was definitely good motivation to continue to invest effort into it.
 
 ## The Test Suite
 
