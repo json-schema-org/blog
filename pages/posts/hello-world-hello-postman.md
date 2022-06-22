@@ -65,7 +65,7 @@ Through the years I've occasionally spoken about JSON Schema at conferences or m
 
 And more broadly than myself, we have even bigger dreams. Stay tuned for more details there, both here on the blog as well as on the issue trackers and discussion boards throughout the organization.
 
-Please help! Your feedback, as a user, as an implementer of the specification, or as an observer, are all likely invaluable to making sure JSON Schema moves forward. Please do reach out – to Ben, to myself, to other wonderful folks who form JSON Schema's contributors, and/or via the [JSON Schema Slack](https://json-schema.slack.com/). I know we'd all love to hear feedback, things you'd like to see, constructive complaints, or general thoughts on how we can grow the community.
+Please help! Your feedback, as a user, as an implementer of the specification, or as an observer, are all likely invaluable to making sure JSON Schema moves forward. Please do reach out – to Ben, to myself, to other wonderful folks who form JSON Schema's contributors, and/or via the [JSON Schema Slack](https://json-schema.org/slack). I know we'd all love to hear feedback, things you'd like to see, constructive complaints, or general thoughts on how we can grow the community.
 
 In particular, if you're an open source maintainer who depends on my library, or on the test suite, please introduce yourself if we don't already know each other! I'd love to hear about what either can do better for you.
 
