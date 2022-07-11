@@ -7,7 +7,7 @@ const { slugify } = require('markdown-toc/lib/utils')
 const readingTime = require('reading-time')
 const { markdownToTxt } = require('markdown-to-txt')
 
-let specWeight = 100
+// let specWeight = 100
 const result = []
 const basePath = 'pages'
 const postDirectories = [
@@ -65,7 +65,7 @@ function walkDirectories(directories, result, sectionWeight = 0, sectionTitle) {
 function slugifyToC(str) {
   let slug
   // Try to match heading ids like {# myHeadingId}
-  const headingIdMatch = str.match(/[\s]?\{\#([\w\d\-_]+)\}/)
+  const headingIdMatch = str.match(/[\s]?\{#([\w\d\-_]+)\}/)
   if (headingIdMatch && headingIdMatch.length >= 2) {
     slug = headingIdMatch[1]
   } else {
@@ -81,5 +81,5 @@ function isDirectory(dir) {
 }
 
 function capitalize(text) {
-  return text.split(/[\s\-]/g).map(word => `${word[0].toUpperCase()}${word.substr(1)}`).join(' ')
+  return text.split(/[\s-]/g).map(word => `${word[0].toUpperCase()}${word.substr(1)}`).join(' ')
 }

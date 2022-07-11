@@ -197,7 +197,7 @@ function getMDXComponents() {
         if (caption.startsWith('\'') && caption.endsWith('\''))
           caption = caption.substring(1, caption.length - 1);
       });
-      const maybeLanguage = className.match(/language\-([\w\d\-_]+)/);
+      const maybeLanguage = className.match(/language-([\w\d\-_]+)/);
       const language =
         maybeLanguage && maybeLanguage.length >= 2
           ? maybeLanguage[1]

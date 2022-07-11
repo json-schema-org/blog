@@ -1,6 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("@tailwindcss/ui/colors");
-const plugin = require("tailwindcss/plugin");
+// const plugin = require("tailwindcss/plugin");
 
 const colorPrimary = {
   100: "#e0f0fb",

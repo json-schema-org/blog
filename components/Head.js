@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Head from 'next/head'
 import AppContext from '../context/AppContext'
 import ReactGA from 'react-ga'
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 
 export default function HeadComponent({
   title,

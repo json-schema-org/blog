@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import { useRouter } from 'next/router'
 import HtmlHead from 'next/head'
 import ErrorPage from 'next/error'

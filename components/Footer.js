@@ -1,9 +1,9 @@
 import IconTwitter from './icons/Twitter'
 import IconGithub from './icons/Github'
-import IconYoutube from './icons/YouTube'
-import IconLinkedIn from './icons/LinkedIn'
-import NewsletterSubscribe from './NewsletterSubscribe'
-import Container from './layout/Container'
+// import IconYoutube from './icons/YouTube'
+// import IconLinkedIn from './icons/LinkedIn'
+// import NewsletterSubscribe from './NewsletterSubscribe'
+// import Container from './layout/Container'
 
 export default function Footer() {
   return (
