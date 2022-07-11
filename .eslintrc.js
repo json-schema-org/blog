@@ -14,7 +14,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: "module",
   },
   plugins: ["react"],
@@ -22,5 +22,11 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "no-useless-catch": "off",
     // quotes: ["error", "single"],
+    "react/prop-types": "off",
+  },
+  "settings": {
+    react: {
+      "version": "detect",
+    },
   },
 };
