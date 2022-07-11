@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^7.20.0"
   },
   "volta": {
-    "node": "14.17.3",
+    "node": "16.16.0",
     "yarn": "1.22.10"
   }
 }
