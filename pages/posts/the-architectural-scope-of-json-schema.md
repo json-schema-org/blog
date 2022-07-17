@@ -43,15 +43,15 @@ An implementation of JSON Schema is an embodiment of the specification that is d
 
 ## A nuance
 
-Something I've seen a lot of lately, and I think the source of some of the confusion that has arisen in my discussions, is that many implementations are embedded into applications in such a way that they are inseparable from that application (at least, not without a lot of work).  This tends to give the appearance that the application itself is the implementation.  But I don't see it that way.  Even in these cases, there exists a distinction between the application and the implementation, even if that distinction is, in practice, really blurry.
+Something I've seen a lot of lately, and I think the source of some of the confusion that has arisen in my discussions, is that an application may be merely an executable wrapper around an implementation.  This tends to give the appearance that the application itself is the implementation.  But I don't see it that way.  Even in these cases, there exists a distinction between the application and the implementation, even if that distinction is, in practice, really blurry.
 
 Applications tend to have three basic components:  an interface (UX or API), some business logic, and data persistence.  **All** applications have an interface.  However, the business logic and data persistence components are optional to the degree that you can have one or the other or both.  (An application with only a UX is generally not very useful.)
 
 An application may only provide an interface over data persistence (e.g. a Postgres web service), meaning that there's no need for any business logic.  Conversely, another application may provide a computational service (e.g. image processing) where there's no need to persist data.
 
-For the recent conversations I've had, this second scenario seems to be the case: an implementation has been created _as_ an application that just evaluates instances against schemas.  But the unification of the application and implementation doesn't mean that they *are* the same thing.
+For the recent conversations I've had, this second scenario seems to be the case: an application is created that just evaluates instances against schemas.  But this doesn't mean that the application and implementation *are* the same thing.
 
-These applications can be refactored so that the business logic (the implementation) is completely separate from the interface.  And it's important to recognize that JSON Schema as a specification can only cover the implementation part.
+Within these applications the implementation, which for these applications _is_ the business logic, is still a separate component from the interface.  And it's important to recognize that JSON Schema as a specification can only cover the implementation part.
 
 ## Why any of this matters
 
