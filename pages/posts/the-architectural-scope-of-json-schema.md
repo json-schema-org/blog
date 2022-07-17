@@ -10,7 +10,7 @@ authors:
     photo: /img/avatars/gregsdennis.webp
     link: https://twitter.com/gregsdennis
     byline: JSON Tooling Implementer, Specification & Tooling Architect @ Postman
-excerpt: "What actually _is_ JSON Schema?!"
+excerpt: "What actually is JSON Schema?!"
 ---
 
 Recently, I've had a few conversations that got me thinking about JSON Schema's place architecturally.  Today I'd like to share some of those thoughts.
@@ -43,7 +43,7 @@ An implementation of JSON Schema is an embodiment of the specification that is d
 
 ## A nuance
 
-Something I've seen a lot of lately, and I think the source of some of the confusion that has arisen in my discussions, is that many implementations are embedded into applications in such a way that they are inseperable from that application (at least, not without a lot of work).  This tends to give the appearance that the application itself is the implementation.  But I don't see it that way.  Even in these cases, there exists a distinction between the application and the implementation, even if that distinction is, in practice, really blurry.
+Something I've seen a lot of lately, and I think the source of some of the confusion that has arisen in my discussions, is that many implementations are embedded into applications in such a way that they are inseparable from that application (at least, not without a lot of work).  This tends to give the appearance that the application itself is the implementation.  But I don't see it that way.  Even in these cases, there exists a distinction between the application and the implementation, even if that distinction is, in practice, really blurry.
 
 Applications tend to have three basic components:  an interface (UX or API), some business logic, and data persistence.  **All** applications have an interface.  However, the business logic and data persistence components are optional to the degree that you can have one or the other or both.  (An application with only a UX is generally not very useful.)
 
