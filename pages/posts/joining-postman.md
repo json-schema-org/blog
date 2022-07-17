@@ -14,7 +14,7 @@ authors:
 ---
 
 In the last couple of weeks, you may have seen that Postman has been investing
-heavily in JSON Schema\'s future by hiring some of its top contributors giving
+heavily in JSON Schema's future by hiring some of its top contributors giving
 them the opportunity to work full time on improving the JSON Schema
 specification and tooling ecosystem. I'm happy to announce that I'm the next
 addition to that team.
