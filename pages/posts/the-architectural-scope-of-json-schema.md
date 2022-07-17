@@ -17,9 +17,9 @@ Recently, I've had a few conversations that got me thinking about JSON Schema's 
 
 ## What _is_ JSON Schema?
 
-JSON Schema is a specification that defines a system of a set of behaviors that can be used to determine whether a JSON value meets certain rules, as well as how those rules can be expressed.
+JSON Schema is a specification that defines a mechanism to describe a JSON value and can be used to validate and provide meta-data about the value.  This mechanism is organized into a number of keywords, each of which provides a defined behavior.
 
-A single set of rules comprises a "schema."
+A single set of keywords comprises a "schema."
 
 This system takes an input of a schema, which itself is representable as a JSON value, and a JSON value (which we call the "instance") to which the rules in the schema will be applied.  For the purposes of this post, we'll call the application of these rules "evaluation."  (i.e. A schema "evaluates" an instance.)
 
