@@ -51,7 +51,7 @@ An application may only provide an interface over data persistence (e.g. a Postg
 
 For the recent conversations I've had, this second scenario seems to be the case: an implementation has been created _as_ an application that just evaluates instances against schemas.  But the unification of the application and implementation doesn't mean that they *are* the same thing.
 
-These applications can be refactored so that the business logic (the implementation) is completely separate from the interface.  And it's important to recognize that JSON Schema as a specficiation can only cover the implementation part.
+These applications can be refactored so that the business logic (the implementation) is completely separate from the interface.  And it's important to recognize that JSON Schema as a specification can only cover the implementation part.
 
 ## Why any of this matters
 
@@ -59,7 +59,7 @@ It all comes back to what I touched on this in the opening section: JSON Schema 
 
 When the line between implementation and application is blurred, it's natural to think that the specification is imposing requirements on how the application communicates with its users.  But that's not the case.
 
-It is impossible for JSON Schema to know the needs of an application's users, and so it's impractical for the specification to attempt to define input and output to which applications must adhere.
+It is impossible for JSON Schema to know the needs of an application's users, and so it's impractical for the specification to attempt to define input and output requirements to which applications must adhere.
 
 Users of different applications have different needs.  Even when you consider two applications that essentially just provide a UX for implementations, say a web app and a CLI, the UX needs of their users are vastly different, despite the two applications doing basically the same thing.
 
@@ -67,7 +67,7 @@ Users of different applications have different needs.  Even when you consider tw
 
 As a result of everything discussed above, it follows that the specification's input and output requirements are only applicable when there is a clear communication seam between an application and a JSON Schema implementation.
 
-The specification recognizes that programming languages and frameworks likely will not be dealing with textual JSON, but rather they will use data models defined within the limitations of that language.  As such, it defines input and output in terms of the abstract JSON data model so that implemenations are free to use what they have at their disposal.
+The specification recognizes that programming languages and frameworks likely will not be dealing with textual JSON, but rather they will use data models defined within the limitations of that language.  As such, it defines input and output in terms of abstract JSON data and JSON Schema models so that implementations are free to use what they have at their disposal.
 
 Specifically, these requirements only pertain to standalone implementations that are provided as general-use representations of the JSON Schema specification to be consumed by unknown parties.
 
