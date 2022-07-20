@@ -37,6 +37,8 @@ The reasons to ensure we have valid JSON data could be numerous: checking data b
 
 So _applications_ are the consumers of JSON Schema.
 
+But what about annotations?  Well, annotations are specifically _intended_ for applications so that they can provide additional behavior.  So, yeah, applications are still the consumers here.
+
 But an application can't consume a specification without that specification being realized into code.  That's where implementations come in.
 
 An implementation of JSON Schema is an embodiment of the specification that is directly consumable by an application.
