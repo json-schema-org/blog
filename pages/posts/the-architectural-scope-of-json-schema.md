@@ -23,7 +23,7 @@ A single set of keywords comprises a "schema."
 
 This system takes an input of a schema, which itself is representable as a JSON value, and a JSON value (which we call the "instance") to which the rules in the schema will be applied.  For the purposes of this post, we'll call the application of these rules "evaluation."  (i.e. A schema "evaluates" an instance.)
 
-The output of an evaluation is an aggregation of the individual results of each of the rules.
+The output of an evaluation is an aggregation of the individual errors and/or annotations of each of the rules.
 
 However, in general, a system of behaviors is somewhat abstract, and so it's not practically useful.  What we need is a realization of this system in code.  What we need is an implementation.
 
