@@ -71,6 +71,6 @@ The specification recognizes that programming languages and frameworks likely wi
 
 Specifically, these requirements only pertain to standalone implementations that are provided as general-use representations of the JSON Schema specification to be consumed by unknown parties.
 
-Applications which have integrated implemenations or application/implemenatation pairs which have specialized contracts need not adhere to these requirements because these arrangements are out of scope of the specification.
+Applications which have integrated implementations or application/implementation pairs which have specialized contracts need not adhere to these requirements because these arrangements are out of scope of the specification.
 
 _Cover photo by me_ 😁
