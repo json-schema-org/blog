@@ -17,7 +17,7 @@ Recently, I've had a few conversations that got me thinking about JSON Schema's 
 
 ## What _is_ JSON Schema?
 
-JSON Schema is a specification that defines a mechanism to describe a JSON value and can be used to validate and provide meta-data about the value.  This mechanism is organized into a number of keywords, each of which provides a defined behavior.
+JSON Schema is a specification that defines a mechanism to describe a JSON value and can be used to validate and annotate the value.  This mechanism is organized into a number of keywords, each of which provides a defined behavior.
 
 A single set of keywords comprises a "schema."
 
