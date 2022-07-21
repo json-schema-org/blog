@@ -48,7 +48,7 @@ An implementation of JSON Schema is an embodiment of the specification that is d
 
 Something I've seen a lot of lately, and I think the source of some of the confusion that has arisen in my discussions, is that an application may be merely an executable wrapper around an implementation.  This tends to give the appearance that the application itself is the implementation, in which case the application would be subject to the requirements of the specification.  But I don't see it that way.  Even in these cases, there exists a distinction between the application and the implementation, even if that distinction is, in practice, really blurry.
 
-***NOTE** It's important to recognize that this distinction is **actually** blurry.  This is currently an open point of discussion, and nothing has been officially defined in this area.*
+_**NOTE** It's important to recognize that this distinction is **actually** blurry.  This is currently an open point of discussion, and nothing has been officially defined in this area._
 
 Applications tend to have three basic components:  an interface (UX or API), some business logic, and data persistence.  **All** applications have an interface.  However, the business logic and data persistence components are optional to the degree that you can have one or the other or both.  (An application with only a UX is generally not very useful.)
 
