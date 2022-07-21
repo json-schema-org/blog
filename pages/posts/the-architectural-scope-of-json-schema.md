@@ -2,8 +2,9 @@
 title: "The Architectural Scope of JSON Schema"
 date: 2022-07-15
 tags:
+  - Opinion
   - Fundamentals
-type: Engineering
+type: Opinion
 cover: /img/posts/2022/the-architectural-scope-of-json-schema/cover.webp
 authors:
   - name: Greg Dennis
