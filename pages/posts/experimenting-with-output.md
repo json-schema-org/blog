@@ -1,5 +1,5 @@
 ---
-title: "Experimenting with Output"
+title: "Exploring JSON Schema Output"
 date: 2022-07-23
 tags:
   - Engineering
@@ -11,7 +11,6 @@ authors:
     photo: /img/avatars/gregsdennis.webp
     link: https://twitter.com/gregsdennis
     byline: JSON Tooling Implementer, Specification & Tooling Architect @Postman
-excerpt: ""
 ---
 
 I have a problem: when I read GitHub issues, they occasionally resonate with me, and I obsess about them until they're resolved.  That may not sound like a problem to some, but when that resolution causes JSON Schema implementation developers to ask fundamental design questions for three years... yeah, that's a problem.
@@ -22,7 +21,7 @@ And that's precisely what happened coming out of draft 2019-09.  For this versio
 - Among those who wanted some more detail about what actually failed, some preferred a flat list, while others figured a hierarchy that matched the schema would work better.  So we created `basic` for the list people.
 - Finally of those that wanted a hierarchy, some wanted a condensed version (which became `detailed`), and others wanted the fully-realized hierarchy (`verbose`).
 
-***ASIDE** Some people wanted a hierarhy that mimicked the instance data, but we couldn't figure out how to make that work in a realistic way, so we just kinda swept it under the rug and moved on.*
+_**ASIDE** Some people wanted a hierarchy that mimicked the instance data, but we couldn't figure out how to make that work in a realistic way, so we just kinda swept it under the rug and moved on._
 
 ## Adding stuff to the spec
 
@@ -58,7 +57,7 @@ Draft 2020-12 had come and gone, and I decided to do something about the output.
 
 First up was a isolating purpose for and renaming some of the output properties.  These properties served a purpose, but [naming things is hard](https://martinfowler.com/bliki/TwoHardThings.html), and the names for these could be better.  This one got a quick-n-easy PR that's already been merged, so that's one thing done.
 
-You can read the dicussion for the rest of the proposed changes, but at some point in the discussion, I had an epiphany, and I now wonder how many of the other changes still apply.
+You can read the discussion for the rest of the proposed changes, but at some point in the discussion, I had an epiphany, and I now wonder how many of the other changes still apply.
 
 The epiphany was this:  Why is the output designed to capture errors and annotations from individual keywords instead of from subschemas when it's the subschemas that ultimately collect errors and annotation and provide the final result?
 
