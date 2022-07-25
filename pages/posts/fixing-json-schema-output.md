@@ -35,7 +35,7 @@ I even implemented it in my library, Manatee.Json, before the spec was released 
 
 But I missed something: annotations.  I mean, I considered them, and provided requirements for them.  But I didn't provide an example of the results from a passing instance that generated annotations.  I guess _technically_ I did, but it was buried, nested way down inside the `verbose` example, which happened to be so big that I decided it needed to be in its own file, separate from the specification document.  (Yeah, like anyone was gonna read _that_.)
 
-The highlight of the following years would be the numerous questions I would receive from fellow implementors regarding confusion about the output, mainly around how annotations should be represented.  And my general response to these questions wasn't great either:  "They're in the output, just like errors."  I thought it was a trivial exercise.
+The highlight of the following years would be the numerous questions I would receive from fellow implementors regarding confusion about the output, mainly around how annotations should be represented.  And my general response to these questions wasn't great either:  "They're just like errors."  I thought it was a trivial exercise.
 
 Fortunately, we listed the output as a whole as a "SHOULD" requirement, so implementations weren't _required_ to do it.  The idea behind this was that we were in the early stages of defining it and we didn't want to put too much of a burden on implementations knowing that we were likely going to tweak it in future releases.
 
@@ -78,7 +78,9 @@ To understand what I mean by this, let's take a look at the existing output.  We
     "foo": {
       "title": "foo's title",
       "description": "foo's description",
-      "type": "string"
+      "type": "string",
+      "pattern": "^foo ",
+      "minLength": 10,
     }
   },
   "required": [ "foo" ],
@@ -87,7 +89,7 @@ To understand what I mean by this, let's take a look at the existing output.  We
 
 // instance (passing)
 {
-  "foo": "bar"
+  "foo": "foo isn't a real word"
 }
 ```
 
@@ -133,7 +135,7 @@ The 2019-09 / 2020-12 specs would require the following output for this evaluati
 
 So what's bad about this?
 
-- Annotations are being rendered as full nodes.  This results in a lot of unnecessary or duplicate information.  This is actually more apparent in the hierarchical formats where everything is grouped by location.
+- Annotations are being rendered as full nodes.  This results in a lot of unnecessary or duplicate information.  This is actually more apparent in the hierarchical formats where everything is grouped by location making the repeated location properties redundant.
 - All nodes carry the `valid` property, which makes it difficult to tell what is the result of an annotation vs the result of a validation.
 - The top-level node has a plural `annotations` property with an array of nodes, whereas the inner nodes each have a singular `annotation` property with the annotation value.  This is just confusing.
 
@@ -261,7 +263,7 @@ Our first failing instance
 
 ```json
 {
-  "baz": [ "array", "of", "strings" ]
+  "baz": 42
 }
 ```
 
@@ -270,7 +272,7 @@ This will fail because
 - `foo` is required but missing
 - `baz` isn't allowed
 
-The current output has the same problems as the annotations output:
+The current error output has the same problems as the current annotations output:
 
 ```json
 {
@@ -326,11 +328,11 @@ Let's look at the new output:
 
 Again, we see the errors exist as a single `errors` property, which is reported at the subschema level.
 
-Also, that nuance I mentioned appears: that `false` under `additionalProperties` is reported as a separate subschema (because it technically _is_ a subschema).  Looking at the evaluation path, though, it still appears that we're reporting at the keyword level.  That's the nuance:  we're actually reporting at the subschema level; it's just that the subschema happens to be located at a keyword.  Let's take a look at another failing instance to see this better.
+Also, that nuance I mentioned appears: that `false` under `additionalProperties` is reported as a separate subschema (because it technically _is_ a subschema), and the error is reported as an empty-string keyword.  Looking at the evaluation path, though, it still appears that we're reporting at the keyword level.  That's the nuance:  we're actually reporting at the subschema level; it's just that the subschema happens to be located at a keyword.  Let's take a look at another failing instance to see this better.
 
 ```json
 {
-  "foo": { "definitely": "not a string" }
+  "foo": "baz"
 }
 ```
 
@@ -344,11 +346,13 @@ Also, that nuance I mentioned appears: that `false` under `additionalProperties`
       "schemaLocation": "https://json-everything/example-schema#/properties/foo",
       "instanceLocation": "/foo",
       "errors": {
-        "type": "Value is \"object\" but should be \"string\""
+        "pattern": "The string value was not a match for the indicated regular expression",
+        "minLength": "Value is not longer than or equal to 10 characters"
       }
     }
   ]
 }
+
 ```
 
 Here, you can see that the evaluation path shows that we are at the subschema located at `/properties/foo`.  Compare this to the previous example, where we were evaluating the subschema `false` at the location `/additionalProperties`, and you can see the similarity.
