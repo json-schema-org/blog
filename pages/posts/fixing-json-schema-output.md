@@ -352,7 +352,6 @@ Also, that nuance I mentioned appears: that `false` under `additionalProperties`
     }
   ]
 }
-
 ```
 
 Here, you can see that the evaluation path shows that we are at the subschema located at `/properties/foo`.  Compare this to the previous example, where we were evaluating the subschema `false` at the location `/additionalProperties`, and you can see the similarity.
