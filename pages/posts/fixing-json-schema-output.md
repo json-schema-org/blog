@@ -362,4 +362,4 @@ So that's one way that I would like to update the output and the reasoning behin
 
 Again, if you'd like to see what the impact of making this change in my implementation was, please have a look at [this PR](https://github.com/gregsdennis/json-everything/pull/308).  All of these changes were driven by updating the output, but I think most of them are specific to my architecture, and some of them could be made to the library even without implementing the new output.  The short summary, though, is the net -343 lines of code!
 
-_Cover photo by me_ 😁
+_Cover photo by [Daria Nepriakhina](https://unsplash.com/@epicantus) on [Unsplash](https://unsplash.com/photos/zoCDWPuiRuA)_ 😁
