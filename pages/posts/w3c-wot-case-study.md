@@ -38,17 +38,19 @@ of physical entities called [Thing Descriptions][thing-description], and to
 model and describe data sent by Internet of Things consumers and producers in a
 multi-protocol manner.
 
-We are on-board with JSON Schema since Draft 4, and even the first draft
-versions were quite enough to model data models of Internet of Things devices.
-Currently, we are on Draft 7 and expect to move to 2020-12 or a newer one when
-starting our new charter in February 2023.
+The W3C Web of Things are on-board with JSON Schema since Draft 4, and even the
+first draft versions were quite enough to model data models of Internet of
+Things devices.  "Currently, we are on Draft 7 and expect to move to 2020-12 or
+a newer one when starting our new charter in February 2023." - Ege Korkan
 
-We observe JSON Schema becoming more and more stable over the years and
-Postman's support to the community gives us even more confidence on it. JSON
-Schema is delivering exciting features, and more importantly these features are
-becoming more and more consistent across implementations.  For example,
-vocabularies are very promising and we plan to explore them further in
-conjunction with Semantic Web technologies.
+"We observe JSON Schema becoming more and more stable over the years and
+Postman's support to the community gives us even more confidence on it." - Ege
+Korkan 
+
+JSON Schema is delivering exciting features, and more importantly these
+features are becoming more and more consistent across implementations.  For
+example, "vocabularies are very promising and we plan to explore them further
+in conjunction with Semantic Web technologies." - Ege Korkan
 
 ## Impact
 
@@ -58,17 +60,17 @@ Measure][units-of-measure] and [Schema.org][schema-org]. Being based on the
 JSON data model, JSON Schema fits well with JSON-LD when integrating both
 technologies as part of a single specification.
 
-Adopting JSON Schema means that we do not need to invest effort on inventing
-our own schema language. As a consequence of the popularity of JSON Schema, we
-can often rely on existing tooling instead of implementing our own parsers,
-validators, code generators and UI generators for all the programming languages
-that our community might be interested in.
+Adopting JSON Schema means that the W3C Web of Things does not need to invest
+effort on inventing another schema language. As a consequence of the popularity
+of JSON Schema, existing tooling can be often reused instead of implementing
+custom parsers, validators, code generators and UI generators for all the
+programming languages that the community might be interested in.
 
 JSON Schema has proven to be a foundational block for creating higher-level
-tooling that is specific to our needs. As a notable example, the W3C Web of
-Things community has developed a tool that makes use of JSON Schema definitions
-inside Thing Descriptions to generate matching payloads for the purpose of
-stress and penetration testing.
+tooling that is specific to the W3C Web of Things. As a notable example, the
+community has developed a tool that makes use of JSON Schema definitions inside
+Thing Descriptions to generate matching payloads for the purpose of stress and
+penetration testing.
 
 Given the growing popularity of using JSON Schema to generate web-based forms,
 W3C Web of Things specifications can be used to automatically generate
@@ -79,8 +81,9 @@ Descriptions.
 
 The ultimate metric of success for a standard like the W3C Web of Things is
 adoption, and community adoption is not something you can just "engineer".
-Because we adopt JSON Schema, developers who are familiar with it have a
-smaller learning curve when learning the W3C Web of Things standard.
+"Because we adopt JSON Schema, developers who are familiar with it have a
+smaller learning curve when learning the W3C Web of Things standard." - Ege
+Korkan
 
 ## W3C Web of Things
 
@@ -88,8 +91,9 @@ World Wide Web Consortium (W3C) is the standardization organization behind most
 of the standards used in the Web. We are the Web of Things Working and Interest
 Groups, who work on the standardization of Web of Things at the W3C.
 
-We aim to create an interoperability layer so that different Internet of Things
-platforms, protocols and standards can operate together.
+The Web of Things groups aim to create an interoperability layer so that
+different Internet of Things platforms, protocols and standards can operate
+together.
 
 The work has started as a discussion in the Web of Things Community Group in
 2013-2014.  It has proceed to an Interest Group in 2015 that has collected the
@@ -97,8 +101,8 @@ use cases and defined the standards to be worked on. Since 2016, the working
 group is working on different standards on the Web of Things with the first
 publications of the Thing Description and Architecture recommendations in 2019.
 
-At the time of this writing, our Working Group consists of 96 participants
-representing 36 organizations and the our Interest Group consists of 131
+At the time of this writing, the Working Group consists of 96 participants
+representing 36 organizations and the the Interest Group consists of 131
 participants representing 48 organizations. 
 
 ![W3C Web of Things Examples](/blog/img/posts/2022/w3c-wot-case-study/wot-examples.webp)
@@ -106,18 +110,18 @@ participants representing 48 organizations.
 ## Getting Started
 
 We invite you to leverage your existing JSON Schema knowledge to play with the
-Internet of Things through the use of our specifications and tools. You might
-already have a smart device next to you that does not come with a Thing
-Description!
+Internet of Things through the use of the W3C Web of Things specifications and
+tools. You might already have a smart device next to you that does not come
+with a Thing Description!
 
 If you write your own Thing Description, you can programatically interact with
-your device by using our [Node.js Web of Things
+your device by using the [Node.js Web of Things
 implementation](https://github.com/eclipse/thingweb.node-wot), or play with it
-through our [Node-RED](https://www.youtube.com/watch?v=oAcYbJ6P9bU)
+through the [Node-RED](https://www.youtube.com/watch?v=oAcYbJ6P9bU)
 integration.
 
-To learn more, head over to our
-[documentation](https://www.w3.org/WoT/documentation/), watch our [introductory
+To learn more, head over to the
+[documentation](https://www.w3.org/WoT/documentation/), watch the [introductory
 videos](https://www.w3.org/WoT/videos/), have a look at the many examples
 provided as part of the [Thing Description specification](thing-description)
 and try them out on the [Thing Description
