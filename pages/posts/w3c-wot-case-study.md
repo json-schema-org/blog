@@ -33,9 +33,10 @@ on their meaning in the physical world.
 To solve these problems, the W3C Web of Things works on providing standardized
 building blocks that make use of JSON Schema.
 
-JSON Schema is used for validating abstractions of physical entities called
-[Thing Descriptions][thing-description], and to model and describe data sent by
-Internet of Things consumers and producers in a multi-protocol manner.
+JSON Schema is used for validating descriptions of network-facing capabilities
+of physical entities called [Thing Descriptions][thing-description], and to
+model and describe data sent by Internet of Things consumers and producers in a
+multi-protocol manner.
 
 We are on-board with JSON Schema since Draft 4, and even the first draft
 versions were quite enough to model data models of Internet of Things devices.
