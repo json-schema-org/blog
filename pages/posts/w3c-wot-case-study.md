@@ -7,7 +7,7 @@ authors:
   - name: Juan Cruz Viotti
     photo: /img/avatars/jviotti.webp
     link: https://twitter.com/jviottidc
-excerpt: "Using JSON Schema at the W3C Web of Things to counter the fragmentation of the Internet of Things"
+excerpt: "Using JSON Schema at the W3C Web of Things to create an interoperability layer so that different IoT platforms, protocols and standards can operate together"
 language: en
 ---
 
