@@ -41,7 +41,8 @@ multi-protocol manner.
 The W3C Web of Things are on-board with JSON Schema since Draft 4, and even the
 first draft versions were quite enough to model data models of Internet of
 Things devices.  "Currently, we are on Draft 7 and expect to move to 2020-12 or
-a newer one when starting our new charter in February 2023." - Ege Korkan
+a newer one when starting our new charter in February 2023." - Ege Korkan,
+Research Scientist
 
 "We observe JSON Schema becoming more and more stable over the years and
 Postman's support to the community gives us even more confidence on it." - Ege
