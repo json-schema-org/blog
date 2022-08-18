@@ -128,6 +128,9 @@ provided as part of the [Thing Description specification](thing-description)
 and try them out on the [Thing Description
 Playground](http://plugfest.thingweb.io/playground/) app.
 
+Thank you to Ege Korkan, Web of Things Researcher at TU Munich, and the W3C Web
+of Things, for allowing and enabling us to share this case study with you.
+
 [thing-description]: https://www.w3.org/TR/2020/REC-wot-thing-description-20200409/
 [saref]: https://saref.etsi.org
 [units-of-measure]: https://bioportal.bioontology.org/ontologies/UO
