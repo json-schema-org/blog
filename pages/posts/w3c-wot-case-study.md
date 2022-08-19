@@ -40,7 +40,9 @@ multi-protocol manner.
 
 The W3C Web of Things specifications are on board with JSON Schema since Draft
 4, and even the first draft versions already catered to data models of Internet
-of Things devices.  "Currently, we are on Draft 7 and expect to move to 2020-12
+of Things devices.  "Currently, we are on JSON Schema Draft 7 and expect to
+move to JSON Schema
+[2020-12](https://json-schema.org/specification-links.html#understanding-draft-names-and-numbers)
 or a newer one when starting our new charter in February 2023," said Ege
 Korkan, Research Scientist at Siemens and W3C Specifications editor.
 
