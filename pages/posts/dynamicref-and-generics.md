@@ -167,3 +167,6 @@ If we wanted `int` items instead of `string`s, we just create a new schema where
 By using `$dynamicRef` and `$dynamicAnchor`, you don't need to write full schemas for classes which share structure but vary in a content type.  Instead, you can write a partial, reusable schema for the structure, which makes the fully-defined schemas significantly smaller and easier to maintain.
 
 _**ASIDE** With Draft 2020-12, including `$dynamicAnchor` in the generic schema is required for `$dynamicRef` to work.  In future versions, this requirement will be removed as it isn't strictly needed: any resolution attempt will simply fail.  (This requirement is a holdover from its Draft 2019-09 predecessor `$recursive*`.)  However for the particular application of modelling generic types, I'd still keep it in because it serves as an analog for not being able to instantiate a generic type, like `List<T>`.  The net outcome is the same (validation failure), but I think including it more explicitly describes the intent._
+
+
+_Cover photo by [Nick Fewings](https://unsplash.com/@jannerboy62) on [Unsplash](https://unsplash.com/photos/-sAtFFj28W4) with some edits by me._ 😁
