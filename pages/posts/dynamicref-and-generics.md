@@ -87,7 +87,7 @@ _**NOTE** I used `T` here to match up with the C# `List<T>` to better illustrate
 
 If we validate an instance against only this schema, `"$dynamicRef": "#T"` resolves to the subschema with `"$dynamicAnchor": "T"` that we included at `/$defs/content`.  In this case, `$dymamicRef` and `$dynamicAnchor` work just like `$ref` and `$anchor`.
 
-The `"not": true` means that all instances will fail validation.  Typically, to ensure all instances fail validation, we'd use the `false` schema, but in this case, we need to include a dynamic anchor, so a simple `false` doesn't work.  I think `"not": true` is probably the cleanest alternative, but you can also use something like `"allOf": { false }` if that makes more sense to you.
+The `"not": true` means that all instances will fail validation.  Typically, to ensure all instances fail validation, we'd use the `false` schema, but in this case, we need to include a dynamic anchor, so a simple `false` doesn't work.  I think `"not": true` is probably the cleanest alternative, but you can also use something like `"allOf": [ false ]` if that makes more sense to you.
 
 _**NOTE** An empty array will still pass validation for this schema, but any array that has items will fail._
 
