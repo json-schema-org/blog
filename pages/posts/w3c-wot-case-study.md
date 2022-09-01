@@ -135,6 +135,8 @@ Playground](http://plugfest.thingweb.io/playground/) app.
 Thank you to Ege Korkan, Web of Things Researcher at TU Munich, and the W3C Web
 of Things, for allowing and enabling us to share this case study with you.
 
+Cover image: Hello WoT © 2022 by desertmonitor OÜ is licensed under CC BY-ND 4.0
+
 [thing-description]: https://www.w3.org/TR/2020/REC-wot-thing-description-20200409/
 [saref]: https://saref.etsi.org
 [units-of-measure]: https://bioportal.bioontology.org/ontologies/UO
