@@ -21,7 +21,7 @@ Today, I want to cover the idea of generics or templates or some other label you
 
 ## Generic Types
 
-By "generic types" I mean the feature in many programming languages to create a type that requires the additional information of one or more secondary types to be complete.  In object-oriented programming, generics can also apply to services as well as data models, but since we use JSON Schema to describe data models, it's we can be fairly certain that the generic types we care about for this use case are wrappers and containers.
+By "generic types" I mean the feature in many programming languages to create a type that requires the additional information of one or more secondary types to be complete.  In object-oriented programming, generics can also apply to services as well as data models, but since we use JSON Schema to describe data models, we can be fairly certain that the generic types we care about for this use case are wrappers and containers.
 
 In .Net (C#), these are denoted by angle brackets at the end of the type name, so `List<T>` or `Dictionary<TKey, TValue>` where `T`, `TKey`, and `TValue` represent the secondary types.  (These examples are both container types, but you can also do this with envelope types like [Cloud Events](https://cloudevents.io/) (e.g. `CloudEvent<T>`).)
 
@@ -85,7 +85,7 @@ Now we define the items.  This is where `$dynamic*` does some work for us.
 
 _**NOTE** I used `T` here to match up with the C# `List<T>` to better illustrate what's happening.  You can name it whatever you want._
 
-If we validate an instance against only this schema, `"$dynamicRef": "#T"` resolves to the subschema with `"$dynamicAnchor": "T"` that we included at `/$defs/content`.  In this case, `$dymamicRef` and `$dynamicAnchor` work just like `$ref` and `$anchor`.
+If we validate an instance against only this schema, `"$dynamicRef": "#T"` resolves to the subschema with `"$dynamicAnchor": "T"` that we included at `/$defs/content`.  In this case, `$dynamicRef` and `$dynamicAnchor` work just like `$ref` and `$anchor`.
 
 The `"not": true` means that all instances will fail validation.  Typically, to ensure all instances fail validation, we'd use the `false` schema, but in this case, we need to include a dynamic anchor, so a simple `false` doesn't work.  I think `"not": true` is probably the cleanest alternative, but you can also use something like `"allOf": [ false ]` if that makes more sense to you.
 
