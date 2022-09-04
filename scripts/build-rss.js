@@ -25,7 +25,7 @@ function rssFeed(type, title, desc, outputPath) {
     return i2Date - i1Date;
   });
 
-  const base = 'https://json-schema.org';
+  const base = 'https://json-schema.org/blog';
   const tracking = '?utm_source=rss';
 
   const feed = {};
