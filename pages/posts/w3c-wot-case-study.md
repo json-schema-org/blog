@@ -71,9 +71,10 @@ programming languages that the community might be interested in.
 
 JSON Schema has proven to be a foundational block for creating higher-level
 tooling that is specific to the W3C Web of Things. As a notable example, the
-community has developed a tool that makes use of JSON Schema definitions inside
-Thing Descriptions to generate matching payloads for the purpose of stress and
-penetration testing.
+community has developed a tool called
+[testbench](https://github.com/tum-esi/testbench) that makes use of JSON Schema
+definitions inside Thing Descriptions to generate matching payloads for the
+purpose of stress and penetration testing.
 
 Given the growing popularity of using JSON Schema to generate web-based forms,
 W3C Web of Things specifications can be used to automatically generate
