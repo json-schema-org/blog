@@ -89,6 +89,11 @@ Korkan commented, "because we adopt JSON Schema, developers who are familiar
 with it have a smaller learning curve when learning the W3C Web of Things
 standard."
 
+"During my PhD times, my MSc engineering students had to become familiar with
+the W3C Web of Things. These students typically took 1 week to go through my
+[tutorial](https://github.com/tum-esi/wot-tutorial). If they knew JSON Schema,
+that 1 week could become 2 days", said Ege Korkan.
+
 ## W3C Web of Things
 
 The World Wide Web Consortium (W3C) is the standardization organization behind
