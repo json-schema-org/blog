@@ -11,7 +11,7 @@ authors:
     photo: /img/avatars/gregsdennis.webp
     link: https://twitter.com/gregsdennis
     byline: JSON Tooling Implementer, Specification & Tooling Architect @Postman
-excerpt: ""
+excerpt: "How to model type inheritance with JSON Schema"
 ---
 
 Continuing on the theme of my previous post on [how to support generic types with JSON Schema](dynamicref-and-generics), I'd like to cover what is probably the most-asked question:
@@ -427,3 +427,5 @@ While `unevaluatedProperties` doesn't completely solve the needs of modelling po
 
 1. You **must** be using an implementation that support annotations.  While the number of implementations that do is growing, that number is quite small at this point.  (If you have an implementation that doesn't support annotations, please consider it.)
 2. You're going to need to do some processing of the evaluation results.  Validation alone isn't going to be able to handle this.
+
+_Cover photo by [Louis Hansel](https://unsplash.com/@louishansel) on [Unsplash](https://unsplash.com/photos/Pue7MnF80Jo)_
