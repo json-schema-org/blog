@@ -121,7 +121,7 @@ participants representing 48 organizations.
 
 We invite you to leverage your existing JSON Schema knowledge to play with the
 Internet of Things through the use of the W3C Web of Things specifications and
-tools. You might already have a smart device next to you that does not come
+tools. You might already have a smart device next to you, just that it does not come
 with a Thing Description!
 
 If you write your own Thing Description, you can programatically interact with
