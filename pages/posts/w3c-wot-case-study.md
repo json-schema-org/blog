@@ -109,7 +109,8 @@ The work has started as a discussion in the Web of Things Community Group in
 collected the use cases and defined the standards to be worked on. Since 2016,
 the working group is working on different standards on the Web of Things with
 the first publications of the Thing Description and Architecture
-recommendations in 2019 and more that will be published by the end of this year.
+recommendations in 2019 and more that will be published by the end of this
+year.
 
 At the time of this writing, the Working Group consists of 96 participants
 representing 36 organizations and the Interest Group consists of 131
@@ -138,8 +139,10 @@ provided as part of the [Thing Description specification](thing-description)
 and try them out on the [Thing Description
 Playground](http://plugfest.thingweb.io/playground/) app.
 
-Thank you to Ege Korkan, Web of Things Researcher at Siemens AG, Munich, the W3C Web
-of Things Working and Interest Groups and Coralie Mercier from the W3C Marketing and Communications Team for allowing and enabling us to share this case study with you.
+Thank you to Ege Korkan, Web of Things Researcher at Siemens AG, Munich, the
+W3C Web of Things Working and Interest Groups and Coralie Mercier from the W3C
+Marketing and Communications Team for allowing and enabling us to share this
+case study with you.
 
 Cover image: [Hello WoT](https://bind.systems/tags/web-of-things/) © 2022 by desertmonitor OÜ is licensed under CC BY-ND 4.0
 
