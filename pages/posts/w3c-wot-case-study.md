@@ -138,7 +138,7 @@ provided as part of the [Thing Description specification](thing-description)
 and try them out on the [Thing Description
 Playground](http://plugfest.thingweb.io/playground/) app.
 
-Thank you to Ege Korkan, Web of Things Researcher at TU Munich, and the W3C Web
+Thank you to Ege Korkan, Web of Things Researcher at Siemens AG, Munich, the W3C Web
 of Things, for allowing and enabling us to share this case study with you.
 
 Cover image: [Hello WoT](https://bind.systems/tags/web-of-things/) © 2022 by desertmonitor OÜ is licensed under CC BY-ND 4.0
