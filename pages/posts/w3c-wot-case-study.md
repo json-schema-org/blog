@@ -109,7 +109,7 @@ The work has started as a discussion in the Web of Things Community Group in
 collected the use cases and defined the standards to be worked on. Since 2016,
 the working group is working on different standards on the Web of Things with
 the first publications of the Thing Description and Architecture
-recommendations in 2019.
+recommendations in 2019 and more that will be published by the end of this year.
 
 At the time of this writing, the Working Group consists of 96 participants
 representing 36 organizations and the Interest Group consists of 131
