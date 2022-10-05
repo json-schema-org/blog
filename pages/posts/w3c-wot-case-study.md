@@ -25,7 +25,7 @@ repetitive, non-scalable and error-prone work that is difficult to automate.
 
 While technologies like OpenAPI and AsyncAPI largely solve this problem in the
 context of Web APIs, they fall short for describing networks of non-HTTP and 
-multi-protocol devices and do not consider different modes of interaction based
+multi-protocol devices, and do not consider different modes of interaction based
 on their meaning in the physical world.
 
 ## Solution
