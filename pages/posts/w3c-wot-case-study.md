@@ -52,7 +52,7 @@ continued Ege Korkan.
 
 JSON Schema is delivering exciting features, and more importantly these
 features are becoming more and more consistent across implementations.  For
-example, Ege Korkan added, "vocabularies are very promising and we plan to
+example, Ege Korkan added, "JSON Schema vocabularies are very promising and we plan to
 explore them further in conjunction with Semantic Web technologies."
 
 ## Impact
