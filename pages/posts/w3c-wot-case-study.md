@@ -85,7 +85,7 @@ Descriptions.
 
 The ultimate metric of success for a standard like the W3C Web of Things is
 adoption, and community adoption is not something you can just "engineer".  Ege
-Korkan commented, "because we adopt JSON Schema, developers who are familiar
+Korkan commented, "since we adopt JSON Schema, developers who are familiar
 with it have a smaller learning curve when learning the W3C Web of Things
 standard."
 
