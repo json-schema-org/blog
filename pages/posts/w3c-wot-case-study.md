@@ -104,8 +104,8 @@ The Web of Things groups aim to create an interoperability layer so that
 different Internet of Things platforms, protocols and standards can operate
 together.
 
-The work has started as a discussion in the Web of Things Community Group in
-2013-2014.  It has proceeded to become an Interest Group in 2015 that has
+The work started as a discussion in the Web of Things Community Group in
+2013-2014.  It proceeded to become an Interest Group in 2015 that
 collected the use cases and defined the standards to be worked on. Since 2016,
 the working group is working on different standards on the Web of Things with
 the first publications of the Thing Description and Architecture
