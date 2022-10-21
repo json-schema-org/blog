@@ -97,8 +97,8 @@ that 1 week would become 2 days", said Ege Korkan.
 ## W3C Web of Things
 
 The World Wide Web Consortium (W3C) is the standardization organization behind
-most of the standards used in the Web. We are the Web of Things Working and
-Interest Groups, who work on the standardization of Web of Things at W3C.
+most of the standards used in the Web. The W3C Web of Things Working and
+Interest Groups work on the standardization of Web of Things at W3C.
 
 The Web of Things groups aim to create an interoperability layer so that
 different Internet of Things platforms, protocols and standards can operate
