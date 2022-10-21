@@ -24,9 +24,9 @@ of protocols, serialization formats and API specifications. This results in
 repetitive, non-scalable and error-prone work that is difficult to automate.
 
 While technologies like OpenAPI and AsyncAPI largely solve this problem in the
-context of Web APIs, they fall short for describing networks of non-HTTP and 
-multi-protocol devices, and do not consider different modes of interaction based
-on their meaning in the physical world.
+context of Web APIs, they fall short for describing networks of non-HTTP and
+multi-protocol devices, and do not consider different modes of interaction
+based on their meaning in the physical world.
 
 ## Solution
 
@@ -52,8 +52,8 @@ continued Ege Korkan.
 
 JSON Schema is delivering exciting features, and more importantly these
 features are becoming more and more consistent across implementations.  For
-example, Ege Korkan added, "JSON Schema vocabularies are very promising and we plan to
-explore them further in conjunction with Semantic Web technologies."
+example, Ege Korkan added, "JSON Schema vocabularies are very promising and we
+plan to explore them further in conjunction with Semantic Web technologies."
 
 ## Impact
 
@@ -120,10 +120,10 @@ participants representing 48 organizations.
 
 ## Getting Started
 
-The W3C Web of Things Working Group invite you to leverage your existing JSON Schema knowledge to play with the
-Internet of Things through the use of the W3C Web of Things specifications and
-tools. You might already have a smart device next to you, just that it does not come
-with a Thing Description!
+The W3C Web of Things Working Group invites you to leverage your existing JSON
+Schema knowledge to play with the Internet of Things through the use of the W3C
+Web of Things specifications and tools. You might already have a smart device
+next to you, just that it does not come with a Thing Description!
 
 If you write your own Thing Description, you can programatically interact with
 your device by using the [Node.js Web of Things
