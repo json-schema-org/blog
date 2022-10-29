@@ -112,7 +112,7 @@ You can also use multiple dynamic anchors to support types like `Dictionary<TKey
     "type": "object",
     "properties": {
       "key": { "$dynamicRef": "#TKey" },
-      "key": { "$dynamicRef": "#TValue" }
+      "value": { "$dynamicRef": "#TValue" }
     }
   }
 }
