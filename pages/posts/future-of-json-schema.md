@@ -122,9 +122,9 @@ finalized, but here are some outcomes users can expect.
   you won't have to continue to update them as JSON Schema evolves.
 * Custom dialects and vocabularies will continue to be central concepts for
   customizing and extending JSON Schema.
-* Implementations only need to support the latest stable release. For example, a
-  library that supports the 2025 release will automatically support the 2023 and
-  2024 releases. The older releases will no longer need to be maintained as
-  distinct versions. However, implementations that continue to support the
-  "draft" releases would still need to maintain those as distinct versions from
-  the current stable release.
+* Implementers won't need to maintain distinct code to support past stable
+  releases. A library that supports the 2025 release will automatically support
+  the 2023 and 2024 releases. The past stable releases will no longer need to be
+  maintained as distinct versions. However, implementations that continue to
+  support the "draft" releases would still need to maintain those as distinct
+  versions from the current stable release.
