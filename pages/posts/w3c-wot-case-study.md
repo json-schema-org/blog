@@ -1,6 +1,6 @@
 ---
 title: "How the W3C Web of Things brings JSON Schema to the Internet of Things"
-date: 2022-08-17T06:00:00+00:00
+date: 2022-11-01T06:00:00+00:00
 type: Case Study
 cover: /img/posts/2022/w3c-wot-case-study/cover.webp
 authors:
