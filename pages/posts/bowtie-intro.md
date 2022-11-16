@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Introducing: Bowtie"
 date: 2022-11-16
 tags:
   - Update
@@ -12,24 +12,44 @@ authors:
     photo: /img/avatars/julian.webp
     link: https://twitter.com/JulianWasTaken
     byline: JSON Schema Test Suite Maintainer & Technical Lead, API Specifications @Postman
-excerpt: "Bowtie: a new tool for executing JSON Schema implementations & a call to help improve it"
+excerpt: "A new tool for executing JSON Schema implementations & a call to help improve it"
 ---
 
-*This is the first in what will hopefully be an intermittent series of posts about Bowtie.
-I speak here without speaking on behalf of the JSON Schema organization or its members in any official capacity -- Bowtie isn't a tool we The JSON Schema Team are "blessing" in some way today, though I have personal hopes it does become a sort of official tool, and have developed it fully intending for it to be owned by "the community" in whatever sense that means.
+*This is the first in what will hopefully be an intermittent series on Bowtie.
+I speak here without speaking on behalf of the JSON Schema organization in any official capacity -- Bowtie isn't a tool we The JSON Schema Team are "blessing" in some way today, though I have personal hopes it becomes a sort of official tool, and have developed it intending it to be owned by "the community" in whatever sense that means.
 For the moment, I speak only on behalf of myself as its author :)*
+
+The JSON Schema
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "string",
+  "maxLength": 3
+}
+```
+
+validates strings of length at most 3.
+This behavior is what the specification says *should* happen.
+Does every *implementation* of the specification, across the wide spectrum of programming languages, properly *follow* the specification?
+What about for other more complicated schema / instance pairs?
+This is the key question Bowtie tries to address -- how can we compare behavioral differences between JSON Schema implementations and between the specification, in the hopes that we make it easier to fix implementation issues and clarify any unclear portions of the specification?
 
 ## What It Is
 
 [Bowtie](https://github.com/bowtie-json-schema/bowtie/) is what I'm calling a "meta-validator", by which I mean a program which can execute *other* JSON Schema validation implementations and collect results from them.
 
+There's prior art in doing this sort of thing.
+The [JSON Path Comparison project](https://cburgmer.github.io/json-path-comparison/) does this extremely well for [JSONPath](https://goessner.net/articles/JsonPath/), and [Nicolas Seriot's "Parsing JSON is a Minefield"](https://seriot.ch/projects/parsing_json.html) is a fantastic example for JSON itself.
+Bowtie attempts to bring these ideas to JSON Schema.
+
 From the existing [list of JSON Schema implementations](https://json-schema.org/implementations.html#validators), Bowtie already [supports](https://github.com/orgs/bowtie-json-schema/packages) *12* implementations across *9* programming languages, allowing anyone to run any of these implementations and see what they have to say about schemas and instances.
 
 It ships with a [command line program](https://bowtie-json-schema.readthedocs.io/en/latest/cli/), but perhaps more excitingly, ongoing automated runs of this CLI have been set up, such that Bowtie emits a [report across all of its supported implementations](https://bowtie-json-schema.github.io/bowtie/draft2020).
 
-To produce this report, Bowtie runs the (existing) [official JSON Schema Test Suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite), which is our existing set of tests meant to exercise compliance with the JSON Schema specifications.
-Many implementations already [use the suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite#who-uses-the-test-suite), but this is the first time both users of JSON Schema as well as implementers can see results of running the suite in a single place, across many implementations.
-The test suite already has great coverage of our specifications, meaning it well represents all corners of the *validation* portions of the specification.
+To produce this report, Bowtie runs the [official JSON Schema Test Suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite), which is our existing set of tests meant to exercise compliance with the JSON Schema specifications.
+Many implementations already [use the suite within their own continuous integration](https://github.com/json-schema-org/JSON-Schema-Test-Suite#who-uses-the-test-suite), but this is the first time both users of JSON Schema as well as implementers can see results of running the suite in a single place, across many implementations.
+The test suite already has great coverage of our specifications (specifically the validation portions of them).
 The suite certainly isn't perfect, but Bowtie's results therefore cover the validation specification really well.
 
 ## Why It Might Be Interesting
@@ -38,7 +58,7 @@ The most noticeable thing Bowtie enables is an easy way to compare how close an 
 This gives transparency to users of implementations, and also to the community about areas which might be hard to implement, or are commonly misimplemented.
 Our hope is that this leads to improvement and energy to help fix issues, and overall to a stronger community!
 
-Even beyond the test suite, Bowtie is capable of providing a "uniform" interface to the implementations it supports, meaning you can quickly access results from each one.
+Even beyond the test suite, Bowtie is capable of providing a uniform interface to the implementations it supports, meaning you can quickly access results from each one without needing to learn the language-specific API each implementation offers.
 If you have a schema and instance and want to run it across many implementations, or a single implementation which you're not already familiar with or don't have set up, Bowtie can help.
 
 ## How Do I Run It?
@@ -52,11 +72,11 @@ If you're just interested in its output (i.e. reports on runs of the test suite)
 * [draft4](https://bowtie-json-schema.github.io/bowtie/draft4)
 * [draft3](https://bowtie-json-schema.github.io/bowtie/draft3)
 
-The medium term goal is to combine these onto one nice, unified report, at which point the links may change (though hopefully we'll remember to put a redirect in place).
+The medium-term goal is to combine these onto one unified report (at which point the links may change, though hopefully we'll put a redirect in place).
 
 If you want to go beyond the test suite reports, you can run Bowtie locally as well, on whatever input you'd like.
 Bowtie is written in Python and published [on PyPI](https://pypi.org/project/bowtie-json-schema/).
-If you have no existing preferred setup for installing Python applications, [install pipx using the platform-specific instructions for your OS](https://pypa.github.io/pipx/#install-pipx), then run:
+If you have no existing preferred setup for installing Python applications, [install `pipx` using the platform-specific instructions for your OS](https://pypa.github.io/pipx/#install-pipx), then run:
 
 ```sh
 $ pipx install bowtie-json-schema
@@ -176,6 +196,8 @@ Even something like making Bowtie easier to install for those who don't use Pyth
 ## Conclusion
 
 Thanks for taking the time to hear a bit about Bowtie.
+Special thanks also must be given to [Postman](https://www.postman.com/) who employs me full-time to be able to do work like this on behalf of the community.
+Without Postman, this work would never have happened!
 I hope there's a lot more to come.
 Please do share feedback, it's very welcome, and if you do want to get involved, that'd be very much appreciated!
 
