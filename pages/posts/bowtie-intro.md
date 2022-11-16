@@ -40,7 +40,7 @@ This is the key question Bowtie tries to address -- how can we compare behaviora
 [Bowtie](https://github.com/bowtie-json-schema/bowtie/) is what I'm calling a "meta-validator", by which I mean a program which can execute *other* JSON Schema validation implementations and collect results from them.
 
 There's prior art in doing this sort of thing.
-The [JSON Path Comparison project](https://cburgmer.github.io/json-path-comparison/) does this extremely well for [JSONPath](https://goessner.net/articles/JsonPath/), and [Nicolas Seriot's "Parsing JSON is a Minefield"](https://seriot.ch/projects/parsing_json.html) is a fantastic example for JSON itself.
+The [JSONPath Comparison project](https://cburgmer.github.io/json-path-comparison/) does this extremely well for [JSONPath](https://github.com/ietf-wg-jsonpath/draft-ietf-jsonpath-base), and [Nicolas Seriot's "Parsing JSON is a Minefield"](https://seriot.ch/projects/parsing_json.html) is a fantastic example for JSON itself.
 Bowtie attempts to bring these ideas to JSON Schema.
 
 From the existing [list of JSON Schema implementations](https://json-schema.org/implementations.html#validators), Bowtie already [supports](https://github.com/orgs/bowtie-json-schema/packages) *12* implementations across *9* programming languages, allowing anyone to run any of these implementations and see what they have to say about schemas and instances.
