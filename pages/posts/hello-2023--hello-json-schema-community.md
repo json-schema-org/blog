@@ -17,7 +17,7 @@ Since Ben Hutton joined Postman to work full-time on JSON Schema [the past year]
 
 ## Who is this guy?
 
-My whole career, APIs have been at the core of everything. In the first part of my career, I focused on the engineering aspect of building APIs, playing all the possible team roles. Later, I focused on API Design and Governance, leading API Programs, and finally, my focus has been Developer Experience and Developer Relations because this human aspect is the most critical for a technology or product to be successful.
+My whole career, APIs have been at the core of everything. In the first part of my career, I focused on the engineering aspect of building APIs, playing all the possible team roles. Later, I focused on API Design and Governance, leading API Programs, and most recently, my focus has been Developer Experience and Developer Relations because this human aspect is the most critical for a technology or product to be successful.
 
 Having said that, I see myself as a mix of 1/3 Software Engineering 1/3 API Strategy 1/3 Developer Relations, but I am constantly learning and testing new things, and today I am investing in Product Strategy/Growth. With this diverse background, I hope to be a good complement to the current JSON Schema Team.
 
