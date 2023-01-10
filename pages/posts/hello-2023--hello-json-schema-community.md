@@ -37,3 +37,5 @@ If you like to know more about me, check out [this intro post](https://www.twili
 >* Twitter: [@benjagm](https://twitter.com/benjagm)
 >* Linkedin: [benjagranados](https://www.linkedin.com/in/benjagranados/)
 >* Github: [benjagm](https://github.com/benjagm)
+
+Cover photo by [Jai Cano](https://www.jaicano.com/redes) on [Instagram](https://www.instagram.com/jaicano).
