@@ -384,11 +384,11 @@ The instance location being evaluated is the first item in the array.
 
 The error tells us that the first item in the array doesn't match exactly one of the subschemas found in our `oneOf`. This means it validates successfully for BOTH.
 
-The first item in our instance array is identifying as a student, so should only pass for the first subschema in `allOf`. So why is it valid when applying the second subschema?
+The first item in our instance array is identifying as a student, so should only pass for the first subschema in `oneOf`. So why is it valid when applying the second subschema?
 
 Let's recap. The `properties` keyword applies its schemas (which are the values) based on matching keys in the instance Object. The implication we explored earlier is that just having a key in the `properties` object doesn't make it required in the instance.
 
-When you apply the second subschema in `allOf` to the instance, there are no constraints that cause it to fail validation, so it passes validation. If all subschemas consider the instance location to be valid, `oneOf` fails validation, because it's not "one and only one", as in "true exclusive OR`.
+When you apply the second subschema in `oneOf` to the instance, there are no constraints that cause it to fail validation, so it passes validation. If all subschemas consider the instance location to be valid, `oneOf` fails validation, because it's not "one and only one", as in "true exclusive OR`.
 
 # Now you try
 
