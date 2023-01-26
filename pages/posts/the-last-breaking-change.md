@@ -1,6 +1,6 @@
 ---
 title: "The Last Breaking Change"
-date: 2022-07-23
+date: 2023-01-27
 tags:
   - Specification
 type: Engineering
@@ -10,6 +10,7 @@ authors:
     photo: /img/avatars/gregsdennis.webp
     link: https://twitter.com/gregsdennis
     byline: JSON Tooling Implementer, Specification & Tooling Architect @Postman
+excerpt: We need to make a breaking change so that we can promise we won't again.
 ---
 
 As we continue to [move toward a stable specification](https://json-schema.org/blog/posts/future-of-json-schema), we are analyzing the various components, behaviors, and features of JSON Schema to determine what can be included, what may need modification, and what (if anything) needs to be removed.
