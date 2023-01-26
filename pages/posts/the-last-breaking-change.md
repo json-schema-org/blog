@@ -1,3 +1,17 @@
+---
+title: "The Last Breaking Change"
+date: 2022-07-23
+tags:
+  - Specification
+type: Engineering
+cover: /img/posts/2022/the-last-breaking-change/cover.webp
+authors:
+  - name: Greg Dennis
+    photo: /img/avatars/gregsdennis.webp
+    link: https://twitter.com/gregsdennis
+    byline: JSON Tooling Implementer, Specification & Tooling Architect @Postman
+---
+
 As we continue to [move toward a stable specification](https://json-schema.org/blog/posts/future-of-json-schema), we are analyzing the various components, behaviors, and features of JSON Schema to determine what can be included, what may need modification, and what (if anything) needs to be removed.
 
 We're pleased to report that the vast majority of Draft 2020-12 can be kept completely as-is, and there are a few keywords and behaviors that could use some tweaking, but only in ways that we feel are compatible with the current release.  But unfortunately there is also one behavior that we absolutely must change in a breaking way: support for unknown keywords.
@@ -40,3 +54,5 @@ Current proposals include inlined and ad-hoc vocabularies included in the a sche
 It looks like we have to break some schemas with the next version.  However by doing so, we are able to promise that we won't in the future.
 
 We have to break it in order to fix it.
+
+_Cover photo by [Ken Suarez](https://unsplash.com/@kensuarez) on [Unsplash](https://unsplash.com/photos/4IxPVkFGJGI)_ 😁
