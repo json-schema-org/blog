@@ -1,0 +1,42 @@
+As we continue to [move toward a stable specification](https://json-schema.org/blog/posts/future-of-json-schema), we are analyzing the various components, behaviors, and features of JSON Schema to determine what can be included, what may need modification, and what (if anything) needs to be removed.
+
+We're pleased to report that the vast majority of Draft 2020-12 can be kept completely as-is, and there are a few keywords and behaviors that could use some tweaking, but only in ways that we feel are compatible with the current release.  But unfortunately there is also one behavior that we absolutely must change in a breaking way: support for unknown keywords.
+
+## What are unknown keywords?
+
+A keyword is "known" if it is defined by a vocabulary listed in the schema's meta-schema (identified by the value in `$schema`).  By recognizing this vocabulary and continuing to process the schema, an implementation declares that it understands how to process all of the keywords that vocabulary defines.  Any keyword which is not defined by a vocabulary listed in the schema's meta-schema is considered "unknown."
+
+All of the currently published versions of JSON Schema instruct implementations to (at a minimum) ignore keywords that are not recognized.  With the introduction of annotations in Draft 2019-09, implementations were given the option to collect the values of unknown keywords and report them to the user in the output.  This behavior was widely supported by the community because it meant that they could annotate and document their schemas without having to worry that their validations would be impacted.  For a schema like
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "database-field-id": 1234
+    }
+  }
+}
+```
+
+an validator would either ignore `database-field-id` or include it and its value as an annotation in the output.  One can see how this feature would be extremely helpful.  However, this feature blocks our ability to promise that schemas written to one version will be valid for later versions.
+
+## Why can't we still support this?
+
+Suppose a user processes the example schema above with a validator that's been written for a 2025 specification.  Now suppose in that 2025 specification, we add `database-field-id` as a keyword, and its value is expected to be a string.  Now this schema is no longer valid.  **We've broken a user by adding a new keyword.**
+
+In order to prevent this scenario, we are forced to forbid keywords that are not declared by a listed vocabulary.  We recognize that this will break a lot of people up front.  However we feel that a promise of future-compatible specifications should take precedence over the immediate pain of having to change your schemas yet again (and potentially again thereafter).
+
+## What is being done to soften the blow?
+
+We have an [open discussion](https://github.com/orgs/json-schema-org/discussions/241) on this very topic, and we invite you to weigh in.
+
+Current proposals include inlined and ad-hoc vocabularies included in the a schema that can define annotation-only keywords, like `title` and `readOnly`, just for that schema.  This is effectively a way for the schema author to say, "I know these keywords aren't declared by any vocabulary, but I'd really like them in my schema.  Please disregard them."
+
+## Sum up
+
+It looks like we have to break some schemas with the next version.  However by doing so, we are able to promise that we won't in the future.
+
+We have to break it in order to fix it.
