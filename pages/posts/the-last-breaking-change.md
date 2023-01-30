@@ -36,7 +36,7 @@ All of the currently published versions of JSON Schema instruct implementations 
 }
 ```
 
-an validator would either ignore `database-field-id` or include it and its value as an annotation in the output.  One can see how this feature would be extremely helpful.  However, this feature blocks our ability to promise that schemas written to one version will be valid for later versions.
+a validator would either ignore `database-field-id` or include it and its value as an annotation in the output.  One can see how this feature would be extremely helpful.  However, this feature blocks our ability to promise that schemas written to one version will be valid for later versions.
 
 ## Why can't we still support this?
 
