@@ -42,13 +42,13 @@ All of the currently published versions of JSON Schema instruct implementations 
 }
 ```
 
-a validator would either ignore `database-field-id` or include it and its value as an annotation in the output.  One can see how this feature would be extremely helpful.  However, this feature blocks our ability to promise that schemas written to one version will be valid for later versions.
+a validator would either ignore `database-field-id` or include it and its value as an annotation in the output.  One can see how this feature would be extremely helpful.  However, this feature also blocks our ability to promise future compatibility.
 
 ## Why can't we still support this?
 
-Suppose a user processes the example schema above with a validator that's been written for a 2025 specification.  Now suppose in that 2025 specification, we add `database-field-id` as a keyword, and its value is expected to be a string.  Now this schema is no longer valid.  **We've broken a user by adding a new keyword.**
+Suppose a user wrote the example schema above while using a validator written to conform to the 2023 version of the specification.  A couple years later, they want to upgrade the validator now that supports the 2025 specification.  However in that 2025 specification, we added `database-field-id` as a keyword, and its value is expected to be a string.  Suddenly the user's schema is no longer valid.  **We've broken a user by adding a new keyword.**
 
-In order to prevent this scenario, we are forced to forbid keywords that are not declared by a listed vocabulary.  We recognize that this will break a lot of people up front.  However we feel that a promise of future-compatible specifications should take precedence over the immediate pain of having to change your schemas yet again (and potentially again thereafter).
+In order to prevent this scenario, we are forced to forbid keywords that are not declared by a listed vocabulary.  We recognize that this will break a lot of people up front.  However we feel that a promise of future-compatible specifications should take precedence over the immediate pain of having to change your schemas yet again (and potentially again perpetually into the future).
 
 ## What is being done to soften the blow?
 
