@@ -13,9 +13,15 @@ authors:
 excerpt: We need to make a breaking change so that we can promise we won't again.
 ---
 
-As we continue to [move toward a stable specification](https://json-schema.org/blog/posts/future-of-json-schema), we are analyzing the various components, behaviors, and features of JSON Schema to determine what can be included, what may need modification, and what (if anything) needs to be removed.
+As we continue to [move toward a stable specification](https://json-schema.org/blog/posts/future-of-json-schema), we are analyzing the various components, behaviors, and features of JSON Schema to determine what can be included, what may need modification, and what (if anything) needs to be removed or replaced.  The primary question that we had was whether there were any planned changes that would cause problems for users with existing schemas, i.e. breaking changes.
 
-We're pleased to report that the vast majority of Draft 2020-12 can be kept completely as-is, and there are a few keywords and behaviors that could use some tweaking, but only in ways that we feel are compatible with the current release.  But unfortunately there is also one behavior that we absolutely must change in a breaking way: support for unknown keywords.
+To answer that, we needed user input.  So we posted across the internet in order to encourage users to participate in a [particular conversation on GitHub](https://github.com/orgs/json-schema-org/discussions/295) around how we treat any supposed breaking changes.  The response was very much, "If you can help it, please don't break things."  But many people also said they would be less bothered if there was a defined migration path and tooling to help.
+
+We also performed an internal survey of feature stability, involving all of the JSON Schema core team members.  We're pleased to report that the vast majority of Draft 2020-12 can be kept completely as-is.  There are a few keywords and behaviors that could use some tweaking, but mostly in ways that we feel are generally compatible with the current release.
+
+Another common sentiment among both users and team members was that JSON Schema already has a history (and reputation) of including breaking changes when releasing new versions of the specification, meaning that a schema that validates properly with one version may not validate properly with the next.  This perception is one that we need to address.  To do that, we need to orient ourselves and the specification so that we can promise schemas written to one version will validate consistently with every subsequent version.
+
+Unfortunately, in order to make that promise, there is one behavior that we absolutely must change in a breaking way: support for unknown keywords.
 
 ## What are unknown keywords?
 
