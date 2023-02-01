@@ -25,7 +25,7 @@ Unfortunately, in order to make that promise, there is one behavior that we abso
 
 ## What are unknown keywords?
 
-A keyword is "known" if it is defined by a vocabulary listed in the schema's meta-schema (identified by the value in `$schema`).  By recognizing this vocabulary and continuing to process the schema, an implementation declares that it understands how to process all of the keywords that vocabulary defines.  Any keyword which is not defined by a vocabulary listed in the schema's meta-schema is considered "unknown".
+A keyword is "known" if it is defined by a vocabulary listed in the schema's meta-schema (identified by the value in `$schema`).  By recognizing this vocabulary and continuing to process the schema, an implementation declares that it understands how to process all of the keywords that vocabulary defines.  Any keyword which is not defined by a vocabulary listed in the schema's meta-schema is considered "unknown."
 
 All of the currently published versions of JSON Schema instruct implementations to (at a minimum) ignore keywords that are not recognized.  With the introduction of annotations in Draft 2019-09, implementations were given the option to collect the values of unknown keywords and report them to the user in the output.  This behavior was widely supported by the community because it meant that they could annotate and document their schemas without having to worry that their validations would be impacted.  For a schema like
 
