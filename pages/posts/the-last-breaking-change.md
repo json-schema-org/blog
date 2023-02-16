@@ -60,12 +60,7 @@ Current proposals include things from simple prefixes on unknown keywords as a c
 
 Hopefully not.  We believe that removing support for unknown keywords will be the only change of any real negative impact, but that doesn't preclude the possibility of other changes that break things in less critical ways.
 
-There are generally two approaches to including a breaking change:
-
-- Find anything else that needs to change, breaking or not, and include it.  It's breaking anyway, so why not change what we can?
-- Measure the changes that are needed, and seek alternatives to breaks where possible.
-
-We recognize that making changes like this is hard on developers, both users and implementors, and so we're doing our best to take the latter approach.  We don't see this as an opportunity to go wild with changes.
+We recognize that making breaking changes like this is hard on developers, both users and implementors, and so we're doing our best to measure the changes that are needed and seek alternatives to breaks where possible.  We don't see this as an opportunity to go wild with changes.
 
 In any case, we will be open and transparent about any changes that we make, breaking and otherwise.
 
