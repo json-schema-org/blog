@@ -52,7 +52,7 @@ In order to prevent this scenario, we are forced to forbid keywords that are not
 
 ## What is being done to soften the blow?
 
-We have an [open discussion](https://github.com/orgs/json-schema-org/discussions/241) on this very topic, and we invite you to weigh in.
+We have an [open discussion](https://github.com/orgs/json-schema-org/discussions/329) on this very topic, and we invite you to weigh in.
 
 Current proposals include things from simple prefixes on unknown keywords as a convention to indicate custom annotations to more complex solutions like inlined and ad-hoc vocabularies bundled into the schema that can define annotation-only keywords, like `title` and `readOnly`.  These options are effectively ways for the schema author to say, "I know these keywords aren't declared by any vocabulary, but I'd really like them in my schema.  Please disregard them."
 
