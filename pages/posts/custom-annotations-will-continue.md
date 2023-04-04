@@ -24,14 +24,14 @@ The `tl;dr` of it is that going forward, JSON Schema will treat any keyword that
 This solution was chosen for several reasons.
 
 1. Ad-hoc keywords necessarily cannot have any functionality tied to them.  That is, they're only ever annotations; their values are just returned to the user or application without any processing by the schema.
-2. Having ad-hoc annotations follow a convention makes it very easy to identify them.
+2. Having ad-hoc annotations follow a convention makes them very easy to identify.
 3. A prefix is a good convention to follow.
 4. Reserving this prefix for ad-hoc annotations means that there can be no collision with keywords defined by vocabularies, now or in the future (preserving our compatibility promise).
 5. Developers are generally familiar with the `x-` prefix as it's already commonly used in other arenas, such as HTTP headers, to denote custom data intended for recipients that understand it.
 
-The one hesitancy we had for using `x-` was that its origins denoted experimental behavior.  However, it seems that in practice, it's used quite liberally for any custom data.  Since we're making custom data our expressed purpose, it seems like a good fit.
+The one hesitancy we had for using `x-` was that its origins denoted experimental behavior.  However, it seems that in practice, this prefix used quite liberally for any custom data.  Since we're making custom data our expressed purpose, it seems like a good fit.
 
-## Why this and not some other solution?
+## Why a prefix and not some other solution?
 
 After releasing the previous blog post and publicizing it as far across the internet as we could, we received feedback that custom keywords were used quite extensively and not supporting them would break users more severely than we wanted.  While we had already planned on still supporting annotative custom keywords, we didn't know what that would look like.  So, I started a [discussion](https://github.com/json-schema-org/community/discussions/57) with some of the loose ideas that the team already had.
 
@@ -43,19 +43,19 @@ This option actually builds on the one we selected by defining a new Core keywor
 
 It was pointed out, however, that in order for a schema to be validated by the meta-schema, the meta-schema would need to be able to read this new keyword to get the prefix so that it could ignore the keywords that started with it.  This requires a whole lot of new mechanisms that we don't currently have in JSON Schema, so it's not very practical at this time.
 
-We also noted that we couldn't figure out what the scope of this keyword would be.  Would it be only the schema resource (indicated by `$id`) where the keyword was used?  Would it be the whole document?  What if we `$ref` to another schema resource or document that doesn't define a prefix?  There's a balance somewhere between being inferring intent and requiring too much repetition. 
+We also noted that we couldn't figure out what the scope of this keyword would be.  Would it be only the schema resource (indicated by `$id`) where the keyword was used?  Would it be the whole document?  What if we `$ref` to another schema resource or document that doesn't define a prefix?  There's a balance somewhere between inferring intent and requiring too much repetition. 
 
 ### Alternative #2 - Listing the custom keywords to ignore in a new keyword
 
 This option defines a new Core keyword such as `$ignored` that would hold an array of the names of keywords to ignore.  This would allow schema authors to explicitly define the keywords they wanted to use.
 
-Like alternative #1, this has the problem that JSON Schema doesn't currently have the mechanisms to perform the kind of meta-schema validation that would be required, as well as the same scoping issues.  It's also possible that a keyword some author has decided to ignore would later be added to the spec or some vocabulary, meaning that it _shouldn't_ be ignored, resulting in surprisingly wrong validations.
+Like alternative #1, this has the problem that JSON Schema doesn't currently have the mechanisms to perform the kind of meta-schema validation that would be required, as well as the same scoping issues.  It's also possible that a schema author could ignore a keyword that would later be added to the spec or some vocabulary, meaning that it _shouldn't_ be ignored, resulting in surprisingly wrong validations.
 
 ### Alternative #3 - Inlined vocabularies that define keywords
 
 This option allows for a vocabulary to be defined and described _within_ a meta-schema's `$vocabulary` keyword.  This is like alternative #2, except that the ad-hoc keywords are defined by a vocabulary so the normal JSON Schema process that enforces "no unknown keywords" wouldn't pick them up; they would be known.
 
-We decided against this because it requires a lot of further development of vocabularies (a concept which is still under development anyway) that we just can't address right now.  It would also skew that development toward solving this problem, which may not be the right direction for the vocabulary concept.
+We decided against this because it requires a lot of further development of vocabularies, a concept which is still under development anyway.  This solution would also skew that development toward solving this problem, which may not be the right direction for the vocabulary concept.
 
 ### Alternative #4 - A new keyword to contain all custom annotations
 
@@ -65,9 +65,9 @@ Undesirably, this creates a layer of separation between the annotations and the 
 
 ### Alternative #5 - Support unknown keywords behind an option
 
-Finally, this option just requires implementations to provide a configuration option to allow unknown keywords, defaulting to "disallow."
+Finally, this option just requires implementations to provide a configuration option to allow unknown keywords, defaulting to "disallow."  While allowing unknown keywords breaks our compatibility promises, a user explicitly setting this option is effectively acknowledging that risk.
 
-This felt like [a step backwards](https://vlipsy.com/vlip/the-emperors-new-groove-this-is-a-step-backwards-0YryOW3W).  Allowing unknown keywords breaks our compatibility promises, but a user explicitly setting this option is effectively acknowledging the risk.  This one just didn't feel like it aligned with the spirit of supportability we want for this project.
+This felt like [a step backwards](https://vlipsy.com/vlip/the-emperors-new-groove-this-is-a-step-backwards-0YryOW3W).  It just didn't feel like it aligned with the spirit of supportability we want for this project.
 
 ## How did we arrive at `x-` as the prefix of choice?
 
