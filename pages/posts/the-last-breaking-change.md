@@ -70,4 +70,4 @@ It looks like we have to break some schemas with the next version.  However by d
 
 We have to break it in order to fix it.
 
-_Cover photo by [Ken Suarez](https://unsplash.com/@kensuarez) on [Unsplash](https://unsplash.com/photos/4IxPVkFGJGI)_ 😁
+_Cover photo by [Ken Suarez](https://unsplash.com/@kensuarez) on [Unsplash](https://unsplash.com/photos/4IxPVkFGJGI)_
