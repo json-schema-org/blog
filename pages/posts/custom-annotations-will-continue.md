@@ -49,7 +49,7 @@ We also noted that we couldn't figure out what the scope of this keyword would b
 
 This option defines a new Core keyword such as `$ignored` that would hold an array of the names of keywords to ignore.  This would allow schema authors to explicitly define the keywords they wanted to use.
 
-Like alternative #1, this has the problem that JSON Schema doesn't currently have the mechanisms to perform the kind of meta-schema validation that would be required, as well as the same scoping issues.  It's also possible that a schema author could ignore a keyword that would later be added to the spec or some vocabulary, meaning that it _shouldn't_ be ignored, resulting in surprisingly wrong validations.
+Like alternative #1, this has the problem that JSON Schema doesn't currently have the mechanisms to perform the kind of meta-schema validation that would be required, as well as the same scoping issues.  It's also possible that a schema author could ignore a keyword that would later be added to the spec or some vocabulary, meaning that it _shouldn't_ be ignored, resulting in surprisingly wrong validations and violates our compatibility requirements.
 
 ### Alternative #3 - Inlined vocabularies that define keywords
 
