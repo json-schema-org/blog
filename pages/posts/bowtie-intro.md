@@ -10,7 +10,7 @@ cover: /img/posts/2022/bowtie-intro/cover.webp
 authors:
   - name: Julian Berman
     photo: /img/avatars/julian.webp
-    link: https://twitter.com/JulianWasTaken
+    link: https://mastodon.social/@JulianWasTaken
     byline: JSON Schema Test Suite Maintainer & Technical Lead, API Specifications @Postman
 excerpt: "A new tool for executing JSON Schema implementations & a call to help improve it"
 ---
