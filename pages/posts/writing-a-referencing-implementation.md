@@ -13,7 +13,13 @@ authors:
 excerpt: "Some pitfalls and lessons from writing a new referencing implementation for the Python ecosystem"
 ---
 
-I'd like to tell a brief tale of improving support for JSON Schema referencing in my [Python implementation](https://pypi.org/project/jsonschema/) of JSON Schema, which involved writing a new implementation of the reference resolution bits.
+<!---
+[comment]: # TODO: proofread
+[comment]: # TODO: check voice (you, we, author)
+[comment]: # TODO: interlink with the glossary
+-->
+
+I'd like to tell a brief tale of improving support for JSON Schema referencing in my [Python implementation](https://pypi.org/project/jsonschema/) of JSON Schema, which involved writing a [new implementation of the reference resolution bits](https://referencing.readthedocs.io/).
 I can't tell the whole story, as some of it is still ongoing -- but retracing a bit of the journey might be useful to others, both schema authors and implementers.
 
 What follows certainly contains opinions, and those specifically of the author. General familiarity with JSON Schema validation is also assumed.
@@ -196,6 +202,78 @@ There are a number of places where someone might decide to stop investing additi
 The first major consideration here is that strictly speaking according to the specification, an implementer might provide no discovery of subschema resources whatsoever -- in other words. 
 Similarly, given the differences across versions of JSON Schema, one could choose not to support multiple versions, or certainly not all versions.
 
+A further example which is extremely common for those extending the JSON Schema specifications is in the creation or extension of dialects of JSON Schema.
+Imagine for instance that one wishes to create a new keyword called `exactlyNOf` and make it available for use when writing schemas.
+This `exactlyNOf` keyword will be similar to the (existing) `anyOf`, `oneOf` and `allOf` keywords but we wish for it to mean "exactly `n` of the given schemas match".
+
+So for instance:
+
+```json
+{
+  "exactlyNOf": {
+    "schemas": [
+      {"type": "integer"},
+      {"const": "foo"},
+      {"minimum": 37}
+    ],
+    "n": 2
+  }
+}
+```
+
+is a schema which we intend to validate successfully anthing matching exactly 2 of the schemas listed (and fail otherwise).
+Getting what we want the behavior to be out of the way, the key referencing-related question is -- how do we handle discovering and making available subschemas present in `schemas` array.
+Specifically, what do we expect this to do?
+
+```json
+{
+  "exactlyNOf": {
+    "$id": "urn:example:exactlyNOf",
+    "schemas": [
+      {"type": "integer"},
+      {"const": "foo"},
+      {"minimum": 37}
+    ],
+    "n": 2
+  }
+}
+```
+
+or how about:
+
+```json
+{
+  "exactlyNOf": {
+    "schemas": [
+      {"$id": "urn:example:subschema", "type": "integer"},
+      {"const": "foo"},
+      {"minimum": 37}
+    ],
+    "n": 2
+  }
+}
+```
+
+Should they make the URIs `urn:example:exactlyNOf` and/or `urn:example:subschema` referenceable elsewhere via a `$ref` keyword?
+Most users (of our new keyword) will likely expect them to be, and doing so is potentially useful for the same reasons it is useful for any existing keyword.
+In order to do so, our referencing library or API needs a way of registering or expressing which *keywords* (or really keyword values) are to be interpreted as schemas, and therefore where should it recurse into when looking for `$id` keywords.
+One could imagine even more elaborate examples of keywords, with even more complex structures for where within them contain schemas, so it can get hairy!
+
+The above is yet again not outside the bounds of the specification at all (other than that of course the specification does not govern the behavior of our new keyword).
+The specifications overtly encourage extension in this way, to support more complex use cases, to support experimentation of new keywords, to support domain-specific behavior, et cetera [^4].
+
+[^4]: We ignore here discussions of JSON Schema vocabularies and whether the keyword should ideally be part of one, as such things don't really affect the referencing behavior mentioned.
+
+Note that if we think about implementing this kind of discovery, one *cannot* simply recursively walk any and all properties collected throughout the schema.
+The reasons for this are somewhat simple, consider the schema:
+
+```json
+{"const": {"$id": "foo"}}
+```
+
+which seems to contain an `$id` keyword, but the object it sits within is *not* interpreted as a JSON Schema, as the `const` keyword simply exactly matches an instance against its value as if it were an opaque JSON value.
+Blindly collecting this `$id` keyword might incorrectly change the base URI (for any nested objects within the discovered value), or in the case of `$anchor` might incorrectly create duplicate anchors, or an incorrect anchor, or otherwise cause non-schemas to be treated as schemas by some other part of processing.
+
 Even more importantly are users asking for functionality *beyond* that proscribed by the specification...
 
 ## Beyond the Specification
@@ -203,14 +281,13 @@ Even more importantly are users asking for functionality *beyond* that proscribe
 JSON Schema is, thankfully, quite widely used, and often used in ways "beyond" the strict letter of the JSON Schema specifications.
 Arguably, this is a good thing, as though it puts pressure on both the specification maintainers as well as implementers, it also equally indicates JSON Schema's wide applicability and is useful as a feedback mechanism for JSON Schema's potential future growth areas.
 
-
 Referencing in particular seems to be an area where users often want things beyond those mandated or proscribed by the specifications.
 
-Users seem to often want to retrieve and reference schemas written in YAML or other file formats, to automatically retrieve schemas over the network [^4], to dynamically generate schemas, or to otherwise press the boundaries of what's strictly within the specified behavior.
+Users seem to often want to retrieve and reference schemas written in YAML or other file formats, to automatically retrieve schemas over the network [^5], to dynamically generate schemas, or to otherwise press the boundaries of what's strictly within the specified behavior.
 There's plenty of complexity already, even in specified behavior -- but in a sense, it's understandable that most users care about this sort of flexibility much more than they do about edge cases from the specification (and about the correctness of their implementation under them).
 So ideally an implementation would have both correct behavior under the specification as well as ways to allow users to do many of these things they want to do.
 
-In the case of the [`referencing` Python library](https://referencing.readthedocs.io/) that was the impetus for this post, the approach taken was to simply provide a general "retrieval" callback hook which could be used by users to lookup any URI which was not preconfigured.
+In the case of the `referencing` Python library that was the impetus for this post, the approach taken was to simply provide a general "retrieval" callback hook which could be used by users to lookup any URI which was not preconfigured.
 In other words, by providing a callable themselves, users of the library can hook into the retrieval process to dynamically retrieve whatever they'd like.
 A simplified example, where here a single resource is pre-loaded and additional schemas are dynamically loaded from TOML looks like:
 
@@ -265,9 +342,9 @@ There were a couple of reasons for doing so:
 * It's a second check -- doing so means I got extra confirmation that I was on the right track if all of my new tests passed *and* all of the validation test suite passed once I wired the referencing implementation up into a validator
 
 All in all I think the two suites complement each other quite well -- and indeed I have hopes we can actually incorporate tests from the referencing suite to fill in gaps in the validation suite, perhaps even in an automated way (i.e. by cross-converting tests from one to the other).
-But someone who is writing referencing tooling and *not* a validator implementation now has a second option![^5]
+But someone who is writing referencing tooling and *not* a validator implementation now has a second option![^6]
 
-[^5]: Do note that as of today, the validation test suite has been reviewed and used by many more people!
+[^6]: Do note that as of today, the validation test suite has been reviewed and used by many more people!
       It's quite possible the referencing suite has issues, though my hope is it's made less likely by virtue of my implementation passing both suites simultaneously, as mentioned.
 
 # How It Went
