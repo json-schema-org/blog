@@ -68,7 +68,7 @@ We wish to schematize these data, so we might try:
 }
 ```
 
-which expresses that our data has the two properties mentioned, and that they must be integers bigger than 0 (along potentially with other properties which we haven't constrained).
+which expresses that our data have the two properties mentioned, and that they must be integers bigger than 0 (along potentially with other properties which we haven't constrained).
 Being good programmers, we notice some duplication -- we've twice attempted to express the notion of "positive integer" and repeated ourselves in doing so.
 We wish to be able to name this concept (positive integer) and to use it in multiple places within our schema, just like naming a function we repeatedly call when writing a program.
 
@@ -86,7 +86,7 @@ Our complexity in implementing support for this notion will come when dealing wi
 Still, before moving onto implementation details, let's consider a number of concrete examples taking our positive integer subschema, putting it somewhere, and referencing it from our "main" schema.
 
 Perhaps the simplest thing we could hope for is to simply name our positive integer subschema `positiveInteger` as if it were a name or variable in a programming language, and then reference the name we've given it in various places, leaving everything else about our original schema unchanged.
-Here's how to do so in Draft 2020-12 of the specification[^2]:
+Here's how to do so in 2020-12 version of the specification[^2]:
 
 ```json
 {
@@ -189,10 +189,34 @@ Note that to do so, we still use the `$ref` keyword we previously used, just wit
 Again, functionally equivalent, but here we refer to our subschema positionally within the document by pointing to it.
 Both plain name fragments and JSON pointers are useful for different scenarios of course, so one isn't better than the other, but these are the most basic kinds of references for us to deal with -- at least for referencing subschemas which live within some single larger schema.
 
-
 ## Base URIs and `$id`
 
 The two of these kinds of fragments are essentially the two kinds of destinations that a `$ref` might point to, but where things get more complicated (for implementers and for users) is when we introduce the notion of base URIs, and more specifically the notion of tracking the base URI in nested schema documents.
+
+### Schemes
+
+## Dynamic Scope and Dynamic References
+
+## Lions and Dragons and Versions, Oh My!
+
+So far we've only discussed a *single* version of JSON Schema -- specifically 2020-12, the latest release as of the this article's publication date.
+
+Referencing however *differs* across versions.
+
+Specifically, here are some examples of how it differs across the history of JSON Schema, in no particular order:
+
+* In earlier versions of JSON Schema, the `$anchor` keyword did not exist, and instead, the examples shown above (defining our anchor references) were done using the `$id` keyword using syntax like `{"$id": "#<fragment name>"}` instead of `{"$anchor": <fragment name>}`
+* The most common place to put arbitrary additional schemas, the `$defs` keyword, was previously called `definitions`.
+  More generally, any time a keyword comes in or out of existence in the specification, the specific list of locations where one must check to see if there are additional subschemas will change.
+* Relatedly, some keywords have changed their *type* over time (meaning at one point they took a value of one kind of JSON value and at a different point they took a value of another).
+  Some keywords have even taken values of *multiple* types.
+  As a concrete example, the `items` keyword used to take *either* a single JSON object -- i.e. JSON Schema -- in which case one must look at the value itself and decide whether it contains any subresources, or alternatively a JSON array of multiple schemas, in which case one must look recursively at each object in the array.
+  The `dependencies` keyword also historically took values which could contain subresources in different places depending on the type of JSON value used.
+  Code which handles these keywords has to be sure to not fail when handled values of these possibly different types.
+* In even earlier versions of JSON Schema, the keyword used to change the base URI was called `id` rather than `$id`.
+* The `$ref` keyword, again in earlier versions of the specification, was defined to cause any keywords alongside it to be *ignored* -- in particular, in these versions, an `$id` keyword sitting next to a `$ref` keyword is ignored and doesn't affect the base URI or define an anchor.
+* Boolean schemas don't exist in early versions of JSON Schema, in which something like the `false` in `{"additionalProperties": false}` was not a schema, it was simply a flag value saying no additional properties were allowed.
+  Code which handles recursing into places within a schema in these versions needs to be sure it doesn't misinterpret this value as a schema.
 
 # OK, Tell Me About the Implementation!
 
@@ -204,7 +228,7 @@ Similarly, given the differences across versions of JSON Schema, one could choos
 
 A further example which is extremely common for those extending the JSON Schema specifications is in the creation or extension of dialects of JSON Schema.
 Imagine for instance that one wishes to create a new keyword called `exactlyNOf` and make it available for use when writing schemas.
-This `exactlyNOf` keyword will be similar to the (existing) `anyOf`, `oneOf` and `allOf` keywords but we wish for it to mean "exactly `n` of the given schemas match".
+This `exactlyNOf` keyword will be similar to the (existing) `anyOf`, `oneOf` and `allOf` keywords but we wish for it to mean "exactly `n` of the given schemas match the instance".
 
 So for instance:
 
