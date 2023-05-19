@@ -1,5 +1,5 @@
 ---
-title: "Using JSON Schema at Remote to solve data validation problems across all levels"
+title: "Using JSON Schema at Remote to scale forms and data validations"
 date: 2023-04-19T06:00:00+00:00
 type: Case Study
 cover: /img/posts/2023/remote-case-study/cover.webp
@@ -21,7 +21,7 @@ Forms. Legal forms, employment forms, salary forms, all the forms! Hiring from m
   <figcaption class="mt-2 mb-10 text-sm text-center text-gray-500">One of the onboarding forms for Netherlands, among more than 500 unique forms to all the countries.</figcaption>
 </figure>
 
-When Remote first started, the company only covered a handful of countries with a few specific forms per country. Scaling to hundreds of country forms with complex requirements is impressive. Did you even realize that the public time-off is different across all countries? Some even supported unlimited time-off. Getting that wrong for someone's salary payment could have huge implications.
+When Remote first started,  the company only covered a handful of countries with a few specific forms per country. Scaling to hundreds of country forms with complex requirements is impressive. Did you even realize that the working hours and weekend days are different across countries and employment types? In some countries, the weekend is Friday and Saturday. And there are many other types of schedules besides the traditional 9 to 5. Getting that wrong for someone's salary payment could have huge implications.
 
 Managing and maintaining hardcoded forms in full HTML format (or even frontend components), wasn't going to be viable for the scaling Remote wanted.
 
@@ -35,10 +35,10 @@ JSON Schema was designed specifically for JSON data validation, but that hasn't 
 
 "All of that is now being solved with JSON Schemas," continued Sandrina. They worked on JSON Schema for forms and validation initially in their Development Foundations team, and later as part of the company's "Onboarding" vertical. Their onboarding process, which requires a lot of data, has to be the best experience possible to avoid incompletion, without compromising data safety or accuracy.
 
-Remote decided to create their [own form generation solution](https://remote.com/blog/json-schema-forms-guide), allowing them to layer on additional fields in JSON Schema related to the presentation of form fields as required. "After deep research with proof of concepts, taking into account the critical nature of forms in our core product, we decided to take a leap of faith… We aim to open-source it once the beta version is ready!" We eagerly await further developments, Sandrina!
+Remote decided to create their [own form generation solution](https://remote.com/blog/json-schema-forms-guide), allowing them to layer on additional fields in JSON Schema related to the presentation of form fields as required. "After deep research with proof of concepts, taking into account the critical nature of forms in our core product, we decided to take a leap of faith…" The first version of this solution has very recently been published, so you can try it today! See https://github.com/remoteoss/json-schema-form.
 
 <figure class="mt-10">
-  <img class="rounded-lg" src="/blog/img/posts/2023/remote-case-study/blog_image.webp"/>
+  <img class="rounded-lg" src="/blog/img/posts/2023/remote-case-study/blog-image.webp"/>
   <figcaption class="mt-2 mb-10 text-sm text-center text-gray-500">Diagram of how JSON Schema integrates with the server and client.</figcaption>
 </figure>
 
@@ -54,10 +54,9 @@ As with adding any new technology to your stack, you must critically evaluate if
 
 Using JSON Schema as the SSoT (Single Source of Truth) unlocked a lot of potential. "JSON Schemas were the first step to solving data validation and form generation problems across all levels at Remote," explains Sandrina.
 
-Once you start with JSON Schema, it's not uncommon to discover multiple uses. Remote creates JSON Schemas on the server and uses them to validate API payloads, run periodic validation reports (based on legal requirements), and auto-complete in code. Additionally, the client consumes these schemas to generate visual representations such as forms and tables..
+Once you start with JSON Schema, it's not uncommon to discover multiple uses. Remote creates JSON Schemas on the server and uses them to validate API payloads, run periodic validation reports (based on legal requirements), and auto-complete in code. Additionally, the client consumes these schemas to generate visual representations such as forms and tables.
 
 Armed with the SSoT, Remote sees reduced time to create and maintain forms, but also a measurable reduction in support tickets related to inconsistent data and incorrect validation. Most importantly for Remote, they also reduced the time to onboard new international employees and contractors. While other improvements were made at the same time as integrating JSON Schema, they were confident JSON Schema was pivotal.
-
 
 ## Key Impact Results
 
@@ -70,6 +69,7 @@ Adapt and evolve at a large scale, providing services quicker, and onboarding fr
 - Create and maintain forms more easily
 - Opened the doors to allow the Internal Operations team to build the forms themselves
 
+"JSON Schemas are the connector to keep our data accurate on a large scale, speeding up many of our provided services to our customers. In some cases, the time taken to implement the forms for a new country was reduced from weeks to just a couple of days."
 
 ## Remote - The Company
 
@@ -103,4 +103,4 @@ Initially unsure how far JSON Schema could go, and despite Remote pushing the ba
 
 "JSON Schema has proven its value as part of our core tooling ecosystem to validate data and generate its visual representations, such as forms and tables, which are a fundamental piece to take our services to a large-scale without compromising accuracy, speed, and most importantly, customer happiness!" We are glad you've found value in JSON Schema Sandrina! Long may it continue.
 
-Thank you to [Sandrina Pereira](https://www.linkedin.com/in/sandrina-p), Staff Frontend Engineer, and [Remote.com](https://remote.com), for allowing and enabling us to share this case study with you. Sandrina would also like to acknowledge and thank her colleagues who joined her on this journey so far: [André Albuquerque](https://pt.linkedin.com/in/amalbuquerque), [António Capelo](https://www.linkedin.com/in/antoniocapelo/), [António Silva](https://www.linkedin.com/in/antonio-silva-0a6a72b4/), [Livia Barbosa](https://www.linkedin.com/in/liviaab/), and [João Almeida](https://www.linkedin.com/in/engjoaoalmeida/).
+Thank you to [Sandrina Pereira](https://www.linkedin.com/in/sandrina-p), Staff Frontend Engineer, and [Remote.com](https://remote.com), for allowing and enabling us to share this case study with you. Sandrina would also like to acknowledge and thank her colleagues who joined her on this journey: [André Albuquerque](https://pt.linkedin.com/in/amalbuquerque), [António Capelo](https://www.linkedin.com/in/antoniocapelo/), [António Silva](https://www.linkedin.com/in/antonio-silva-0a6a72b4/), [Livia Barbosa](https://www.linkedin.com/in/liviaab/), and [João Almeida](https://www.linkedin.com/in/engjoaoalmeida/).
