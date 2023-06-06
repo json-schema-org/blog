@@ -1,6 +1,6 @@
 ---
 title: "Using JSON Schema at Remote to scale forms and data validations"
-date: 2023-04-19T06:00:00+00:00
+date: 2023-05-06T06:00:00+00:00
 type: Case Study
 cover: /img/posts/2023/remote-case-study/cover.webp
 authors:
