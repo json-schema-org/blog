@@ -36,7 +36,7 @@ By expanding their use of JSON Schema, 6 River Systems was able to solve a numbe
 
 To address their communication challenges, 6 River Systems' analysts started to directly collaborate with product engineers to draft new schemas. Using JSON Schema, the analysts can write a production-ready specification that the engineers understand immediately.
 
-6 River Systems has found JSON Schema to be extremely helpful for generating typed SDKs. When an analyst and engineer finish iterating on a schema, they use the schema to generate TypeScript interfaces for use by robots and throughout the application. The strongly typed nature at the data generation point makes development much smoother and eliminates bugs before they reach production, which makes all the difference.
+6 River Systems has found JSON Schema to be extremely helpful for generating typed SDKs. When an analyst and an engineer finish iterating on a schema, they use the schema to generate TypeScript interfaces for use by robots and throughout the application. The strongly typed nature at the data generation point makes development much smoother and eliminates bugs before they reach production, which makes all the difference.
 
 6 River Systems also uses their schemas to automatically update destination databases, identify and isolate non-conforming data, and provide insight into the data that flows through the pipelines.
 
