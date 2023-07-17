@@ -35,7 +35,7 @@ In early 2022, Postman released support for [gRPC and Protocol Buffers](https://
 
 ## JSON Schema in the Postman API Platform
 
-JSON Schema is not only used internally to develop the various components of the Postman API Platform---many of the features offered by Postman directly involve the use of JSON Schema.
+JSON Schema is not only used internally to develop the various components of the Postman API Platform - many of the features offered by Postman directly involve the use of JSON Schema.
 
 ### **JSON Schema in the context of Postman Collections**
 
@@ -55,4 +55,4 @@ A key component of the Postman API Platform is the [Postman API Network](https:/
 
 ## Postman and JSON Schema
 
-With JSON Schema being a crucial component of the Postman API Platform and the API ecosystem, we are honored to be supporting the JSON Schema organization as part of the [OpenJS foundation](https://json-schema.org/blog/posts/json-schema-joins-the-openjsf) by bringing aboard some of its passionate core contributors---[Ben Hutton](https://blog.postman.com/ben-hutton-joins-postman-to-lead-json-schema-strategy/), Greg Dennis, Jason Desrosiers, and Julian Berman---as Postmanauts. We can't know everything about what the future might hold, but we are certain that the future of APIs involves JSON Schema.
+With JSON Schema being a crucial component of the Postman API Platform and the API ecosystem, we are honored to be supporting the JSON Schema organization as part of the [OpenJS foundation](https://json-schema.org/blog/posts/json-schema-joins-the-openjsf) by bringing aboard some of its passionate core contributors - [Ben Hutton](https://blog.postman.com/ben-hutton-joins-postman-to-lead-json-schema-strategy/), Greg Dennis, Jason Desrosiers, and Julian Berman - as Postmanauts. We can't know everything about what the future might hold, but we are certain that the future of APIs involves JSON Schema.
