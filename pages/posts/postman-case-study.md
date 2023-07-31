@@ -13,6 +13,10 @@ canonicalLink: https://blog.postman.com/how-postman-uses-json-schema/
 
 > Originally published at [blog.postman.com](https://blog.postman.com/how-postman-uses-json-schema).
 
+<div className="border-2 py-3 px-3 border-blue-400 bg-blue-100 text-blue-700">
+Disclaimer: A number of members of the JSON Schema organization are employed by Postman, but this post is not sponsored content.
+</div>
+
 The [Postman API Platform](https://blog.postman.com/announcing-postman-v10/) offers a rich set of solutions for every step of the [API lifecycle](https://www.postman.com/api-platform/api-lifecycle/). Through the years, we have witnessed from the front row how JSON Schema entered the scene to become the industry standard for describing and annotating JSON documents. While many alternatives came and went, JSON Schema unquestionably proved to be the robust and extensible foundation behind the API specification movement. According to Postman's [2022 State of the API Report](https://www.postman.com/state-of-api/api-technologies/#api-technologies), an impressive 72% of respondents chose JSON Schema as their preferred API specification.
 
 With JSON Schema being so ingrained in how APIs are developed today, it is hard to find a place in the Postman organization or the Postman API Platform where JSON Schema is not involved in some way or another. And with the modern (and increasing) importance of [API-first](https://www.postman.com/use-cases/api-first-development/) development, the use of API specifications plays a critical role in designing and sharing APIs. JSON Schema is currently the backbone of the most popular API specification technologies in the world, including [OpenAPI](https://www.openapis.org/), [AsyncAPI](https://www.asyncapi.com/), and [RAML](https://raml.org/).
