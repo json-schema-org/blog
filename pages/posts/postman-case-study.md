@@ -6,7 +6,7 @@ cover: /img/posts/2023/postman-case-study/cover.webp
 authors:
   - name: Juan Cruz Viotti
     photo: /img/avatars/jviotti.webp
-    link: https://twitter.com/jviottidc
+    link: https://www.jviotti.com/
 excerpt: "Learn how JSON Schema continues to be a crucial component of the Postman API Platform and the API ecosystem."
 canonicalLink: https://blog.postman.com/how-postman-uses-json-schema/
 ---

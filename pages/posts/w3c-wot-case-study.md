@@ -6,7 +6,7 @@ cover: /img/posts/2022/w3c-wot-case-study/cover.webp
 authors:
   - name: Juan Cruz Viotti
     photo: /img/avatars/jviotti.webp
-    link: https://twitter.com/jviottidc
+    link: https://www.jviotti.com/
 excerpt: "Using JSON Schema at the W3C Web of Things to create an interoperability layer so that different IoT platforms, protocols and standards can operate together"
 language: en
 ---
@@ -114,7 +114,7 @@ year.
 
 At the time of this writing, the Working Group consists of 96 participants
 representing 36 organizations and the Interest Group consists of 131
-participants representing 48 organizations. 
+participants representing 48 organizations.
 
 ![W3C Web of Things Examples](/blog/img/posts/2022/w3c-wot-case-study/wot-examples.webp)
 
