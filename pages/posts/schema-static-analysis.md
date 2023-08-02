@@ -46,7 +46,16 @@ we have three constraints:
 2. If there is a `foo` property, its value **must** be a string.
 3. If there is a `bar` property, its value **must** be a number.
 
-This is easy to set up.  We can model each of these constraints, and when we get an instance, we test each constraint.  If they all pass, then the validation passes.
+Each constraint identifies:
+
+- where in the schema we are, the "schema location"
+- how we got there, the "evaluation path"
+- the instance location
+- a specific requirement by one keyword
+
+Note that none of this actually requires an instance, and we should be able to precalculate a lot of this.
+
+This seems pretty easy to set up.  We can model each of these constraints, and when we get an instance, we test each constraint.  If they all pass, then the validation passes.
 
 Simple, right?  That's what I thought, too.  It gets complicated in multiple ways pretty quickly.
 
