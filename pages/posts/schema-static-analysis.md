@@ -60,12 +60,12 @@ But there are a few keywords that depend on (or interact with) others in order t
 
 | Keyword | Dependencies |
 |:--|:--|
-| `additionalProperties` | `properties`<br>`patternProperties` |
-| `contains` | `minContains`<br>`maxContains` |
-| `then`<br>`else` | `if` |
+| `additionalProperties` | `properties`<br/>`patternProperties` |
+| `contains` | `minContains`<br/>`maxContains` |
+| `then`<br/>`else` | `if` |
 | `items` | `prefixItems` |
-| `unevaluatedItems`\* | `prefixItems`<br>`items`<br>`unevaluatedItems` |
-| `unevaluatedProperties`\* | `properties`<br>`patternProperties`<br>`additionalProperties`<br>`unevaluatedProperties` |
+| `unevaluatedItems`\* | `prefixItems`<br/>`items`<br/>`unevaluatedItems` |
+| `unevaluatedProperties`\* | `properties`<br/>`patternProperties`<br/>`additionalProperties`<br/>`unevaluatedProperties` |
 
 \* _While most keywords can only find their dependencies among their siblings, the `unevaluated*` keywords also take dependencies on keywords inside subschemas of their siblings (that apply to the same instance location)._
 
@@ -99,7 +99,7 @@ At the top, we defined a constraint as a requirement applied to a specific locat
 | Keyword | Instance locations |
 |:--|:--|
 | `patternProperties` | any property that matches one of its regular expression keys |
-| `additionalProperties`<br>`unevaluatedProperties`<br>`unevaluatedItems` | any property not evaluated by one of its dependencies |
+| `additionalProperties`<br/>`unevaluatedProperties`<br/>`unevaluatedItems` | any property not evaluated by one of its dependencies |
 | `contains` | any item in an array |
 | `unevaluatedItems` | any item in an array not evaluated by one of its dependencies |
 
