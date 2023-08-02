@@ -101,7 +101,7 @@ valid = (if && then) || (!if && else)
 
 Note how this differs from the notion that all individual constraints passing implies validation passing.  In this case, if `if` passes, then it doesn't matter whether `else` passes because it's just skipped; conversely, if `if` fails, `then` is skipped.
 
-While the interaction for `if`/`then`/`else` is pretty straightforward to resolve, doing that for some other keywords, like `additionalProperties`, doesn't work.  For that, you have an additional complication.
+While the interaction for `if`/`then`/`else` is pretty straightforward to precalculate, doing so for some other keywords, like `additionalProperties`, doesn't work.  For that, you have an additional complication.
 
 ## Unknown instance locations
 
@@ -110,9 +110,9 @@ At the top, we defined a constraint as a requirement applied to a specific locat
 | Keyword | Instance locations |
 |:--|:--|
 | `patternProperties` | any property that matches one of its regular expression keys |
-| `additionalProperties`<br/>`unevaluatedProperties`<br/>`unevaluatedItems` | any property not evaluated by one of its dependencies |
+| `additionalProperties`<br/>`unevaluatedProperties`<br/>`unevaluatedItems` | any object property not evaluated by one of its dependencies |
 | `contains` | any item in an array |
-| `unevaluatedItems` | any item in an array not evaluated by one of its dependencies |
+| `items`<br/>`unevaluatedItems` | any array item not evaluated by one of its dependencies |
 
 For all of these, you need the instance to determine what locations are available.  Only then can you complete the constraints.
 
