@@ -5,7 +5,7 @@ tags:
   - Implementations
   - Theory
 type: Engineering
-cover: /img/posts/schema-static-analysis/cover.webp
+cover: /img/posts/2023/schema-static-analysis/cover.webp
 authors:
   - name: Greg Dennis
     photo: /img/avatars/gregsdennis.webp
