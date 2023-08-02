@@ -91,13 +91,15 @@ then {
 }
 ```
 
+We evaluate `if`, and the result of that determines whether we evaluate `then` or `else`.
+
 But if we think of these as constraints, then these three present a rather peculiar boolean logic:
 
 ```
 valid = (if && then) || (!if && else)
 ```
 
-Note how this differs from the notion that all individual constraints passing implies validation passing.
+Note how this differs from the notion that all individual constraints passing implies validation passing.  In this case, if `if` passes, then it doesn't matter whether `else` passes because it's just skipped; conversely, if `if` fails, `then` is skipped.
 
 While the interaction for `if`/`then`/`else` is pretty straightforward to resolve, doing that for some other keywords, like `additionalProperties`, doesn't work.  For that, you have an additional complication.
 
