@@ -88,7 +88,7 @@ Visual Studio provides a user agent (and we'll get to that analysis later), but 
 
 The total number of requests to the draft-04 meta-schema is 7.21 million in the last 7 days.
 
-The top physical locations showed one surprise, with Peru taking the top spot, over the UK and Russia. Otherwise, the USA takes top spot with 5.73 million of those 7.21 million requests.
+The physical locations showed one surprise, with Peru taking the lead over the UK and Russia. Otherwise, the USA takes top spot with 5.73 million of those 7.21 million requests.
 
 This time, the user agent data is much more useful. We don't see the empty agent string till slot number 10, accounting for only 78k requests. In the top spot, we see Java! I'm making an educated guess here, and saying this is related to the Java implementation by Francis Galiegue. They were one of the early core team members of JSON Schema, and created a Java implementation, which hasn't upgraded support since draft-04.
 
