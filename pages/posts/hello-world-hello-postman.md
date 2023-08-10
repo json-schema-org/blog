@@ -9,7 +9,7 @@ cover: /img/posts/2022/hello-world-hello-postman/cover.webp
 authors:
   - name: Julian Berman
     photo: /img/avatars/julian.webp
-    link: https://twitter.com/JulianWasTaken
+    link: https://mastodon.social/@JulianWasTaken
     byline: JSON Schema Test Suite Maintainer & Technical Lead, API Specifications @Postman
 excerpt: "Oh hello there! A second person is now working full-time on JSON Schema."
 ---
