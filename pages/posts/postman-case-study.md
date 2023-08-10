@@ -41,19 +41,19 @@ In early 2022, Postman released support for [gRPC and Protocol Buffers](https://
 
 JSON Schema is not only used internally to develop the various components of the Postman API Platform - many of the features offered by Postman directly involve the use of JSON Schema.
 
-### **JSON Schema in the context of Postman Collections**
+### JSON Schema in the context of Postman Collections
 
 The Postman app can be used to [convert a growing number of API specification formats into Postman Collections](https://learning.postman.com/docs/developer/collection-conversion/). As noted earlier in this post, the most popular API specification formats such as OpenAPI, Swagger, and RAML rely on JSON Schema. In many cases, the API specification conversion logic requires generating random JSON documents that match a JSON Schema definition.
 
 When defining a Postman Collection, users may define JavaScript-based test and pre-request scripts that are executed automatically when running the corresponding collection. The JavaScript engine embedded within Postman to run these scripts integrates with the popular [AJV](https://ajv.js.org/) JSON Schema validator. With it, Postman users write scripts that employ JSON Schema validation using a wide range of JSON Schema specification versions.
 
-### **JSON Schema in the context of OpenAPI**
+### JSON Schema in the context of OpenAPI
 
 The Postman app provides a rich [OpenAPI editor](https://learning.postman.com/docs/designing-and-developing-your-api/defining-an-api/) with advanced JSON Schema capabilities. The editor is able to show autocompletion and syntax warnings, and it also highlights [potential areas of improvements](https://learning.postman.com/docs/api-governance/api-definition/api-definition-warnings/) with regards to readability and security for JSON Schema and OpenAPI endpoint definitions. An OpenAPI definition is then used to generate [rich documentation](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/) of the available endpoints and their respective JSON Schema definitions, and to optionally generate matching [server code](https://learning.postman.com/docs/designing-and-developing-your-api/generating-server-code/) written in Go, Java, Python, and Node.js.
 
 An API defined using Postman is more than its API definition. It has surrounding elements such as documentation, tests, mock servers, and monitors. When writing an OpenAPI specification, Postman will [cross-check the integrity of each of these elements](https://learning.postman.com/docs/designing-and-developing-your-api/validating-elements-against-schema/) against the JSON Schema definitions included in the API specification.
 
-### **The Postman API Network**
+### The Postman API Network
 
 A key component of the Postman API Platform is the [Postman API Network](https://www.postman.com/api-network/), the [world's largest registry of public APIs](https://blog.postman.com/postman-public-api-network-is-now-the-worlds-largest-public-api-hub/). This global public registry includes a vast amount of APIs and their corresponding JSON Schema definitions typically maintained by their respective original authors. Some notable examples are the [Slack Web API](https://www.postman.com/slackhq/workspace/slack-api/collection/13509546-993e3b18-d277-4189-8ce5-af45df38e336), the [Docker HUB API](https://www.postman.com/dockerdev/workspace/docker-hub/collection/17990590-9574e087-2a50-4ecf-88b3-55f12a29d99e), and the [Twilio API](https://www.postman.com/twilio/workspace/twilio-api/overview). The Postman API Network is therefore one of the largest datasets of production-grade JSON Schema definitions.
 
