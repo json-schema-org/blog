@@ -162,6 +162,6 @@ These were the primary gotchas that I found when trying to change my approach to
 
 If you'd like to find out more about how I ended up implementing all of this, I've got a summary on [blog.json-everything.net](https://blog.json-everything.net/posts/new-json-schema-net/).  It's a bit more functional now than procedural, but still very object-oriented.
 
-There's probably a lot more to explore here, too.  If you think of something, feel free to come find me in Slack.  
+There's probably a lot more to explore here, too.  If you think of something, feel free to come find me in [Slack](https://json-schema.org/slack).  
 
 _Cover image by [Google DeepMind](https://unsplash.com/@googledeepmind) on [Unsplash](https://unsplash.com/photos/ZJKE4XVlKIA)_
