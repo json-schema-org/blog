@@ -31,12 +31,28 @@ Without proper schemas for their JSON data, there was no way to verify whether c
 
 ## Solution
 
+The team began to introduce JSON Schemas to validate all of the JSON data files, context data and API request bodies consumed or produced as part of the application.
+Each time a change to the data model is made, the schemas are updated accordingly, and in any circumstance the schemas are used to validate that the application functions correctly with each change.
+
+This occurs in three main ways:
+
+  * While the application runs in production, each API call has its request body validated via a corresponding JSON Schema before passing the event off to a data warehouse
+  * When retrieving external data in automation pipelines, whenever data is transformed from a source format into JSON, the generated data is validated against a JSON Schema to ensure it has been correctly transformed.
+    If validation succeeds, the generated data is checked into a git repository to be used in production.
+    Otherwise, the failure is raised for investigation.
+  * When running continuous integration each time a change is made to the application, various additional schemas ensure:
+
+    * that YAML frontmatter properties are correctly included in Markdown files which are used to generate pages within the application
+    * that YAML or JSON data files which contain page content and which have been hand authored by content writers are correctly formed
+    * that the context object created at runtime which contains the entirety of the site content along with a site tree for the application is itself correctly formed
+
+<p className="text-2xl my-10">"Choosing JSON schema to allow JSON schema validation was a natural and obvious choice that our team made. It has been a fundamental part of our application since we moved from having a static site to a dynamic application about 3 years ago." - Rachael Sewell & Robert Sese, Docs Engineers at GitHub</p>
 
 ## Impact
 
 Introducing JSON Schema into the platform produced meaningful impact in productivity, in discoverability, as well as in reliability.
 
-<p className="text-2xl my-10">"JSON schema makes it so much easier to see the shape of a data and its property types. I can quickly open the file on disk and understand what the data structure looks like. This saves the whole team time when extending a feature that relies on data backed by a schema." - Rachael Sewell, Docs Engineer at GitHub</p>
+<p className="text-2xl my-10">"JSON schema makes it so much easier to see the shape of a data and its property types. I can quickly open the file on disk and understand what the data structure looks like. This saves the whole team time when extending a feature that relies on data backed by a schema." - Rachael Sewell & Robert Sese, Docs Engineers at GitHub</p>
 
 The GitHub team moves quickly, with the documentation team releasing to production 20 times per day or more, and relying heavily on continuous integration checking each and every commit to ensure changes work as intended.
 Failures in continuous integration alert the team before the change is shipped out to production, with JSON Schema validation an integral piece of ensuring all of the various pieces of JSON data needed for the application are properly formed.
