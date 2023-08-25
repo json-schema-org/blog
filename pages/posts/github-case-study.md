@@ -22,7 +22,7 @@ Documentation at GitHub is housed at [docs.github.com](https://docs.github.com),
 Historically, this documentation was split into two statically generated sites (help.github.com and developer.github.com), but in 2020 these static sites were combined in a new dynamic application hosted at docs.github.com.
 The full story of the rebirth of GitHub's documentation is told best on the GitHub blog [here](https://github.blog/2020-10-14-how-we-open-sourced-docs-github-com/) and [here](https://github.blog/2020-07-02-how-we-launched-docs-github-com/), but an important outcome of this change was a move towards data-driven documentation, and in particular a big investment in the use of JSON both to drive content as well as for intercommunication within the application's platform itself.
 
-More specifically, some of page content is assembled fully automatically from JSON data files and some JSON is manually authored by content writers.
+More specifically, some page content is assembled fully automatically from JSON data files and some JSON is manually authored by content writers.
 Within the platform, the application's entire queryable in-memory context is retrievable as JSON.
 
 "Not being able to validate our JSON data against a JSON schema would result in bugs in production like missing data on automated documentation pages or unavailable pages", explain Rachael Sewell and Robert Sese, software engineers who work on GitHub's Docs Engineering team.
