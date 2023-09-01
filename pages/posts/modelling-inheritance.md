@@ -41,7 +41,7 @@ Now we can define other peripherals, `Mouse` and `Keyboard`, by inheriting from 
 class Mouse extends Peripheral {
   buttonCount: number;
   wheelCount: number;
-  trackingType: string; // ball / optical
+  trackingType: "ball" | "optical";
   // ...
 }
 
