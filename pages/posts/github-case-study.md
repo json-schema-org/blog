@@ -2,7 +2,7 @@
 title: "How JSON Schema Was an Obvious Choice at GitHub"
 date: 2023-07-31
 type: Case Study
-cover: /img/posts/2023/github-case-study/github-mark.svg
+cover: /img/posts/2023/github-case-study/cover.webp
 authors:
   - name: Julian Berman
     photo: /img/avatars/julian.webp
