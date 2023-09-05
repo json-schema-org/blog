@@ -29,6 +29,11 @@ Within the platform, the application's entire queryable in-memory context is ret
 
 Without proper schemas for their JSON data, there was no way to verify whether code changes introduced new bugs, or to ensure that data consumed from external sources was in the format needed for automated documentation pages.
 
+<figure className="mt-10">
+  <img src="/blog/img/posts/2023/github-case-study/working.webp"/>
+  <figcaption className="mt-2 mb-10 text-sm text-center text-gray-500">Hubbers (GitHub staff) working to empower developers.</figcaption>
+</figure>
+
 ## Solution
 
 The team began to introduce JSON Schemas to validate all of the JSON data files, context data and API request bodies consumed or produced as part of the application.
@@ -57,6 +62,11 @@ Introducing JSON Schema into the platform produced meaningful impact in producti
 The GitHub team moves quickly, with the documentation team releasing to production 20 times per day or more, and relying heavily on continuous integration checking each and every commit to ensure changes work as intended.
 Failures in continuous integration alert the team before the change is shipped out to production, with JSON Schema validation an integral piece of ensuring all of the various pieces of JSON data needed for the application are properly formed.
 
+<figure className="mt-10">
+  <img src="/blog/img/posts/2023/github-case-study/building.webp"/>
+  <figcaption className="mt-2 mb-10 text-sm text-center text-gray-500">GitHub Offices.</figcaption>
+</figure>
+
 ## GitHub - The Company
 
 <p className="text-2xl my-10">GitHub is the world's largest developer platform, helping developers and organizations around the world to build, scale and deliver secure software.</p>
@@ -66,7 +76,5 @@ It is based in San Francisco, CA, though its hiring and work culture is remote-f
 
 Particular to the subject at hand, within GitHub is an internal organization called Education, Community, and Open Source Software, which houses the Docs team responsible for the documentation application.
 This Docs team consists of content writers, content designers, docs product managers, and docs designers and docs engineers.
-
-## Further Benefits
 
 Thank you to [Rachael Sewell](https://github.com/rachmari) and [Robert Sese](https://github.com/rsese), Software Engineers at GitHub's Docs Engineering team who maintain the wonderful [docs.github.com](https://docs.github.com), as well as to the entire team at GitHub, for sharing their experiences and allowing us to further share them with you.
