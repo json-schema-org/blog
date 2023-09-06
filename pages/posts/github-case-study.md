@@ -71,7 +71,6 @@ Failures in continuous integration alert the team before the change is shipped o
 
 <p className="text-2xl my-10">GitHub is the world's largest developer platform, helping developers and organizations around the world to build, scale and deliver secure software.</p>
 
-Founded in 2008, GitHub's $7.5 billion acquisition by Microsoft was finalized in 2018, and the company has only continued to grow since, currently with approximately 2,000 employees worldwide.
 It is based in San Francisco, CA, though its hiring and work culture is remote-first.
 
 Particular to the subject at hand, within GitHub is an internal organization called Education, Community, and Open Source Software, which houses the Docs team responsible for the documentation application.
