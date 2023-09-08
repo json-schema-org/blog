@@ -1,6 +1,6 @@
 ---
 title: "How JSON Schema Was an Obvious Choice at GitHub"
-date: 2023-07-31
+date: 2023-09-09
 type: Case Study
 cover: /img/posts/2023/github-case-study/cover.webp
 authors:
