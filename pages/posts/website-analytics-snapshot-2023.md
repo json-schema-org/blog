@@ -18,7 +18,7 @@ Why now? In addition to providing meta-schemas at versioned URLs, the web site h
 
 Maybe now we can remove hosting that URL? For reasons out of the scope of this article, using it really isn't a great idea, and will probably produce results you don't expect. As mentioned, web analytics won't tell us what's happening outside of a browser, so we needed something else… We were already using Cloudflare, so decided to submit for the open source free pro tier plan… while we wait, the cost isn't huge, so I decided we should look at the data now.
 
-The data in this article is a 7 day snapshot taken at 2023-07-21.
+The data in this article is a seven-day snapshot taken at 2023-07-21.
 (At the end of the article, I'll share an image from this snapshot, and one from 2023-07-31 for comparison.)
 
 Caveat 1: Clients should not be making requests to meta-schemas as part of their production code. It may be appropriate as part of a CI/CD system, but this is also unlikely. Instead, clients should store a local cached copy. Any noticeable number of requests strongly suggests little or no caching.
