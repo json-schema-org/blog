@@ -10,7 +10,7 @@ authors:
 excerpt: "See what we discovered when looking at over 50 million requests to the JSON Schema org domain from the last 7 days"
 ---
 
-I grant you, 7 days isn't an ideal length of time to do an analysis over, but this is what we have for now. Previously, we had basic website analytics, but that only tells a fraction of the story. We run the website on GitHub pages with Cloudflare infront, which provides 7 days of analytics, critically, including direct access traffic.
+I grant you, 7 days isn't an ideal length of time to do an analysis over, but this is what we have for now. Previously, we had basic website analytics, but that only tells a fraction of the story. We run the website on GitHub pages with Cloudflare in front, which provides 7 days of analytics, critically, including direct access traffic.
 
 The JSON Schema website hosts the official meta-schemas. If you're not sure what that means, meta-schemas are JSON Schemas for JSON Schema. Why is this interesting? Well, we host all historical versions of the meta-schema, not just the most recent. And while we don't expect code to be making requests on a regular basis to download the meta-schemas, the number of requests strongly suggests that they do.
 
