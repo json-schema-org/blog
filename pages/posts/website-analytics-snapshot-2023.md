@@ -56,7 +56,7 @@ The top result, at 11.82 million, is `/draft-07/schema`. This suggests that draf
   <figcaption className="mt-2 mb-10 text-sm text-center text-gray-500">Web traffic snapshot 2023-07-21."</figcaption>
 </figure>
 
-Draft-04 doesn't appear till number 4 in the list. Rank number 2 and 3 are taken by Draft 2019-09, but not as we might expect… the files there, `links` and `hyper-schema` are for Hyper Schema, as opposed to the primary validation use case of JSON Schema.
+Draft-04 doesn't appear till number 4 in the list. Ranks number 2 and 3 are taken by Draft 2019-09, but not as we might expect… the files there, `links` and `hyper-schema` are for Hyper Schema, as opposed to the primary validation use case of JSON Schema.
 
 ## Someone's accessing Hyper Schema?
 
