@@ -168,4 +168,6 @@ Here's the side by side traffic for paths from 2023-07-21 and 2023-07-31.
 
 ---
 
+Got any thoughts, comments, feedback on this article? Got any ideas why we are seeing this data? Have some ideas for futher research or analysis? Please, let's discuss this further: https://github.com/orgs/json-schema-org/discussions/480
+
 Photo by <a href="https://unsplash.com/@isaacmsmith?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Isaac Smith</a> on <a href="https://unsplash.com/photos/6EnTPvPPL6I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
