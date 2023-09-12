@@ -21,11 +21,11 @@ Maybe now we can remove hosting that URL? For reasons out of the scope of this a
 The data in this article is a seven-day snapshot taken at 2023-07-21.
 (At the end of the article, I'll share an image from this snapshot, and one from 2023-07-31 for comparison.)
 
-Caveat 1: Clients should not be making requests to meta-schemas as part of their production code. It may be appropriate as part of a CI/CD system, but this is also unlikely. Instead, clients should store a local cached copy. Any noticeable number of requests strongly suggests little or no caching.
+- **Caveat 1**: Clients should not be making requests to meta-schemas as part of their production code. It may be appropriate as part of a CI/CD system, but this is also unlikely. Instead, clients should store a local cached copy. Any noticeable number of requests strongly suggests little or no caching.
 
-Caveat 2: The traffic analytics data is based on a sample of the total traffic. Each stat uses a different percentage. Anywhere from 0.16%, to 16.67%. I guess there's a lot of numbers to crunch and logs to keep to do a true analysis. You can ask for logs to be piped to a third party… but you need the enterprise plan. Regardless, the insights are still pretty interesting.
+- **Caveat 2**: The traffic analytics data is based on a sample of the total traffic. Each stat uses a different percentage. Anywhere from 0.16%, to 16.67%. I guess there's a lot of numbers to crunch and logs to keep to do a true analysis. You can ask for logs to be piped to a third party… but you need the enterprise plan. Regardless, the insights are still pretty interesting.
 
-Caveat 3: The "top" of each category of data is limited to 15 items in the UI. I think we could use their API to access additional data, but that's something I couldn't figure out in 5 minutes, so let's use what we have today.
+- **Caveat 3**: The "top" of each category of data is limited to 15 items in the UI. I think we could use their API to access additional data, but that's something I couldn't figure out in 5 minutes, so let's use what we have today.
 
 Oh yes, and we are limited to the last SEVEN days worth of data.
 
