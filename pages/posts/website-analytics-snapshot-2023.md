@@ -76,7 +76,7 @@ I guess we should reach out to them to find out about their use case for Hyper S
 
 Accessing the latest meta-schema published using this unversioned URI is not advised. We started making people aware of this about four years ago, and you'll see [a message with your redirection](https://github.com/json-schema-org/json-schema-org.github.io/blob/fb3b1e681e273738f38cb1438b0635b6d4ad5383/_layouts/redirect.html#L13) if using a browser.
 
-The vast majority of requests to this have no referring source, so that's not very helpful. Turning to user agent, we see the vast majority of requests have a user agent of ""... yup, blank. This is poor form, and I had a suspicion about what might be causing this.
+The vast majority of requests to this have no referring source, so that's not very helpful. Turning to user agent, we see the vast majority of requests have a user agent of "". *sigh*. Yup! blank! This is poor form, and I had a suspicion about what might be causing this.
 
 When you look at the adjacent data, seeing over half of the remaining top 15 user agents, it's pretty clear that most of these requests are coming from IDEs and code editors. We see InteliJ IDEA, WebStorm, and multiple versions of each. But, what we don't see is VSCode.
 
@@ -126,7 +126,7 @@ We'll reach out to AWS and see if we can get any more specific details. It's lik
 
 The top two ASN sources are Amazon controlled, totalling just over 39 million requests.
 
-For those of you who aren't network engineers, ASN is an [Autonomous System Number](https://www.cloudflare.com/en-gb/learning/network-layer/what-is-an-autonomous-system/), used for routing of packets over the internet, making sure they take the likely fastest route. If you cast your mind back to when you learnt about the OSI model (yeah, I don't remember much of that either)... [Open Systems Interconnection model](https://www.cloudflare.com/en-gb/learning/ddos/glossary/open-systems-interconnection-model-osi/), these ASNs are used as part of the transport layer.
+For those of you who aren't network engineers, ASN is an [Autonomous System Number](https://www.cloudflare.com/en-gb/learning/network-layer/what-is-an-autonomous-system/), used for routing of packets over the internet, making sure they take the likely fastest route. If you cast your mind back to when you learnt about the OSI model (yeah, I don't remember much of that either), AKA the [Open Systems Interconnection model](https://www.cloudflare.com/en-gb/learning/ddos/glossary/open-systems-interconnection-model-osi/), these ASNs are used as part of the transport layer.
 
 Point is, we can tell without needing to look up IP address owners, that almost 80% of our traffic is coming from AWS!
 
