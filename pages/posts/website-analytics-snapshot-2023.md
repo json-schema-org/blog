@@ -140,7 +140,7 @@ Weirdly, 1.54k requests declare a referrer of some defunct Uber settlement, just
 
 ## What does this all mean?
 
-Access of meta-schemas is unlikely to correlate with useage percentages, but it is at least an indicator of use to an extent.
+Access of meta-schemas is unlikely to correlate with usage percentages, but it is at least an indicator of use to an extent.
 Looking at this data has meant we are reaching out to AWS to see if we can get any details.
 It has prompted us to reach out to IDE makers, although doing so was already on our list.
 We have extended our known platform users. It's nice when people use a proper agent string.
