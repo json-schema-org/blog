@@ -49,7 +49,7 @@ About 51 million of those requests are made from something that doesn't declare 
 
 In terms of what paths are accessed, and therefore what meta-schemas, I found the results interesting and insightful.
 
-The top result, at 11.82 million, is `/draft-07/schema`. This suggests that draft-07 JSON Schema is the most popular when it comes to people actually using them or authoring them today.
+The top result, at 11.82 million, is `/draft-07/schema`. This suggests that draft-07 JSON Schema is the most popular passed to misbehaving implementations. (Most well behaved implementations won't go download the meta-schemas, because they already have it! This includes the most popular implementations!)
 
 <figure className="mt-10">
   <img className="mx-auto" src="/blog/img/posts/2023/website-analytics-snapshot-2023/Screenshot 2023-07-21 at 12.12.31.webp"/>
