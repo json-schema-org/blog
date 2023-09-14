@@ -116,7 +116,7 @@ What do we expect to see for 2020-12 then? I was curious too.
 
 We see 7.42 million, and none of those are related to Hyper Schema.
 
-(For reasons I won't go into, we have a meta-schema for Hyper Schema in 2019-09, but not 2020-12.) 1.53 million to `.../meta/core`, and in the next place, the validation vocabulary meta-schema, with only 577.84k. If this is accurate, it's a little concerning. We would expect `/draft/2020-12/schema` to be the top path accessed, but it doesn't appear till position 8, with 472.46k.
+Of that, 1.53 million to `.../meta/core`, and in the next place, the validation vocabulary meta-schema, with only 577.84k. If this is accurate, it's a little concerning. We would expect `/draft/2020-12/schema` to be the top path accessed, but it doesn't appear till position 8, with 472.46k.
 
 The traffic pattern is very spikey, with a repeating time based pattern. It's probably some cron job running. If we exclude the top IP address, we lose all the spikes, strongly suggesting this bursting traffic is coming from some Amazon controlled AWS servers.
 
