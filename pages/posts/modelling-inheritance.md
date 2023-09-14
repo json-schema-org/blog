@@ -1,5 +1,5 @@
 ---
-title: "Modeling Inheritance with JSON Schema"
+title: "Modelling Inheritance with JSON Schema"
 date: 2023-09-13
 tags:
   - Questions
