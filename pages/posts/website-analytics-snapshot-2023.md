@@ -14,7 +14,7 @@ I grant you, 7 days isn't an ideal length of time to do an analysis over, but th
 
 The JSON Schema website hosts the official meta-schemas. If you're not sure what that means, meta-schemas are JSON Schemas for JSON Schema. Why is this interesting? Well, we host all historical versions of the meta-schema, not just the most recent. And while we don't expect code to be making requests on a regular basis to download the meta-schemas, the number of requests strongly suggests that they do.
 
-Why now? In addition to providing meta-schemas at versioned URLs, the web site has, and continues to, provide the latest meta-schema at `/schema`. We currently advise people not to be accessing this! We put in a delayed redirect with a message warning people to avoid it, but realistically, we expect most access will be via code and not in a browser.
+Why now? In addition to providing meta-schemas at versioned URLs, the web site has, and continues to, provide the latest meta-schema at `/schema`. We currently advise people not to be accessing this! We put in a delayed redirect with a message warning people to avoid it, but realistically, we expect most access will be via code and not in a browser. (This means things are likely broken. More on that later.)
 
 Maybe now we can remove hosting that URL? For reasons out of the scope of this article, using it really isn't a great idea, and will probably produce results you don't expect. As mentioned, web analytics won't tell us what's happening outside of a browser, so we needed something else… We were already using Cloudflare, so decided to submit for the open source free pro tier plan… while we wait, the cost isn't huge, so I decided we should look at the data now.
 
@@ -83,6 +83,8 @@ When you look at the adjacent data, seeing over half of the remaining top 15 use
 Sure enough, VSCode, as far as we can tell, [doesn't provide a user agent](https://github.com/microsoft/vscode/issues/188398). At least, when making requests related to JSON Schema. While we love VSCode and the baked-in support for JSON Schema, there are a number of things we wish were a little better, and this is one of them.
 
 Visual Studio provides a user agent (and we'll get to that analysis later), but given Visual Studio Code does not, we can't differentiate between requests it is making, and any others which aren't providing a user agent. (We generally see a user agent is given.)
+
+It's important to note here that, due to the limitations of hosting the site on GitHub, the redirect used for `/schema` is an HTML based header redirect as opposed to using a HTTP 302 status code like you might expect. This means that realistically, it's unlikely any code making these requests is actually getting what they want. (The redirection technique is almost exclusivly followed by browsers, and not developer tools, such as CURL, as it is non-standard). Sure enough, if we try this in Visual Studio Code, we see an "Unable to parse content" error. It expects JSON in the response, but the website does not oblige.
 
 ## Who is accessing draft-04?
 
