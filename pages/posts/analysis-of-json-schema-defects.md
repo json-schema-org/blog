@@ -59,9 +59,22 @@ As a result, mistyping, misnaming, misspelling or misplacing a keyword simply
 results in the keyword being silently ignored, and these unintentional errors
 tend to be stay in schemas without being ever detected.
 
+In the worst case, schemas may not be satisfiable at all. Consider for
+instance this schema, where both possible values are integers, which mean
+that it will always fail when checking that they are also strings:
+
+```json
+{
+  "type": "string",
+  "enum": [ 80, 443 ]
+}
+```
+
+Other defects manifest themselves as ignored keywords.
 Consider the following schema extract (line 614 of
 [.NET Template](https://json.schemastore.org/template.json)), where `uniqueItems`
-applies to a string, thus is ignored:
+applies to a string, thus is ignored, and should have been attached to the upper
+level:
 
 ```json
 {
@@ -75,7 +88,8 @@ applies to a string, thus is ignored:
 
 Or this extract (line 55 of
 [Azure Device Update Manifest](https://json.schemastore.org/azure-deviceupdate-manifest-definitions-4.0.json)),
-where `propertyNames` applies to a string thus is also ignored.
+where `propertyNames` applies to a string thus is also ignored, and should also be moved upward to
+be effective.
 
 ```json
 {
@@ -101,17 +115,6 @@ of applying to the surrounding object.
     "image": { "type": "string" },
     "additionalProperties": false
   }
-}
-```
-
-In the worst case, schemas may not be satisfiable at all. Consider for
-instance this schema, where both possible values are integers, which mean
-that it will always fail when checking that they are also strings:
-
-```json
-{
-  "type": "string",
-  "enum": [ 80, 443 ]
 }
 ```
 
@@ -142,12 +145,12 @@ Note that other syntactic and semantic changes could help reduce the number of d
 by ruling out some cases but allowing others. Our proposal is simple (constraints
 are in the syntax) and effective (most defects are ruled out).
 
-With these rules, the first two examples above become illegal.
+With these rules, the first three examples above become illegal.
 We think that such changes result in schema descriptions which are easier to
-understand and maintain, and validation would be more efficient.
+understand and maintain, and that validation could be more efficient.
 
-Although some description tricks are not possible anymore with these
-restrictions, we believe that they bring a significant software engineering benefit.
+Although some description tricks are not possible anymore with these restrictions,
+we believe that they bring a significant overall software engineering benefit.
 Moreover, many existing schemas already conform to these restrictive rules and
 would not need to be changed at all.
 
