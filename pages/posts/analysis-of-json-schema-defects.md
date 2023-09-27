@@ -32,7 +32,7 @@ contraints. The results are described in
 
 More precisely, the methodology consisted in
 - reading all versions of the specs (yes, really!),
-- collecting all the publicly schemas we could find (especially aggregating corpura from prior academic studies),
+- collecting all the public schemas we could find (especially aggregating corpura from prior academic studies),
 - writing several tools to analyze schemas and report *definite* or *probable* defects,
 - looking at the reported defects to try to guess *why* these defects are there
   (most of the time some typo, a misplaced `}`, some type errors…),
@@ -45,7 +45,7 @@ the worst case in unintended data to be validated, possibly risking system break
 or even cybersecurity issues.
 
 The changes we recommend go beyond [Last Breaking Change](/blog/posts/the-last-breaking-change),
-and somehow change the philosophy of the specification, so can be seen as controversial.
+and somehow change the philosophy of the specification, so can be perceived as controversial.
 However they reach their target, which is to turn most defects into errors.
 Although the added restrictions would require to update some existing schemas, we found
 that a significant number of public schemas already conform to our proposed restrictions.
@@ -57,10 +57,10 @@ With JSON Schema, there is *no* constraint on where you put valid keywords, and
 unknown keywords are silently ignored for ensuring *upward* compatibility.
 As a result, mistyping, misnaming, misspelling or misplacing a keyword simply
 results in the keyword being silently ignored, and these unintentional errors
-tend to be stay in schemas without being ever detected.
+tend to stay in schemas without being ever detected.
 
 In the worst case, schemas may not be satisfiable at all. Consider for
-instance this schema, where both possible values are integers, which mean
+instance this schema, where both allowed values are integers, which mean
 that it will always fail when checking that they are also strings:
 
 ```json
