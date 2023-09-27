@@ -60,8 +60,8 @@ results in the keyword being silently ignored, and these unintentional errors
 tend to stay in schemas without being ever detected.
 
 In the worst case, schemas may not be satisfiable at all. Consider for
-instance this schema, where both allowed values are integers, which mean
-that it will always fail when checking that they are also strings:
+instance this schema (Ansible 2.5), where both allowed values are integers,
+which mean that it will always fail when checking that they are also strings:
 
 ```json
 {
