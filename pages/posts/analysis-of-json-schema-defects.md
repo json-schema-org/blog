@@ -14,7 +14,7 @@ authors:
     photo: /img/avatars/claire.jpg
     link: https://www.linkedin.com/in/claire-medrala/
     byline: Research Engineer
-excerpt: Evidences suggest that schemas are hard to write, and possible changes to the spec
+excerpt: Evidence suggests that schemas are hard to write, and possible changes to the spec
 ---
 
 ## Context
@@ -24,13 +24,13 @@ an engineering school which is part of [PSL University](https://psl.eu/), we hav
 looked at how JSON data could be validated when transfered from a front-end (eg react-native)
 to a back-end (eg a REST API with Flask) and to storage (eg a Postgres database).
 
-We have stumbled upon JSON Schema, and our investigation lead to an *academic* study
-which analyses many schemas, finds common defects, and propose changes to the spec
+We have stumbled upon JSON Schema, and our investigation leads to an *academic* study
+which analyses many schemas, finds common defects, and proposes changes to the spec
 which would rule out syntactically most of these defects, at the price of some
-contraints. The results are described in
-[this paper](https://www.cri.minesparis.psl.eu/classement/doc/A-794.pdf).
+contraints.
 
-More precisely, the methodology consisted in
+More precisely, the methodology consisted in:
+
 - reading all versions of the specs (yes, really!),
 - collecting all the public schemas we could find (especially aggregating corpura from prior academic studies),
 - writing several tools to analyze schemas and report *definite* or *probable* defects,
@@ -59,9 +59,10 @@ As a result, mistyping, misnaming, misspelling or misplacing a keyword simply
 results in the keyword being silently ignored, and these unintentional errors
 tend to stay in schemas without being ever detected.
 
-In the worst case, schemas may not be satisfiable at all. Consider for
-instance this schema (Ansible 2.5), where both allowed values are integers,
-which mean that it will always fail when checking that they are also strings:
+In the worst case, schemas may not be satisfiable at all.
+Consider for instance this schema (Ansible 2.5), where both allowed values are
+integers, which mean that it will always fail when checking that they are also
+strings:
 
 ```json
 {
@@ -70,11 +71,11 @@ which mean that it will always fail when checking that they are also strings:
 }
 ```
 
-Other defects manifest themselves as ignored keywords.
+Other defects often manifest themselves as ignored keywords.
 Consider the following schema extract (line 614 of
 [.NET Template](https://json.schemastore.org/template.json)), where `uniqueItems`
-applies to a string, thus is ignored, and should have been attached to the upper
-level:
+applies to a string, thus is always ignored, and should have been attached to
+the upper level:
 
 ```json
 {
@@ -88,8 +89,8 @@ level:
 
 Or this extract (line 55 of
 [Azure Device Update Manifest](https://json.schemastore.org/azure-deviceupdate-manifest-definitions-4.0.json)),
-where `propertyNames` applies to a string thus is also ignored, and should also be moved upward to
-be effective.
+where `propertyNames` applies to a string thus is also always ignored, and
+should also be moved up to be effective.
 
 ```json
 {
@@ -119,12 +120,12 @@ of applying to the surrounding object.
 ```
 
 We have found many such issues in our corpus of *57,800* distinct schemas.
-We think that this could be significantly improved with limited although bold
-changes to the spec.
+This could be significantly improved with limited although bold changes to
+the spec.
 
 ## Recommendations
 
-Based on these evidences, we recommend to tighten the JSON Schema specification
+Based on these evidence, we recommend to tighten the JSON Schema specification
 by adding restrictions to keyword occurences. The strictest version of these
 proposed changes are:
 
@@ -143,7 +144,8 @@ proposed changes are:
 
 Note that other syntactic and semantic changes could help reduce the number of defects
 by ruling out some cases but allowing others. Our proposal is simple (constraints
-are in the syntax) and effective (most defects are ruled out).
+are in the syntax, all conformant tool would enforce it) and effective (most
+defects are ruled out).
 
 With these rules, the first three examples above become illegal.
 We think that such changes result in schema descriptions which are easier to
