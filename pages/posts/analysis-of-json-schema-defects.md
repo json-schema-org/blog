@@ -175,7 +175,7 @@ picture could be different if we could access privately held schemas.
 Well, we cannot say anything about what we cannot see!
 
 Our study provides a first analysis of the causes of defects, say a typo,
-a misplacement… which we believed go undetected in projects because they are
+a misplacement… which we believe go undetected in projects because they are
 *allowed* by the spec, thus we tackle the issue from this perspective.
 The spec changes we propose to rule these out may possibly break some use cases.
 However, which would be broken without a possible solution is unclear.
