@@ -60,9 +60,10 @@ results in the keyword being silently ignored, and these unintentional errors
 tend to stay in schemas without being ever detected.
 
 In the worst case, schemas may not be satisfiable at all.
-Consider for instance this schema (Ansible 2.5), where both allowed values are
-integers, which mean that it will always fail when checking that they are also
-strings:
+Consider for instance this schema extract (line 48037 of
+[Ansible 2.5](https://github.com/miniHive/schemastore-analysis/blob/master/JSON/Ansible_2.5.json)),
+where both allowed values are integers, which mean that it will always fail
+when checking that they are also strings:
 
 ```json
 {
@@ -173,7 +174,10 @@ Maybe the public schemas we found are somehow not representative, and the
 picture could be different if we could access privately held schemas.
 Well, we cannot say anything about what we cannot see!
 
-The changes we propose may break some use cases.
+Our study provides a first analysis of the causes of defects, say a typo,
+a misplacement… which we believed go undetected in projects because they are
+*allowed* by the spec, thus we tackle the issue from this perspective.
+The spec changes we propose to rule these out may possibly break some use cases.
 However, which would be broken without a possible solution is unclear.
 
 ## References
