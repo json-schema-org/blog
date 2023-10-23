@@ -6,7 +6,9 @@ This repository is now deprecated. To contribute to JSON Schema's blog please us
 ---
 
 # JSON Schema blog
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/json-schema-org/.github/blob/main/CODE_OF_CONDUCT.md) [![Project Status: Moved/Deprecated to https://github.com/json-schema-org/website – The project has been moved to a new location, and the version at that location should be considered authoritative.](https://www.repostatus.org/badges/latest/moved.svg)](https://www.repostatus.org/#moved) to [https://github.com/json-schema-org/website](https://github.com/json-schema-org/websitem) [![Financial Contributors on Open Collective](https://opencollective.com/json-schema/all/badge.svg?label=financial+contributors)](https://opencollective.com/json-schema)
+[![Project Status: Moved to https://github.com/json-schema-org/website – The project has been moved to a new location, and the version at that location should be considered authoritative.](https://www.repostatus.org/badges/latest/moved.svg)](https://www.repostatus.org/#moved) to [https://github.com/json-schema-org/website](https://github.com/json-schema-org/websitem) 
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/json-schema-org/.github/blob/main/CODE_OF_CONDUCT.md)[![Financial Contributors on Open Collective](https://opencollective.com/json-schema/all/badge.svg?label=financial+contributors)](https://opencollective.com/json-schema)
 
 A fork from https://github.com/asyncapi/website at 34eba91120505a5065715337f73c66bfcf126736
 In effort to avoid having to build a whole new blog and get something up quickly!
